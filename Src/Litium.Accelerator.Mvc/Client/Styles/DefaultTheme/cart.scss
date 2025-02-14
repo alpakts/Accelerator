@@ -1,0 +1,80 @@
+.cart {
+    @include link--block;
+    @include mobile {
+        order: 4;
+        padding-right: 0;
+    }
+    &--mini &__icon {
+        position: relative;
+        @include icon;
+        @include icon--bag;
+    }
+    &--mini &__quantity {
+        position: absolute;
+        top: rem(-6px);
+        left: rem(10px);
+        width: rem(20px);
+        height : rem(20px);
+        border-radius: 50%;
+        background: $color-primary;
+        font-size: rem($fontsize-small);
+        font-weight: bold;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &--mini &__title {
+        white-space: nowrap;
+        text-transform: uppercase;
+        @include mobile {
+            display: none;
+        }
+    }
+    &__info {
+        display: block;
+        position: absolute;
+        right: 0;
+        padding: rem(25px 30px);
+        background-color: $color-primary;
+        color: $color-white;
+        z-index: 100;
+        * {
+            color: $color-white;
+        }
+        @include mobile {
+            width: 100%;
+            text-align: center;
+            top: 100%;
+        }
+        &--hidden {
+            display: none;
+        }
+    }
+    &__info-row {
+        margin: 0 0 10px 0;
+    }
+    &__close-button {
+        display: none;
+        color: $color-black-lighter;
+        position: absolute;
+        right: rem(10px);
+        top: rem(10px);
+        cursor: pointer;
+        @include mobile {
+            display: block;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            @include icon;
+            @include icon--cross(FFF);
+        }
+    }
+    &__checkout-button {
+        background-color: $color-white;
+        color: $color-black;
+        padding: rem(7.5px 15px);
+        display: inline-block;
+    }
+}

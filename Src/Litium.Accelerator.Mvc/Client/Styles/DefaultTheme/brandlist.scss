@@ -1,0 +1,24 @@
+.brands-list {
+    font-weight: 300;
+    padding-left: 0;
+    margin-bottom: 0;
+    &__header {
+        margin: rem(20px 0 20px 20px);
+    }
+    &__group {
+        display: flex;
+        margin-bottom: rem(20px);
+    }
+    &__group-letter {
+        font-size: rem(28px);
+        color: $color-black-light;
+        width: rem(50px);
+    }
+    &__sublist {
+        margin-top: rem(10px);
+    }
+    &__sublist-item {
+        line-height: 1.5em;
+        margin-bottom: rem(15px);
+    }
+}

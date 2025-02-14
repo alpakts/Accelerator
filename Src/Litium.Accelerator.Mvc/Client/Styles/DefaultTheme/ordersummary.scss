@@ -1,0 +1,41 @@
+.order-summary {
+    border: 1px solid $color-grey;
+    margin-top: rem(20px);
+    border-radius: 5px;
+    h1,
+    h2,
+    h3 {
+        font-family: $font-family;
+    }
+    .simple-table__header {
+        border-bottom: none;
+    }
+    .simple-table__header .columns {
+        padding: rem(10px);
+    }
+    .row:nth-of-type(odd):not(:first-of-type) {
+        background-color: transparent;
+    }
+    &__separator {
+        padding-top: rem(15px);
+    }
+    &__discount-row {
+        color: red;
+    }
+    @include breakpoint(small only) {
+        &__items,
+        &__method {
+            border-bottom: 1px solid $color-grey-light;
+            &.row:nth-of-type(odd):not(:first-of-type) {
+                background-color: $color-white-dark;
+            }
+            .columns {
+                max-width: 100%;
+                padding: rem(5px) rem(10px);
+                &:not(:first-of-type) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

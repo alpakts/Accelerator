@@ -1,0 +1,202 @@
+.product-detail {
+    font-family: $font-family;
+
+    &__image {
+        &--main {
+            width: auto;
+            max-height: 600px;
+            @include mobile {
+                max-height: 400px;
+            }
+        }
+        &--alter {
+            width: auto;
+            height: auto;
+            max-width: rem(100px);
+            max-height: rem(143px);
+            @include mobile {
+                max-width: rem(73px);
+                padding: 5px;
+            }
+        }
+    }
+    &__image-container {
+        margin-bottom: rem(10px);
+        text-align: center;
+    }
+
+    &__brand {
+        font-size: rem($fontsize-large);
+    }
+
+    &__name {
+        font-size: rem(28px);
+    }
+
+    &__article-number {
+        font-weight: 300;
+        margin: rem(5px 0);
+        font-size: rem($fontsize-normal);
+        color: $color-black-light;
+        word-wrap: break-word;
+    }
+
+    &__description,
+    &__price-info,
+    &__tier-prices {
+        font-weight: 300;
+    }
+
+    &__tier-prices {
+        line-height: 1.7;
+        margin-bottom: rem(10px);
+    }
+
+    &__price-info {
+        margin: rem(10px 0);
+        font-size: rem(28px);
+        display: inline-block;
+        @include textoverflow();
+        .price {
+            font-weight: 400;
+        }
+    }
+
+    &__part-payment {
+        font-size: rem($fontsize-small);
+        font-weight: 300;
+    }
+
+    &__color-text,
+    &__size-text {
+        font-weight: 700;
+        font-size: rem($fontsize-h4);
+    }
+
+    &__variant-color,
+    &__variant-size {
+        margin: 0 0 1rem;
+    }
+
+    &__selector-item {
+        display: inline-block;
+        list-style: none;
+        margin-right: rem(8px);
+    }
+
+    &__selector-link {
+        font-weight: 300;
+        display: inline-block;
+        border: 1px solid $color-grey-light;
+        border-radius: rem(5px);
+        padding: rem(5px 12px);
+        color: $color-black;
+        font-size: rem(13px);
+        @include transition(border-color);
+
+        &:hover {
+            border-color: $color-black;
+        }
+
+        &--active {
+            &,
+            &:hover {
+                background: $color-black-lighter;
+                border: 1px solid $color-black-lighter;
+                font-weight: bold;
+                color: $color-white;
+            }
+        }
+
+        &--disabled {
+            &,
+            &:hover {
+                color: $color-grey;
+                border-color: $color-grey;
+            }
+        }
+    }
+
+    &__stock-status {
+        text-transform: uppercase;
+        margin-bottom: rem(10px);
+        @include textoverflow();
+
+        &--in-stock {
+            color: $color-success;
+        }
+
+        &--out-of-stock {
+            color: $color-black-lighter;
+        }
+    }
+
+    &__quantity-container {
+        margin-bottom: rem(20px);
+        display: flex;
+        align-items: center;
+    }
+
+    &__quantity-input {
+        margin-bottom: 0;
+    }
+
+    &__buy-button {
+        @extend .product__buy-button;
+        padding: rem(16px);
+        width: 100%;
+        margin-bottom: rem(20px);
+    }
+
+    &__social-share {
+        font-weight: 300;
+    }
+
+    &__header-title {
+        margin-top: rem(25px);
+        padding-top: rem(25px);
+        border-top: 1px solid $color-black-lighter;
+        font-size: rem(32px);
+        text-align: center;
+        text-transform: uppercase;
+        @include textoverflow();
+    }
+
+    &--centered {
+        margin: 0 auto;
+    }
+}
+
+.product-info {
+    &__container {
+        margin-bottom: rem(25px);
+        margin-top: rem(25px);
+    }
+
+    &__title {
+        font-size: rem(32px);
+        @include textoverflow();
+    }
+
+    &__name {
+        margin-top: rem(4px);
+        font-size: rem(16px);
+        @include textoverflow();
+    }
+
+    &__image {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @include transition(all, 0.3s, ease-in-out);
+
+        &--zoom {
+            &:hover {
+                background-size: 200%;
+            }
+        }
+    }
+}

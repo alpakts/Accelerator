@@ -1,0 +1,20 @@
+﻿@model Litium.Accelerator.ViewModels.Block.VideoBlockViewModel
+
+@if (Model.Video != null && !string.IsNullOrEmpty(Model.Video.Url))
+{
+    var fileUrl = Model.Video.Url;
+    var isSupportedVideo = fileUrl.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase) || fileUrl.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase) || fileUrl.EndsWith(".webm", StringComparison.OrdinalIgnoreCase);
+    if (isSupportedVideo)
+    {
+        var videoFormat = fileUrl.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase) ? "video/mp4" :
+            fileUrl.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase) ? "video/ogg" : "video/webm";
+        <div class="row video">
+            <div class="columns small-12 video__container">
+                <video class="video__player" playsinline webkit-playsinline autoplay muted loop>
+                    <source src="@Model.Video.Url" type="@videoFormat">
+                </video>
+            </div>
+        </div>
+    }
+}
+

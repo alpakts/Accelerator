@@ -1,0 +1,7 @@
+.teaser {
+    position: relative;
+    &, p, img {
+        display: block;
+        width: 100%;
+    }
+}

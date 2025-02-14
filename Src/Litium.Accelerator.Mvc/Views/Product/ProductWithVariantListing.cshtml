@@ -1,0 +1,62 @@
+﻿@model Litium.Accelerator.ViewModels.Product.ProductPageViewModel
+
+<div class="row">
+    <div class="small-12 columns">
+        <div class="row-inner product" itemscope itemtype="http://schema.org/Product">
+            <div class="small-12 large-11 product-detail--centered columns">
+                <div class="row-inner">
+                    <div class="small-12 medium-8 columns">
+
+                        @await Html.PartialAsync("_Images", Model)
+
+                    </div>
+                    <div class="small-12 medium-4 columns">
+                        <div class="product-detail">
+                            <hgroup>
+                                @if (!string.IsNullOrEmpty(Model.ProductItem.Brand))
+                                {
+                                    <h2 class="product-detail__brand" itemprop="brand">@Model.ProductItem.Brand</h2>
+                                }
+
+                                <h1 class="product-detail__name" itemprop="name">
+                                    @Model.ProductItem.Name
+                                </h1>
+                            </hgroup>
+
+                            <div class="product-detail__article-number">
+                                @Html.WebSiteString("product.articlenumber")
+                                @Model.ProductItem.Id
+                            </div>
+
+                            @if (!string.IsNullOrEmpty(Model.ProductItem.Description))
+                            {
+                                <div itemprop="description" class="product-detail__description">
+                                    @Model.ProductItem.Description
+                                </div>
+                            }
+
+                            <div class="product-detail__social-share">
+                                @Html.Raw(Html.WebSiteString("product.socialsharingscript"))
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-inner">
+                    <div class="small-12 columns">
+                        @await Html.PartialAsync("_VariantInformationTabs", Model)
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (Model.BrandPage != null)
+        {
+            @await Html.PartialAsync("_BrandInfo", Model.BrandPage)
+        }
+
+        @await Html.PartialAsync("_MostSold", Model)
+
+        @await Html.PartialAsync("_RelatedProducts", Model.AccessoriesProducts)
+
+        @await Html.PartialAsync("_RelatedProducts", Model.SimilarProducts)
+    </div>
+</div>

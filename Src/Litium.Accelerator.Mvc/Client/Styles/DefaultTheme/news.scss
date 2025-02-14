@@ -1,0 +1,24 @@
+.news {
+    &__intro {
+        font-weight: bold;
+    }
+    &__figure {
+        margin: 20px 0;
+    }
+    &__figcaption {
+        font-style: italic;
+    }
+}
+
+.news-list {
+    padding-left: 0;
+    &__item {
+        margin-top: 15px;
+    }
+    &__intro {
+        font-weight: bold;
+    }
+    &__figure {
+        margin: 0;
+    }
+}

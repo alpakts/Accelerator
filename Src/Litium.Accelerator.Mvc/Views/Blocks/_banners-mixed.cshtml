@@ -1,0 +1,50 @@
+﻿@using System.Drawing
+@using Litium.ComponentModel
+@model Litium.Accelerator.ViewModels.Block.ProductsAndBannerBlockViewModel
+@{
+    var bannerColumn = Model.Banners.Banners.Count > 0 ? 12 / Math.Min(Model.Banners.Banners.Count, 4) : 0;
+
+    var responsiveDefinition = new ResponsiveImageDefinition()
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (280),
+            new (720),
+            new (1040),
+            new (1284),
+            new (1490),
+            new (1670),
+            new (1830),
+            new (1980),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("(min-width: 1440px)", "642px"),
+            new ("(min-width: 1040px)", "calc(40vw + 74px)"),
+            new ("calc(98.61vw - 16px)"),
+        },
+    };
+}
+
+<div class="small-12 large-6 columns">
+    @if (Model.Banners != null && Model.Banners.Banners.Count > 0)
+    {
+        <div class="row">
+            @foreach (var banner in Model.Banners.Banners)
+            {
+                <div class="columns small-12 large-@bannerColumn product-and-banner-block__content">
+                    <a href="@(banner.LinkUrl.NullIfEmpty()??"#")" alt="@banner.ActionText" title="@banner.ActionText" class="product-and-banner-block__image-link" rel="@(string.IsNullOrEmpty(banner.LinkUrl) ? "nofollow" : null)">
+                        @Html.ImageFor(x => banner.Image, maxSize: new Size(786, -1), htmlAttributes: new { @class = "product-and-banner-block__image" }, renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+                    </a>
+                    <div class="banner-text">
+                        <h3 class="banner-text__title">@banner.LinkText</h3>
+                        @if (!string.IsNullOrEmpty(banner.ActionText) && !string.IsNullOrWhiteSpace(banner.ActionText))
+                        {
+                            <span class="banner-text__button">@banner.ActionText</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

@@ -1,0 +1,87 @@
+﻿@using Litium.Accelerator.Mvc.Extensions
+@model Litium.Accelerator.ViewModels.Product.ProductItemViewModel
+
+@{
+    var maxHeight = (int?)ViewData["ImageMaxHeight"] ?? 150;
+    var maxWidth = (int?)ViewData["ImageMaxWidth"] ?? 100;
+}
+
+<div itemscope itemtype="http://schema.org/Product" class="row-inner">
+    <div class="small-12 medium-4 large-2 columns">
+        <div class="product-image">
+            @if (Model.Images != null && Model.Images.Any())
+            {
+                <a href="@Model.Url" itemprop="url">
+                    @{
+                        var image = Model.Images.FirstOrDefault();
+                    }
+                    @Html.ImageFor(x => image, maxSize: new Size(maxWidth, maxHeight), htmlAttributes: new { itemprop = "image" }, renderSizeAttributes: true)
+                </a>
+            }
+        </div>
+        <meta itemprop="brand" content="@Model.Brand" />
+        <meta itemprop="description" content="@Model.Description" />
+        <meta itemprop="name" content="@Model.Name" />
+        @if (Model.Price != null && Model.Price.Price != null)
+        {
+            <meta itemprop="sku" content="@Model.Price.Price.UnitOfMeasurementTitle" />
+        }
+    </div>
+
+    <div class="small-12 medium-8 large-10 columns">
+        <div class="row-inner product-info" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <link itemprop="url" href="@Model.Url" />
+            <div class="small-12 large-4 columns">
+                <h2 class="product-info__name">
+                    @{
+                        var name = Model.Name;
+                        if (name?.Length > 20)
+                        {
+                            name = name.Substring(0, 20);
+                        }
+                    }
+                    @name
+                </h2>
+                <div class="product-detail__article-number">
+                    @Html.WebSiteString("product.articlenumber") @Model.Id
+                </div>
+
+                @await Html.PartialAsync("_StockStatus", Model)
+            </div>
+            <div class="small-12 large-2 columns">
+                @Model.Color
+            </div>
+            <div class="small-12 large-2 columns">
+                @Model.Size
+            </div>
+
+            <div class="small-12 large-4 columns">
+                @if (Model.Price != null)
+                {
+                    <div class="product-detail__price-info text-right">
+                    @Html.DisplayFor(x => x.Price)
+                    </div>
+
+                    @await Html.PartialAsync("_TierPriceInfo", Model.Price)
+                }
+                
+                @if (Model.ShowQuantityField)
+                {
+                    <div class="row-inner product-detail__quantity-container">
+                        <div class="small-6 columns">
+                            <label for="quantity" class="right inline">
+                                @Html.WebSiteString("product.quantity")
+                            </label>
+                        </div>
+                        <div class="small-6 columns">
+                            <input id="@Model.QuantityFieldId" type="number" class="form__input product-detail__quantity-input" value="1" min="0" max="999" maxlength="3"/>
+                        </div>
+                    </div>
+                }
+                <div class="right">
+                    @Html.BuyButton(cssClass: "product-detail__buy-button", isBuyButton: true)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

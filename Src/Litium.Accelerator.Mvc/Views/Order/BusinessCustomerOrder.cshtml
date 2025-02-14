@@ -1,0 +1,193 @@
+﻿@model Litium.Accelerator.ViewModels.Order.OrderViewModel
+@using Litium.Sales
+@using Microsoft.AspNetCore.Http.Extensions
+
+@{
+    ViewContext.RouteData.DataTokens["BareLayout"] = true;
+}
+
+<div class="row order-detail__container">
+    <div class="columns">
+        @if (Model.ShowButton)
+        {
+            <div class="row-inner order-detail__button-container">
+                <div>
+                    <a class="order-detail__button" href="@($"{Context?.Request?.GetDisplayUrl()}&print=true")" target="_blank">
+                        @Html.WebSiteString("general.print")
+                    </a>
+                </div>
+                @* TODO update when support B2B *@
+                @*@if (Model.Order.OrderStatus == OrderState.Confirmed && Model.HasApproverRole)
+                {
+                    <div>
+                        @using (Html.BeginForm("ApproveOrder", "Order", new { Id = Model.Order.OrderId, IsOrderPage = true }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <input class="order-detail__button" type="submit" value="@Html.WebSiteString("general.approve")" />
+                        }
+                    </div>
+                    <div>
+                        @using (Html.BeginForm("CancelOrder", "Order", new { Id = Model.Order.OrderId, IsOrderPage = true }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <input class="order-detail__button"type="submit" value="@Html.WebSiteString("general.cancel")" />
+                        }
+                    </div>
+                }*@
+                <div>
+                    <reorder-button data-css-class="order-detail__button" data-order-id="@Model.Order.OrderId">@Html.WebSiteString("general.reorder")</reorder-button>
+                </div>
+                <div>
+                    <a class="order-detail__button" href="@Model.OrderHistoryUrl">
+                        @Html.WebSiteString("orderdetail.backtoorderlist")
+                    </a>
+                </div>
+            </div>
+        }
+        <div class="row-inner">
+            <div class="medium-12 large-6">
+                <h3>
+                    @Html.WebSiteString("orderdetail.ordernumber"): @Model.Order.ExternalOrderID
+                </h3>
+            </div>
+            <div class="medium-12 large-6 text--right text__mobile--left">
+                <p>
+                    <span>
+                        @Html.WebSiteString("orderdetail.orderdate"): @Model.Order.OrderDate
+                    </span>
+                    <br />
+                    <span>
+                        @Html.WebSiteString("orderdetail.orderstatus"): <strong> @Model.Order.Status</strong>
+                    </span>
+                    <br />
+                    @if (Model.Order.ActualDeliveryDate.HasValue && Model.Order.ActualDeliveryDate.Value < DateTime.MaxValue.Date)
+                    {
+                        <span>
+                            @Html.WebSiteString("orderdetail.deliverydate"): <strong>@(Model.Order.ActualDeliveryDate?.DateTime.ToShortDateString())</strong>
+                        </span>
+                    }
+                </p>
+            </div>
+        </div>
+        <div class="row-inner">
+            <div class="small-12">
+                <div class="row medium-unstack no-margin">
+                    <div class="medium-12">
+                        @Html.WebSiteString("orderdetail.information")
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="medium-12">
+                        <p>
+                            @Model.Order.CustomerInfo.Address1 <br />
+                            @Model.Order.CustomerInfo.Zip @Model.Order.CustomerInfo.City <br />
+                            @Model.Order.CustomerInfo.Country
+                        </p>
+                        <p>
+                            @Html.WebSiteString("orderdetail.organizationnumber"): @Model.Order.MerchantOrganizationNumber <br />
+                            @Html.WebSiteString("orderdetail.orderreference"): @Model.Order.CustomerInfo.FirstName @Model.Order.CustomerInfo.LastName
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-inner order-table">
+            <div class="row medium-unstack no-margin order-table__header hide-for-small-only">
+                <div class="columns medium-5">@Html.WebSiteString("orderdetail.column.products")</div>
+                <div class="columns medium-2">@Html.WebSiteString("orderdetail.column.quantity")</div>
+                <div class="columns medium-2">@Html.WebSiteString("orderdetail.column.price")</div>
+                <div class="columns medium-3 text--right">@Html.WebSiteString("orderdetail.column.total")</div>
+            </div>
+            <div class="order-table__body">
+                @foreach (var row in Model.Order.OrderRows)
+                {
+                var price = "";
+                if (row.PriceInfo?.HasPrice == true)
+                {
+                    if (row.PriceInfo.CampaignPrice != null)
+                    {
+                        price = row.PriceInfo.CampaignPrice.FormatPrice(true) + " (" + row.PriceInfo.Price.FormatPrice(true) + ")";
+                    }
+                    else
+                    {
+                        price = row.PriceInfo.Price.FormatPrice(true);
+                    }
+                }
+                <div class="row medium-unstack no-margin order-detail__summary-items">
+                    <div class="columns medium-5">
+                        <a href="@(row.Link?.Href)" target="_parent" class="order-detail__product-link">
+                            @row.Brand <strong>@row.Name</strong>
+                        </a>
+                    </div>
+                    <div class="columns medium-2">
+                        @row.QuantityString
+                    </div>
+                    <div class="columns medium-2">
+                        @price
+                    </div>
+                    <div class="columns medium-3 text--right">
+                        @row.TotalPrice
+                    </div>
+                </div>
+                }
+                @foreach (var row in Model.Order.DiscountRows)
+                {
+                    <div class="row medium-unstack no-margin order-detail__summary-items">
+                        <div class="columns medium-5">
+                            @row.Name
+                        </div>
+                        <div class="columns medium-7 text--right">
+                            @row.TotalPrice
+                        </div>
+                    </div>
+                }
+                <div class="row medium-unstack no-margin order-detail__summary-method">
+                    <div class="columns medium-9">
+                        @Html.WebSiteString("orderdetail.paymentmethod") - @Model.Order.PaymentMethod
+                    </div>
+                    <div class="columns medium-3 text--right">
+                        @Model.Order.OrderTotalFee
+                    </div>
+                </div>
+                <div class="row medium-unstack no-margin order-detail__summary-method">
+                    <div class="columns medium-9">
+                        @Html.WebSiteString("orderdetail.deliverymethod"): @Model.Order.DeliveryMethod
+                    </div>
+                    <div class="columns medium-3 text--right">@Model.Order.OrderTotalDeliveryCost</div>
+                </div>
+                @if (!string.IsNullOrEmpty(Model.Order.OrderTotalDiscountAmount))
+                {
+                    <div class="row medium-unstack no-margin order-detail__summary-method">
+                        <div class="columns medium-9">
+                            @Html.WebSiteString("orderdetail.discount")
+                        </div>
+                        <div class="columns medium-3 text--right">
+                            @Model.Order.OrderTotalDiscountAmount
+                        </div>
+                    </div>
+                }
+                <div class="row medium-unstack no-margin order-table__space-delimiter"></div>
+                <div class="row medium-unstack no-margin">
+                    <div class="columns small-12 text--right">
+                        @Html.WebSiteString("orderdetail.grandtotal"): &nbsp &nbsp<strong>@Model.Order.OrderGrandTotal</strong>
+                    </div>
+                </div>
+                <div class="row medium-unstack no-margin">
+                    <div class="columns small-12 text--right">
+                        @Html.WebSiteString("orderdetail.ordertotalvat"): &nbsp &nbsp @Model.Order.OrderTotalVat
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    if (Model.IsPrintPage)
+    {
+        <script type="text/javascript">
+            window.print();
+        </script>
+    }
+}

@@ -1,0 +1,24 @@
+@model Litium.Accelerator.ViewModels.Framework.FooterViewModel
+<footer class="footer">
+    <div class="row">
+    @if (Model.SectionList.Any()) {
+        foreach (var sectionItem in Model.SectionList)
+        {
+            <section class="columns small-10 small-offset-1 medium-offset-0 medium-5 large-3 footer__section">
+                <h1 class="footer__header">@sectionItem.SectionTitle</h1>
+                @if (sectionItem.SectionLinkList != null)
+                {
+                    foreach (var linkItem in sectionItem.SectionLinkList)
+                    {
+                        <p><a class="footer__link" href="@linkItem.Href">@linkItem.Text</a></p>
+                    }
+                }
+                @if (!string.IsNullOrWhiteSpace(sectionItem.SectionText?.Value))
+                {
+                    <p>@sectionItem.SectionText</p>
+                }
+            </section>
+        }
+    }
+    </div>
+</footer>

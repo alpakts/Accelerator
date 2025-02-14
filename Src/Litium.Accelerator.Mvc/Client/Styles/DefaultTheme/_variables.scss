@@ -1,0 +1,44 @@
+/* font-family */
+$font-family: Lato, Helvetica, Roboto, Arial, sans-serif;
+
+/* Colors */
+$color-black: #333 !default;
+$color-black-light: #404040 !default;
+$color-black-lighter: #565656 !default;
+
+$color-white: #fff !default;
+$color-white-dark: #fbfbfb !default;
+
+$color-primary: #111 !default;
+$color-primary-dark: #000 !default;
+$color-error: #f04124 !default;
+$color-success: #206020 !default;
+
+$color-link: #0099ff !default;
+
+$color-grey-lightest: #f2f2f2 !default;
+$color-grey-lighter: #eee !default;
+$color-grey-light: #ddd !default;
+$color-grey: #ccc !default;
+$color-grey-dark: #bbb !default;
+$color-grey-darker: #aaa !default;
+$color-grey-darkest: #595959 !default;
+
+/* Font size */
+$fontsize-tiny: 10px;
+$fontsize-small: 12px;
+$fontsize-normal: 14px;
+$fontsize-large: 16px;
+$fontsize-h4: 18px;
+$fontsize-h3: 20px;
+$fontsize-h2: 22px;
+$fontsize-h1: 24px;
+
+/* Breakpoints */
+$mobile-width: 320px;
+$large-mobile-width: 500px;
+$tablet-width: 1024px;
+$desktop-width: 1440px;
+
+/* Navigation bar */
+$navbar-width: 300px;

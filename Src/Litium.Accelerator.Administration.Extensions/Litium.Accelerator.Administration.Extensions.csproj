@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net9.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <LitiumLocalization Include="Resources\Administration*.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dist\*.js" />
+    <EmbeddedResource Include="dist\*.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Litium.Accelerator\Litium.Accelerator.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Litium.Web.Administration.Application" Version="8.20.1" />
+  </ItemGroup>
+</Project>

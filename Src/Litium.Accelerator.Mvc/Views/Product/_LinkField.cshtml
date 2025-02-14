@@ -1,0 +1,14 @@
+﻿@using Litium.Accelerator.Fields
+@model Litium.Accelerator.ViewModels.ProductFieldViewModel
+
+@if (!string.IsNullOrEmpty(Model.Value))
+{
+    @if (((LinkFieldFormatArgs)Model.Args).IsExternalLink)
+    {
+        <a href="@Model.Value" target="_blank">@(((LinkFieldFormatArgs)Model.Args).Text)</a>
+    }
+    else
+    {
+        <a href="@Model.Value">@(((LinkFieldFormatArgs)Model.Args).Text)</a>
+    }
+}

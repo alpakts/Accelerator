@@ -1,0 +1,59 @@
+﻿
+@model Litium.Accelerator.ViewModels.News.NewsListViewModel
+
+<div class="row collapse">
+    <div class="small-12 medium-8 columns news">
+        <h1 class="news__title">@Model.Title</h1>
+
+        @if (!string.IsNullOrWhiteSpace(Model.Introduction))
+        {
+            <p class="news__intro">@Model.Introduction</p>
+        }
+
+        @Model.Text
+
+        @if (Model.News.Any())
+        {
+            <ul class="news-list">
+                @foreach (var newsPage in Model.News)
+                {
+                    <li class="row news-list__item collapse">
+                        <div class="small-8 columns">
+                            <h2 class="news-list__title">
+                                <a href="@newsPage.Url">
+                                    @newsPage.Title
+                                </a>
+                            </h2>
+                            <span class="news-list__date">@newsPage.NewsDate.ToString("d")</span>
+                            @if (!string.IsNullOrWhiteSpace(newsPage.Introduction))
+                            {
+                                <p>
+                                    <a class="news-list__intro" href="@newsPage.Url">
+                                        @newsPage.Introduction
+                                    </a>
+                                </p>
+                            }
+                        </div>
+
+                        <div class="small-4 columns">
+                        @if (newsPage.Image != null)
+                        {
+                            var ImageUrl = newsPage.Image.GetUrlToImage(new System.Drawing.Size(0, 0), new System.Drawing.Size(253, 140)).Url;
+                            <a href="@newsPage.Url">
+                                <figure class="news-list__figure">
+                                    <img src="@ImageUrl" class="news-list__image" />
+                                </figure>
+                            </a>
+                        }
+                        </div>
+                    </li>
+                }
+            </ul>
+            @Html.DisplayFor(x => x.Pagination)
+        }
+    </div>
+    <div class="small-12 medium-4 columns">
+        @await Html.PartialAsync("_LinkList", Model.Links)
+        @await Html.PartialAsync("_FileList", Model.Files)
+    </div>
+</div>

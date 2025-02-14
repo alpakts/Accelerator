@@ -1,0 +1,57 @@
+﻿@using Litium.Accelerator.ViewModels.Product;
+@model ProductListViewModel
+@{
+    var responsiveDefinition = new ResponsiveImageDefinition()
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (400),
+            new (800),
+            new (1000),
+            new (1314),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("100vw"),
+        },
+    };
+}
+
+<div id="search-result" class="row">
+    <div class="columns small-12">
+        <div>
+            <h1>@Model.Title</h1>
+            @if (Model.Image != null)
+            {
+                @Html.ImageFor(x => x.Image, htmlAttributes: new { @class = "product__group-image" }, renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+                <p>
+                    @Model.AlternativeImageDescription
+                </p>
+            }
+        </div>
+        <div>
+            <div id="facetedSearchCompact" class="compact-filter"></div>
+            @if (Model.Pagination != null && Model.Pagination.TotalCount > 0)
+            {
+                if (Model.Pagination.TotalCount > 1)
+                {
+                    <vc:category-filtering-navigation-controller total-hits="@Model.Pagination.TotalCount" />
+                }
+                if (Model.Products != null && Model.Products.Any())
+                {
+                    <div class="row">
+                        <div class="small-12 columns product-list">
+                            <ul class="row product-list">
+                                @foreach (var product in Model.Products)
+                                {
+                                    <li class="product-list__item columns small-6 medium-4 large-3">@Html.DisplayFor(x => product, new { maxWidth = 371 })</li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                }
+                @Html.DisplayFor(x => x.Pagination)
+            }
+        </div>
+    </div>
+</div>

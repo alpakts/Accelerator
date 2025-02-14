@@ -1,0 +1,37 @@
+﻿@using System.Drawing;
+@model Litium.Accelerator.ViewModels.Block.BrandsBlockViewModel
+@{
+    var responsiveDefinition = new ResponsiveImageDefinition()
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (400),
+            new (800),
+            new (1000),
+            new (1314),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("100vw"),
+        },
+    };
+}
+<div class="columns">
+    <div class="brand-block__header ">
+        <h2 class="brand-block__title">@Model.Title</h2>
+        @if (!string.IsNullOrWhiteSpace(Model.Url?.Href))
+        {
+            <a href="@Model.Url.Href" class="brand-block__link">@Model.LinkText</a>
+        }
+    </div>
+    <ul class="row small-up-2 medium-up-3 large-up-6 brand-block">
+        @foreach (var item in Model.Pages)
+        {
+            <li class="column column-block">
+                <a href="@item.Href" class="brand-block__image-link">
+                    @Html.ImageFor(x => item.Image, maxSize: new Size(200, -1), htmlAttributes: new { @class = "brand-block__image" }, renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+                </a>
+            </li>
+        }
+    </ul>
+</div>

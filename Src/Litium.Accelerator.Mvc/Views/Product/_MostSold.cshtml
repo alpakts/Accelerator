@@ -1,0 +1,27 @@
+﻿@using Litium.Accelerator.ViewModels.Product
+@model ProductPageViewModel
+
+@if (Model != null && Model.MostSoldProducts?.Count > 0)
+{
+    <div class="row">
+        <div class="small-12 columns">
+            <h2 class="product-detail__header-title">
+                @if (!string.IsNullOrEmpty(Model.ProductItem.Name))
+                {
+                    @Html.Raw(string.Format(Html.WebSiteString("product.popularproducts"), "<span class='highlight'>" + Model.ProductItem.Name + "</span>"))<span class='highlight'></span>
+                }
+                else
+                {
+                    @Html.WebSiteString("product.mostsoldproducts")
+                }
+            </h2>
+
+            <ul class="row">
+                @foreach (var product in Model.MostSoldProducts)
+                {
+                    <li class="columns small-6 medium-4 large-3 product__container">@Html.DisplayFor(x => product, new { maxWidth = 371 })</li>
+                }
+            </ul>
+        </div>
+    </div>
+}

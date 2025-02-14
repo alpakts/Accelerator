@@ -1,0 +1,53 @@
+﻿@using Litium.Accelerator.ViewModels.Product
+@using Litium.Accelerator.Constants
+
+@model CategoryPageViewModel
+
+    <div id="search-result">
+        @if (Model.ShowSections)
+        {
+            @await Component.BlockContainerAsync(Model.Blocks, BlockContainerNameConstant.Header);
+        }
+        @if (Model.ShowRegularHeader)
+        {
+            if (string.IsNullOrWhiteSpace(Model.Description))
+            {
+                <h1>@Model.Name</h1>
+            }
+            else
+            {
+                <div class="product-group-header">
+                    <h1>@Model.Name</h1>
+                    @Model.Description
+                </div>
+            }
+        }
+
+        @if (Model.ShowFilterHeader)
+        {
+            <h1>@Model.Name <span>(@Model.Pagination.TotalCount)</span></h1>
+        }
+        <div id="facetedSearchCompact" class="compact-filter"></div>
+        <vc:category-filtering-navigation-controller total-hits="@Model.Pagination.TotalCount" />
+        <vc:child-category-navigation-controller category-system-id="@Model.SystemId" />
+        @if (Model.ShowSections)
+        {
+            @await Component.BlockContainerAsync(Model.Blocks, BlockContainerNameConstant.Main);
+        }
+        <div data-productlist>
+            @if (Model.Pagination.TotalCount > 0)
+            {
+                <div class="product-list">
+                    <ul class="row product-list">
+                        @foreach (ProductItemViewModel product in Model.Products)
+                        {
+                            <li class="product-list__item columns small-6 medium-4 large-3">
+                                @Html.DisplayFor(x => product, new { ImageMaxHeight = 300 })
+                            </li>
+                        }
+                    </ul>
+                </div>
+                @Html.DisplayFor(x => x.Pagination)
+            }
+        </div>
+    </div>

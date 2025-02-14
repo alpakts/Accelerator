@@ -1,0 +1,58 @@
+﻿@model Litium.Accelerator.ViewModels.Block.SliderBlockViewModel
+@{
+    var responsiveDefinition = new ResponsiveImageDefinition
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (500),
+            new (800),
+            new (1000),
+            new (1350),
+            new (1700),
+            new (2000),
+            new (2500),
+            new (5000),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new("100vw"),
+        },
+    };
+
+    var slides = Model.Sliders?.Where(x => x.Image is not null).ToList();
+}
+@if (slides?.Count > 0)
+{
+    <div class="slider__container">
+        @Html.ImageFor(model => slides[0].Image, Size.Empty, default, htmlAttributes: new { @class = "slider__image"}, responsiveDefinition: responsiveDefinition)
+        <section class="slider">
+            @foreach (var slide in slides)
+            {          
+                var text = slide.LinkText;
+                if (string.IsNullOrEmpty(text))
+                {
+                    text = slide.ActionText;
+                }
+                else if (!string.IsNullOrEmpty(slide.ActionText))
+                {
+                    text += " - " + slide.ActionText;
+                }
+
+                <template>
+                    <a class="slider__link" href="@slide.LinkUrl" alt="@text" title="@text">
+                        @Html.ImageFor(_ => slide.Image, Size.Empty, default, htmlAttributes: new { @class = "slider__image"}, responsiveDefinition: responsiveDefinition)
+                    </a>
+                    <div class="banner-text">
+                        <h3 class="banner-text__title">@slide.LinkText</h3>
+                        @if (slide.ActionText?.Length > 0)
+                        {
+                            <span class="banner-text__button">
+                                @slide.ActionText
+                            </span>
+                        }
+                    </div>
+                </template>
+            }
+        </section>
+    </div>
+}

@@ -1,0 +1,44 @@
+﻿@using Litium.Web;
+@model Litium.Accelerator.ViewModels.MyPages.LoginInfoViewModel
+
+<div class="row">
+    <div class="columns medium-8 small-12">
+        @using (Html.BeginForm("SaveUserName", null, FormMethod.Post, new { @id = "UserNameForm" }))
+        {
+            <fieldset class="form-fieldset" @(Model.IsSystemAccount ? "disabled": "")>
+                @Html.AntiForgeryToken()
+                <div>@Html.ValidationSummary(true)</div>
+                <div>
+                    @Html.LabelFor(m => m.UserNameForm.UserName, "login.username".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(m => m.UserNameForm.UserName, new { @class = "form__input", @autocomplete = "username" })
+                    @Html.ValidationMessageFor(m => m.UserNameForm.UserName, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    <input type="submit" class="form__button" value="@Html.WebSiteString("general.update")" />
+                </div>
+            </fieldset>
+        }
+
+        @using (Html.BeginForm("SavePassword", null, FormMethod.Post, new { @id = "PasswordForm" }))
+        {
+            <fieldset class="form-fieldset" @(Model.IsSystemAccount ? "disabled": "")>
+                @Html.AntiForgeryToken()
+                <div>@Html.ValidationSummary(true)</div>
+                <div>
+                    @Html.LabelFor(m => m.PasswordForm.Password, "login.password".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.PasswordFor(m => m.PasswordForm.Password, new { @class = "form__input", @autocomplete = "new-password" })
+                    @Html.ValidationMessageFor(m => m.PasswordForm.Password, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(m => m.PasswordForm.ConfirmPassword, "login.confirmpassword".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.PasswordFor(m => m.PasswordForm.ConfirmPassword, new { @class = "form__input", @autocomplete = "new-password" })
+                    @Html.ValidationMessageFor(m => m.PasswordForm.ConfirmPassword, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    <input type="submit" class="form__button" value="@Html.WebSiteString("general.update")" />
+                </div>
+            </fieldset>
+        }
+    </div>
+</div>
+

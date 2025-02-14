@@ -1,0 +1,6 @@
+﻿@model Litium.Accelerator.ViewModels.Framework.BodyEndViewModel
+
+<script type="module" src="@Model.FileName" asp-append-version="true"></script>
+<script nomodule src="@Model.FileNameEs5" asp-append-version="true"></script>
+
+@Html.Raw(Model.TrackingScripts)

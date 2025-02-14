@@ -1,0 +1,21 @@
+{
+  "name": "litium-extensions",
+  "private": true,
+  "version": "8.0.0",
+  "license": "UNLICENSED",
+  "homepage": "https://docs.litium.com",
+  "repository": {},
+  "scripts": {
+    "prod": "ng build field-types --configuration production && ng build accelerator-extensions --configuration production",
+    "build-field-types:w": "ng build field-types --configuration development --watch",
+    "build-extensions:w": "ng build accelerator-extensions --configuration development --watch",
+    "build": "ng build field-types --configuration development && ng build accelerator-extensions --configuration development",
+    "lint": "ng lint"
+  },
+  "devDependencies": {
+    "litium-ui": "https://packages.litium.com/Npm/litium-ui?8.20.1"
+  },
+  "resolutions": {
+    "@yarnpkg/parsers": "3.0.0-rc.46"
+  }
+}

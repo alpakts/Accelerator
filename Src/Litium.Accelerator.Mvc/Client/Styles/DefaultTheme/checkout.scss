@@ -1,0 +1,262 @@
+#checkout {
+    margin: auto;
+    padding: 0 15px;
+
+    @include mobile {
+        max-width: 100%;
+    }
+
+    @include tablet {
+        max-width: 1024px;
+    }
+
+    @include desktop {
+        max-width: 992px;
+    }
+}
+
+.checkout {
+    &__container {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding-top: rem(15px);
+        padding-bottom: rem(15px);
+        margin-bottom: rem(30px);
+    }
+
+    &__title {
+        font-size: rem(28px);
+        text-align: center;
+    }
+
+    &__section-title {
+        font-size: rem(18px);
+    }
+
+    &__submit {
+        button {
+            font-size: rem(24px);
+            margin-top: rem(30px);
+            margin-bottom: rem(30px);
+        }
+    }
+
+    &__link {
+
+        &,
+        &:hover,
+        &:active {
+            color: #0099ff;
+        }
+    }
+
+    &__text--in-line {
+        margin-left: 5px;
+    }
+
+    &__validator--error {
+        color: $color-error;
+    }
+
+    &__flex-wrapper{
+        flex-wrap: wrap;
+    }
+}
+
+.checkout-info {
+    &__container {
+        @extend .checkout__container;
+
+        .form__label {
+            @include textoverflow;
+        }
+    }
+
+    &__checkbox-input {
+        display: none;
+    }
+
+    &__checkbox-label {
+        @include textoverflow;
+        color: $color-black;
+        cursor: pointer;
+        font-size: rem($fontsize-normal);
+        line-height: 2em;
+        width: 100%;
+        margin-bottom: rem(16px);
+
+        &:before {
+            content: "";
+            display: inline-block;
+            border: rem(1px) solid $color-grey-darkest;
+            width: rem(16px);
+            height: rem(16px);
+            margin: rem(0 5px 0 0);
+            @include transition(border);
+            vertical-align: text-top;
+        }
+
+        &:hover:before {
+            border: 1px solid $color-black;
+        }
+    }
+
+    &__checkbox-input:checked~&__checkbox-label {
+        &:before {
+            @include icon--checked(111);
+            background-size: 75%;
+        }
+    }
+
+    &__checkbox-radio {
+        margin-top: 6px;
+    }
+
+    &__summary {
+        &--full-height {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        &--full-row {
+            &>* {
+                display: flex;
+            }
+        }
+
+        &--expand {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__messages {
+        min-height: 100px;
+        flex: 1 1 auto;
+    }
+
+    &__campaign-button {
+        font-size: rem(16px);
+        padding: rem(10px);
+        background-color: $color-primary;
+        color: $color-white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__placeholder-container {
+        height: 28px;
+    }
+}
+
+.checkout-cart {
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__image-wrapper {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    }
+
+    &__image {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    &__image-info {
+        display: inline-block;
+        margin-left: 5px;
+        height: 100px;
+        width: calc(100% - 100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__discount-info{
+        display: inline-block;
+        margin-left: 5px;
+        width: calc(100% - 100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__discount-row {
+        & > a {
+            color: red;
+        }
+    }
+
+    &__brand-name {
+        color: $color-black-lighter;
+    }
+
+    &__total {
+        font-size: rem(28px);
+        white-space: nowrap;
+    }
+
+    &__original-price {
+        white-space: nowrap;
+        font-size: rem(14px);
+        color: $color-grey-darker;
+    }
+
+    &__total-price {
+        font-weight: bold;
+    }
+
+    &__discount-price {
+        font-weight: bold;
+        color:red;
+    }
+
+    &__input {
+        @extend .form__input;
+        margin-bottom: 0;
+        max-width: rem(80px);
+    }
+}
+
+.checkout-mobile.simple-table {
+    .row:nth-of-type(odd):not(:first-of-type) {
+        background: none;
+    }
+
+    &>.row:nth-of-type(even):not(:first-of-type) {
+        background-color: $color-white-dark;
+    }
+
+    .columns {
+        padding: rem(5px);
+    }
+
+    &>.row>.columns {
+        padding: rem(10px);
+    }
+
+    .checkout-cart__image {
+        max-width: 100%;
+    }
+}
+
+.field-info {
+    &__title {
+        @include textoverflow;
+    }
+
+    &__value {
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+}

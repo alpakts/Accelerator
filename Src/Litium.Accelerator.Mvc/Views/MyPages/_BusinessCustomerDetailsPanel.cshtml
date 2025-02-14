@@ -1,0 +1,58 @@
+﻿@model Litium.Accelerator.ViewModels.MyPages.BusinessCustomerDetailsViewModel
+@using Litium.Web;
+
+@using (Html.BeginForm("SaveBusinessCustomerDetails", "MyPages"))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="columns small-12 medium-4">
+            @Html.LabelFor(x => x.CustomerNumber, "orderdetail.customernumber".AsWebsiteText()) :
+            @Html.DisplayFor(x => x.CustomerNumber)
+            @Html.HiddenFor(x => x.CustomerNumber)
+        </div>
+        <div class="columns small-12 medium-4">
+            @Html.LabelFor(x => x.OrganizationNumber, "orderdetail.organizationnumber".AsWebsiteText()) :
+            @Html.DisplayFor(x => x.OrganizationNumber)
+            @Html.HiddenFor(x => x.OrganizationNumber)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns small-12 medium-4">
+            @Html.LabelFor(x => x.OrganizationName, "orderdetail.organizationname".AsWebsiteText()) :
+            @Html.DisplayFor(x => x.OrganizationName)
+            @Html.HiddenFor(x => x.OrganizationName)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns small-12 medium-4">
+            @Html.LabelFor(x => x.FirstName, "orderdetail.firstname".AsWebsiteText(), new { @class = "form__label" })
+            @Html.TextBoxFor(x => x.FirstName, new { @class = "form__input", @autocomplete = "given-name" })
+            @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "form__validator--error" })
+        </div>
+        <div class="columns small-12 medium-4">
+            @Html.LabelFor(x => x.LastName, "orderdetail.lastname".AsWebsiteText(), new { @class = "form__label" })
+            @Html.TextBoxFor(x => x.LastName, new { @class = "form__input", @autocomplete = "family-name" })
+            @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "form__validator--error" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columns small-12 medium-4">
+            @Html.LabelFor(x => x.Email, "orderdetail.email".AsWebsiteText(), new { @class = "form__label" })
+            @Html.TextBoxFor(x => x.Email, new { @class = "form__input", @readonly = "readonly" })
+        </div>
+        <div class="columns small-12 medium-4">
+            @Html.LabelFor(x => x.Phone, "orderdetail.phone".AsWebsiteText(), new { @class = "form__label" })
+            @Html.TextBoxFor(x => x.Phone, new { @class = "form__input", @autocomplete = "tel" })
+            @Html.ValidationMessageFor(x => x.Phone, string.Empty, new { @class = "form__validator--error" })
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <input type="submit" class="form__button" value="@Html.WebSiteString("general.update")" />
+        </div>
+    </div>
+}

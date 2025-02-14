@@ -1,0 +1,16 @@
+﻿@model IList<Litium.Web.Models.LinkModel>
+
+@if (Model?.Any() ?? false)
+{
+    <div class="links">
+        <h2>@Html.WebSiteString("general.list.link")</h2>
+        <ul class="no-list">
+            @foreach (var link in Model)
+            {
+                <li>
+                    @Html.LinkFor(x => link)
+                </li>
+            }
+        </ul>
+    </div>
+}

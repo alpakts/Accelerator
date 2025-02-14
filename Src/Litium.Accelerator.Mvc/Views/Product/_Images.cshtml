@@ -1,0 +1,59 @@
+﻿@model Litium.Accelerator.ViewModels.Product.ProductPageViewModel
+@{
+    var responsiveDefinitionLarge = new ResponsiveImageDefinition
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (100),
+            new (200),
+            new (400),
+            new (600),
+            new (800),
+            new (1000),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("(min-width: 640px)", "50vw"),
+            new ("100vw"),
+        },
+    };
+
+    var responsiveDefinitionSmall = new ResponsiveImageDefinition
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (100),
+            new (200),
+            new (400),
+            new (600),
+            new (800),
+            new (1000),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("(min-width: 1024px)", "25vw"),
+            new ("(min-width: 640px)", "20vw"),
+            new ("33vw"),
+        },
+    };
+}
+
+@if (Model.ProductItem.Images != null && Model.ProductItem.Images.Any())
+{
+    <section id="lightBoxImages">
+        <template data-src="@Model.ProductItem.Images[0].GetUrlToImage(Size.Empty, Size.Empty).Url">
+            @Html.ImageFor(x => Model.ProductItem.Images[0], maxSize: new Size(840, 1200), htmlAttributes: new { itemprop = "image", @class = "product-detail__image--main" }, renderSizeAttributes: true, responsiveDefinition: responsiveDefinitionLarge)
+        </template>
+        @for (var i = 1; i < Model.ProductItem.Images.Count; i++)
+        {
+            var image = Model.ProductItem.Images[i];
+            <template data-src="@image.GetUrlToImage(Size.Empty, Size.Empty).Url">
+                @Html.ImageFor(x =>image, maxSize: new Size(840, 1200), htmlAttributes: new { itemprop = "image", @class = "product-detail__image--alter" }, renderSizeAttributes: true, responsiveDefinition: responsiveDefinitionSmall)
+            </template>
+        }
+    </section>
+}
+else
+{
+    <span class="image-missing">@Html.WebSiteString("product.noproductimage")</span>
+}

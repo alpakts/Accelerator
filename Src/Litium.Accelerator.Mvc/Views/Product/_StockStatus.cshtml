@@ -1,0 +1,16 @@
+﻿@model Litium.Accelerator.ViewModels.Product.ProductItemViewModel
+
+@if (Model.IsInStock)
+{
+    <p class="product-detail__stock-status product-detail__stock-status--in-stock">
+        <link itemprop="availability" href="http://schema.org/InStock" />
+        @Model.StockStatusDescription
+    </p>
+}
+else
+{
+    <p class="product-detail__stock-status product-detail__stock-status--out-of-stock">
+        <link itemprop="availability" href="http://schema.org/OutOfStock" />
+        @Model.StockStatusDescription
+    </p>
+}

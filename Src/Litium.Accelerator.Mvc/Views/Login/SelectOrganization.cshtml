@@ -1,0 +1,20 @@
+﻿@using Litium.Web.Mvc;
+@using Litium.Web;
+@model Litium.Accelerator.ViewModels.Login.LoginViewModel
+
+<div class="full-height">
+    <div class="form__container">
+        @using (Html.BeginForm("SelectOrganization", "Login"))
+        {
+            @Html.AntiForgeryToken()
+            <fieldset class="form">
+                <div>
+                    @Html.HiddenFor(x => x.RedirectUrl)
+                    @Html.LabelFor(x => x.SelectedOrganization, "login.selectorganization".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.DropDownListFor(x => x.SelectedOrganization, Model.Organizations, new { @class = "form__input" })
+                </div>
+                <input type="submit" class="form__button form__button--expand" value="@Html.WebSiteString("general.select")" />
+            </fieldset>
+        }
+    </div>
+</div>

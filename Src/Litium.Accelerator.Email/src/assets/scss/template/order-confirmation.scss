@@ -1,0 +1,20 @@
+.text-right {
+    text-align: right;
+}
+.container {
+    width: 100%!important;
+    max-width: 60rem;
+}
+.no-margin {
+    margin: 0px!important;
+}
+.email-comfirmation__discount{
+    &__label, 
+    &__value{
+        color: red !important;
+    }
+
+    &__value {
+        text-align: right;
+    }
+}

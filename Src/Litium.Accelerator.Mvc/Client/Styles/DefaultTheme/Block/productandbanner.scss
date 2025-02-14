@@ -1,0 +1,25 @@
+.product-and-banner-block {
+    &__content {
+        position: relative;
+        .banner-text {
+            &__title {
+                @include tablet {
+                    font-size: rem(80px);
+                }
+            }
+        }
+    }
+    &__image-link {
+        padding: rem(10px 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    &__image {
+        width: 100%;
+        max-width: 100%;
+    }
+}

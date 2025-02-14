@@ -1,0 +1,20 @@
+﻿@model Litium.Accelerator.ViewModels.Brand.BrandViewModel
+
+@if (Model != null && (!string.IsNullOrEmpty(Model.Text?.Value) || Model.Image != null))
+{
+    <div class="row">
+        <div class="small-12 columns brand-info">
+            <h2 class="brand-info__title">
+                @Model.Title
+            </h2>
+            <div class="row">
+                <div class="small-6 columns brand-info__image">
+                    @Html.ImageFor(x => x.Image, maxSize: new Size(656, 500), renderSizeAttributes: true)
+                </div>
+                <div class="small-6 columns">
+                    @Model.Text
+                </div>
+            </div>
+        </div>
+    </div>
+}

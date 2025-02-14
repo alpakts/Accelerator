@@ -1,0 +1,16 @@
+﻿@model IList<Litium.Web.Models.FileModel>
+
+@if (Model?.Any() ?? false)
+{
+<div class="files">
+    <h2>@Html.WebSiteString("general.list.file")</h2>
+    <ul class="no-list">
+        @foreach (var file in Model)
+        {
+            <li>
+                @Html.DisplayFor(x => file)
+            </li>
+        }
+    </ul>
+</div>
+}

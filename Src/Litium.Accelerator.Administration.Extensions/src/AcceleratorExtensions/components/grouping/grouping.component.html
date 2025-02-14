@@ -1,0 +1,30 @@
+<page-layout [loading$]="[loading$]"
+    [header]="'accelerator.settings.headline' | translate">
+    <form content [formGroup]="form" (ngSubmit)="submit()">
+        <button-container [rightAlign]="true">
+            <danger-button (click)="reset()" [disabled]="!form.dirty" 
+                [text]="'General.Cancel'" ></danger-button>
+            <primary-button [disabled]="!form.dirty"></primary-button>
+        </button-container>
+
+        <div formArrayName="templates">
+            <expandable-group
+                [title]="'accelerator.settings.index.template.headlines' | translate">
+                <form-field
+                    [formGroupName]="i" 
+                    *ngFor="let template of data?.templates; let i = index; trackBy: trackById"
+                    [label]="template.title | translate">
+                    <field-selector [manualFetch]="true"
+                        formControlName="groupingFieldId" 
+                        [multiSelect]="false"
+                        [idSelector]="idSelector"
+                        [textSelector]="textSelector(template.fields)"
+                        [allowNullField]="true"
+                        [nullFieldLabel]="'accelerator.settings.index.template.null.label' | translate"
+                        [fields]="template.fields || []"
+                    ></field-selector>
+                </form-field>
+            </expandable-group>
+        </div>
+    </form>
+</page-layout>

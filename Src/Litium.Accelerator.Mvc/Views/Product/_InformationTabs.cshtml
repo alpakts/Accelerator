@@ -1,0 +1,88 @@
+﻿@model Litium.Accelerator.ViewModels.Product.ProductPageViewModel
+@{
+    var isTabActivated = false;
+    var groups = Model.ProductFieldGroups.Where(x => x.ProductFields.Count() != 0).ToList();
+}
+<div class="row">
+    <div class="small-12 columns product-info__container">
+        <section class="tab">
+            @foreach (var group in groups)
+            {
+                <input type="radio" class="tab__radio" id="product-@group.HtmlGroupId" name="tab-radio" @(!isTabActivated ? "checked" : string.Empty) />
+                isTabActivated = true;
+            }
+            @if (Model.BundleProducts != null && Model.BundleProducts.Any())
+            {
+                <input type="radio" class="tab__radio" id="product-package" name="tab-radio" @(!isTabActivated ? "checked" : string.Empty) />
+                isTabActivated = true;
+            }
+
+            <div class="tab-mobile-container">
+                <nav class="tab__header-container">
+                    @foreach (var group in groups)
+                    {
+                        <label class="tab__header" for="product-@group.HtmlGroupId"> @(group.Name ?? group.GroupId) </label>
+                    }
+                    @if (Model.BundleProducts != null && Model.BundleProducts.Any())
+                    {
+                        <label class="tab__header" for="product-package"> @Html.WebSiteString("product.package") </label>
+                    }
+                </nav>
+            </div>
+            <section class="tab__content-container">
+                @foreach (var group in groups)
+                {
+                    <div class="tab__content tab__content--small-padding">
+                        <div class="row">
+                            <div class="small-12 medium-8 columns" data-equalizer-watch>
+                                <h2 class="product-info__title">
+                                    @(group.Name ?? group.GroupId)
+                                </h2>
+
+                                @foreach (var item in group.ProductFields)
+                                {
+                                    <p>
+                                        @await Html.PartialAsync("_" + item.ViewName, item)
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (Model.BundleProducts != null && Model.BundleProducts.Any())
+                {
+                    <div class="tab__content tab__content--small-padding">
+                        <div class="row">
+                            <div class="small-12 medium-8 columns" data-equalizer-watch>
+                                <h2 class="product-info__title">
+                                    @Html.WebSiteString("product.package")
+                                </h2>
+
+                                <ul class="small-block-grid-2 medium-block-grid-4">
+                                    @foreach (var bundleProd in Model.BundleProducts)
+                                    {
+                                        <li>
+                                            <div itemscope itemtype="http://schema.org/Product" class="package-item">
+                                                <h3>@bundleProd.Name</h3>
+                                                <div class="product-item">
+                                                    @if (bundleProd.Images != null && bundleProd.Images.Count > 0)
+                                                    {
+                                                        @Html.ImageFor(x => bundleProd.Images[0], maxSize: new Size(350, 510), renderSizeAttributes: true)
+                                                    }
+                                                </div>
+                                            </div>
+
+                                            <div class="product-detail__price-info">
+                                                @Html.DisplayFor(x => x.ProductItem.Price)
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </section>
+        </section>
+    </div>
+</div>

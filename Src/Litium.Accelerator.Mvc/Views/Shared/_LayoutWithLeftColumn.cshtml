@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "_Layout.cshtml";
+}
+
+<div class="row">
+    <aside class="columns large-2 show-for-large">
+        <vc:sub-navigation-controller />
+        <div role="navigation" id="facetedSearch">
+        </div>
+    </aside>
+    <div class="medium-12 large-10 columns">
+        @RenderBody()
+    </div>
+</div>

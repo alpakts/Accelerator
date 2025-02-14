@@ -1,0 +1,175 @@
+---
+layout: no-header
+subject: Order confirmation email template
+---
+@model Litium.Accelerator.ViewModels.Order.OrderConfirmationViewModel
+
+@{
+  ViewContext.RouteData.DataTokens["BareLayout"] = true;
+}
+
+<container>
+<row>
+  <columns>
+    <spacer size="16"></spacer>
+    <callout>
+      <row class="collapse">
+        <columns large="6" small="12">
+          <h4 class="no-margin">@Model.Title</h4>
+        </columns>
+        <columns large="6" small="12">
+          <h4 class="text-right no-margin small-text-left">@Html.WebSiteString("orderdetail.ordernumber"): @Model.Order.ExternalOrderID</h4>
+        </columns>
+      </row>
+      <row class="collapse">
+        <columns large="6" small="12">
+          <h5>@Html.WebSiteString("orderdetail.deliveryaddress")</h5>
+        </columns>
+		@if (User.Identity.IsAuthenticated)
+		{
+			<columns large="6" small="12">
+			<h5 class="text-right small-text-left">@Html.WebSiteString("orderdetail.customernumber"): @Model.Order.CustomerInfo.CustomerNumber</h5>
+			</columns>
+		}
+      </row>
+      
+      @foreach (var delivery in Model.Order.Deliveries)
+      {
+        <row>
+            <p>
+                @{
+                    if (string.IsNullOrEmpty(Model.Order.CompanyName))
+                    {
+                        @delivery.Address.FirstName@:&nbsp;@delivery.Address.LastName
+                    }
+                    else
+                    {
+                        @Model.Order.CompanyName
+                    }
+                }
+            </p>
+          <p>@delivery.Address.Address1 </p>
+          <p>@delivery.Address.Zip @delivery.Address.City </p>
+          <p>@delivery.Address.Country</p>
+        </row>
+      }
+        
+    </callout>
+
+    <spacer size="16"></spacer>
+    <callout>
+        <row class="collapse">
+            <columns small="6">
+                <strong>@Html.WebSiteString("orderdetail.column.products")</strong>
+            </columns>
+            <columns small="2">
+                <div class="text-right"><strong>@Html.WebSiteString("orderdetail.column.quantity")</strong></div>
+            </columns>
+            <columns small="2">
+                <div class="text-right"><strong>@Html.WebSiteString("orderdetail.column.price")</strong></div>
+            </columns>
+            <columns small="2">
+                <div class="text-right"><strong>@Html.WebSiteString("orderdetail.column.total")</strong></div>
+            </columns>
+        </row>
+
+        @foreach (var row in Model.Order.OrderRows)
+        {
+            var price = "";
+            if(row.PriceInfo?.HasPrice == true)
+            {
+                if (row.IsFreeGift && row.PriceInfo.CampaignPrice is not null)
+                {
+                    price = row.PriceInfo.CampaignPrice.FormatPrice(true);
+                }
+
+                if(string.IsNullOrEmpty(price))
+                {
+                    price = row.PriceInfo.Price.FormatPrice(true);
+                }
+            }
+            <row class="collapse">
+                <columns small="6">
+                    <strong>@row.Brand</strong> @row.Name
+                </columns>
+                <columns small="2">
+                    <div class="text-right">@row.QuantityString</div>
+                </columns>
+                <columns small="2">
+                    <div class="text-right">@price</div>
+                </columns>
+                <columns small="2">
+                    <div class="text-right">@row.TotalPrice</div>
+                </columns>
+            </row>
+        }
+
+        @foreach (var row in Model.Order.DiscountRows)
+        {
+            <row class="collapse">
+                <columns small="10">
+                    <div class="email-comfirmation__discount__label">@row.Name</div>
+                </columns>
+                <columns small="2">
+                    <div class="email-comfirmation__discount__value">@row.TotalPrice</div>
+                </columns>
+            </row>
+        }
+
+        <row class="collapse">
+            <columns small="10">
+                @Html.WebSiteString("orderdetail.paymentmethod") - @Model.Order.PaymentMethod
+            </columns>
+            <columns small="2">
+                <div class="text-right">@Model.Order.OrderTotalFee</div>
+            </columns>
+        </row>
+
+        <row class="collapse">
+            <columns small="10">
+                @Html.WebSiteString("orderdetail.deliverymethod") - @Model.Order.DeliveryMethod
+            </columns>
+            <columns small="2">
+                <div class="text-right">@Model.Order.OrderTotalDeliveryCost</div>
+            </columns>
+        </row>
+
+        @if (!string.IsNullOrEmpty(Model.Order.OrderTotalDiscountAmount))
+        {
+            <row class="collapse">
+                <columns small="10">
+                    <div class="email-comfirmation__discount__label"> @Html.WebSiteString("orderdetail.discount")</div>
+                </columns>
+                <columns small="2">
+                    <div class="email-comfirmation__discount__value">@Model.Order.OrderTotalDiscountAmount</div>
+                </columns>
+            </row>
+        }
+
+        <row class="collapse">
+            <columns small="10">
+                <h4 class="text-right no-margin">@Html.WebSiteString("orderdetail.grandtotal")</h4>
+            </columns>
+            <columns small="2">
+                <h4 class="text-right no-margin">@Model.Order.OrderGrandTotal</h4>
+            </columns>
+        </row>
+
+        <row class="collapse">
+            <columns small="10">
+                <h5 class="text-right no-margin">@Html.WebSiteString("orderdetail.ordertotalvat")</h5>
+            </columns>
+            <columns small="2">
+                <h5 class="text-right no-margin">@Model.Order.OrderTotalVat</h5>
+            </columns>
+        </row>
+    </callout>
+    
+    <spacer size="16"></spacer>
+    <callout>
+      <p><strong>@Html.WebSiteString("orderdetail.information")</strong></p>
+      <p>@Model.Text</p>
+    </callout>
+  </columns>
+</row>
+</container>

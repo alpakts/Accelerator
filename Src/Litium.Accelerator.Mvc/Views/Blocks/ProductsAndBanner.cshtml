@@ -1,0 +1,13 @@
+﻿@model Litium.Accelerator.ViewModels.Block.ProductsAndBannerBlockViewModel
+<div class="row mixed">
+    @if (!Model.ShowProductToTheRight)
+    {
+        <partial name="_products-mixed" model="Model" />
+        <partial name="_banners-mixed" model="Model" />
+    }
+    else
+    {
+        <partial name="_banners-mixed" model="Model" />
+        <partial name="_products-mixed" model="Model" />
+    }
+</div>

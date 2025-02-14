@@ -1,0 +1,15 @@
+﻿@model Litium.Accelerator.ViewModels.Framework.BreadCrumbsViewModel
+
+@if (Model.ContentLinks != null && Model.ContentLinks.Any())
+{
+    <nav class="breadcrumbs-container--hide-on-mobile">
+        <ul class="breadcrumbs">
+            @foreach (var contentLink in Model.ContentLinks)
+            {
+                <li class="breadcrumbs__item @(contentLink.Disabled? $"breadcrumbs__item--disabled" : $"")" >
+                    <a class="breadcrumbs__link" href="@contentLink.Url">@contentLink.Name</a>
+                </li>
+            }
+        </ul>
+    </nav>
+}

@@ -1,0 +1,54 @@
+﻿@using Litium.Web.Models;
+@using Litium.Accelerator.Constants;
+@using System.Drawing;
+@model Litium.Accelerator.ViewModels.Article.ArticleViewModel
+@{
+    var responsiveDefinition = new ResponsiveImageDefinition()
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (400),
+            new (800),
+            new (1000),
+            new (1314),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("100vw"),
+        },
+    };
+}
+@await Component.BlockContainerAsync(Model.Blocks, BlockContainerNameConstant.Header)
+<div class="row">
+    <div class="small-12 medium-8 columns">
+        @if (Model.Image != null)
+        {
+            <figure>
+                @Html.ImageFor(x => x.Image, maxSize: new Size(786, -1), renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+                @if (!string.IsNullOrWhiteSpace(Model.Image.Alt))
+                {
+                    <figcaption>@Model.Image.Alt</figcaption>
+                }
+            </figure>
+        }
+        <h1>@Model.Title</h1>
+        @if (!string.IsNullOrWhiteSpace(Model.Introduction))
+        {
+            <p class="intro">@Model.Introduction</p>
+        }
+        @Model.Text
+    </div>
+
+    <div class="small-12 medium-4 columns">
+        @{
+            if (Model.Links != null)
+            {
+                @await Html.PartialAsync("_LinkList", new List<LinkModel>(Model.Links))
+            }
+            if (Model.Files != null)
+            {
+                @await Html.PartialAsync("_FileList", new List<FileModel>(Model.Files))
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,118 @@
+﻿@using Litium.Accelerator.ViewModels.Product;
+@using System.Drawing;
+@using Litium.Web;
+@using Litium.Accelerator.Mvc.Extensions
+@model ProductItemViewModel
+@{
+    var count = (ViewBag.ProductCount as int?).GetValueOrDefault(0);
+
+    var sizeDef = Math.Min(count, 4) switch
+    {
+        4 => new SizeDefinition[]
+            {
+                new ("(min-width: 1420px)", "138px"),
+                new ("(min-width: 1040px)", "calc(10.56vw - 10px"),
+                new ("(min-width: 940px)", "420px"),
+                new ("calc(46.77vw - 10px)"),
+            },
+        3 => new SizeDefinition[]
+            {
+                new ("(min-width: 1420px)", "194px"),
+                new ("(min-width: 1040px)", "14.17vw"),
+                new ("(min-width: 940px)", "420px"),
+                new ("calc(46.77vw - 10px)"),
+            },
+        2 => new SizeDefinition[]
+            {
+                new ("(min-width: 1440px)", "306px"),
+                new ("(min-width: 1040px)", "calc(20vw + 22px)"),
+                new ("(min-width: 940px)", "420px"),
+                new ("calc(46.77vw - 10px)"),
+            },
+        1 => new SizeDefinition[]
+            {
+                new ("(min-width: 940px)", "420px"),
+                new ("calc(46.77vw - 10px)"),
+            },
+        _ => new SizeDefinition[]
+            {
+                new ("(min-width: 1440px)", "306px"),
+                new ("(min-width: 1040px)", "calc(20vw + 22px)"),
+                new ("(min-width: 640px)", "calc(33.42vw - 31px)"),
+                new ("calc(50vw - 20px)"),
+            }
+    };
+
+    var responsiveDefinition = new ResponsiveImageDefinition
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (170),
+            new (210),
+            new (300),
+            new (340),
+            new (420),
+        },
+        Sizes = sizeDef,
+    };
+}
+
+<div itemscope itemtype="http://schema.org/Product" class="product__wrapper">
+    <figure class="product__figure">
+        @if (Model.Images != null && Model.Images.Any())
+        {
+            <a href="@Model.Url" itemprop="url" class="product__image-link">
+                @{
+                    var image = Model.Images.FirstOrDefault();
+                }
+                @Html.ImageFor(x => image, maxSize: new Size(420, 600), htmlAttributes: new { itemprop = "image", @class = "product__image" }, renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+            </a>
+        }
+        else
+        {
+            <span class="product__image--missing">@("product.noproductimage".AsWebsiteText())</span>
+        }
+    </figure>
+    <article class="product__info">
+        <meta itemprop="description" content="@Model.Description" />
+        @if (Model.Price != null && Model.Price.Price != null)
+        {
+            <meta itemprop="sku" content="@Model.Price.Price.UnitOfMeasurementTitle" />
+        }
+        <a href="@Model.Url" title="@Model.Name">
+            <h2 itemprop="name" class="product__name">@Model.Name</h2>
+            @if (!string.IsNullOrEmpty(Model.Brand))
+            {
+                <h3 itemprop="brand" class="product__brand">@Model.Brand</h3>
+            }
+        </a>
+        <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            @if (Model.Price != null)
+            {
+                @Html.DisplayFor(x => x.Price)
+            }
+            @if (Model.IsInStock)
+            {
+                <link itemprop="availability" href="http://schema.org/InStock" />
+            }
+            else
+            {
+                <link itemprop="availability" href="http://schema.org/OutOfStock" />
+            }
+            <link itemprop="url" href="@Model.Url" />
+        </div>
+        @if (Model.ShowBuyButton)
+        {
+            @Html.BuyButton("product__buy-button")
+            if (Model.ShowQuantityField && Model.UseVariantUrl && Model.IsInStock)
+            {
+                <div class="product__quantity-container">
+                    <label for="quantity" class="product__quantity">
+                        @("product.quantity".AsWebsiteText())
+                    </label>
+                    <input id="@Model.QuantityFieldId" type="number" data-buy-quantity-input value="1" min="0" max="999" maxlength="3" class="product__buy-quantity form__input" />
+                </div>
+            }
+        }
+    </article>
+</div>

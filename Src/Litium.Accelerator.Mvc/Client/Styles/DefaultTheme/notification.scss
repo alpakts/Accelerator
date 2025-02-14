@@ -1,0 +1,15 @@
+.notification__tooltip {
+    position: absolute;
+    padding: rem(12px);
+    background: #eeeeec;
+    color: black;
+    transform: translateY(-100%);
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    &--under {
+        @extend .notification__tooltip;
+        transform: translateY(100%);
+    }
+}

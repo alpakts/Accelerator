@@ -1,0 +1,57 @@
+﻿@using Litium.Accelerator.Constants;
+@model Litium.Accelerator.ViewModels.News.NewsViewModel
+@if (Model.Blocks.Any())
+{
+    <h1 class="structural">@Html.DisplayFor(x => x.Title)</h1>
+    @await Component.BlockContainerAsync(Model.Blocks, BlockContainerNameConstant.Header)
+}
+@{
+    var responsiveDefinition = new ResponsiveImageDefinition()
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (400),
+            new (800),
+            new (1000),
+            new (1314),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("75vw"),
+        },
+    };
+}
+<div class="row">
+    <div class="small-12 medium-9 large-10 columns">
+        <div class="row">
+            <div class="small-12 medium-8 columns">
+                @if (Model.Image != null)
+                {
+                    <figure class="news__figure">
+                        @Html.ImageFor(x => x.Image, new(786, -1), default, htmlAttributes: new{ @class= "news__image"}, renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+                        @if (!string.IsNullOrWhiteSpace(Model.Image.Alt))
+                        {
+                        <figcaption class="news__figcaption">@Model.Image.Alt</figcaption>
+                        }
+                    </figure>
+                }
+                <p class="news__date">@Model.NewsDate.ToString("d")</p>
+
+                <h1 class="news__title">@Model.Title</h1>
+
+                @if (!string.IsNullOrWhiteSpace(Model.Introduction))
+                {
+                <p class="news__intro">@Model.Introduction</p>
+                }
+
+                @Model.Text
+
+            </div>
+
+            <div class="small-12 medium-4 columns">
+                @await Html.PartialAsync("_LinkList", Model.Links)
+                @await Html.PartialAsync("_FileList", Model.Files)
+            </div>
+        </div>
+    </div>
+</div>

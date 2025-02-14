@@ -1,0 +1,35 @@
+﻿@model Litium.Accelerator.ViewModels.Block.ProductsAndBannerBlockViewModel
+@{
+    var productColumn = Model.Products.Products.Count > 0 ? 12 / Math.Min(Model.Products.Products.Count, 4) : 0;
+}
+
+<div class="small-12 large-6 columns">
+    <div class="row mixed-block">
+        <div class="small-8 columns">
+            <h2 class="mixed-block__header">@Model.Products.Title</h2>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(Model.Products.FooterLinkUrl) && !string.IsNullOrWhiteSpace(Model.Products.FooterLinkText))
+        {
+            <div class="small-4 columns text--right">
+                <a class="mixed-block__header" href="@Model.Products.FooterLinkUrl">@Model.Products.FooterLinkText</a>
+            </div>
+        }
+    </div>
+
+    @if (Model.Products != null && Model.Products.Products.Count > 0)
+    {
+        ViewBag.ProductCount = Model.Products.Products.Count;
+
+        <div class="row">
+            @foreach (var product in Model.Products.Products)
+            {
+                <div class="columns small-6 large-@productColumn product--mixed">
+                    @Html.DisplayFor(x => product)
+                </div>
+            }
+        </div>
+
+        ViewBag.ProductCount = null;
+    }
+</div>

@@ -1,0 +1,16 @@
+<field-editor [field]="field">
+    <div preview>
+        <tags *ngIf="viewItems?.length" [value]="viewFields" [titleSelector]="titlePreviewSelector" [readonly]="true"></tags>
+    </div>
+    <div edit>
+        <field-selector #control 
+            [manualFetch]="true" 
+            [value]="items"
+            [sortable]="true"
+            [fields]="fields$ | async"
+            [idSelector]="idSelector"
+            [stateSelector]="stateSelector"
+            (valueChange)="onFieldSelect($event)"
+        ></field-selector>
+    </div>
+</field-editor>

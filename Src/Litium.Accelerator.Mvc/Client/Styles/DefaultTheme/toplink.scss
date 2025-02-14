@@ -1,0 +1,11 @@
+.top-link {
+    @include link--block;
+    text-transform: uppercase;
+    white-space: nowrap;
+    @include mobile {
+        display: none;
+        &__icon {
+            margin-right: 0;
+        }
+    }
+}

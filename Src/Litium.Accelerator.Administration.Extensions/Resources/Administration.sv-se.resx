@@ -1,0 +1,1190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="accelerator.title" xml:space="preserve">
+    <value>Accelerator</value>
+  </data>
+  <data name="accelerator.setting.indexing" xml:space="preserve">
+    <value>Produktgruppering</value>
+  </data>
+  <data name="accelerator.setting.filtering" xml:space="preserve">
+    <value>Produktfiltrering</value>
+  </data>
+  <data name="accelerator.setting.search" xml:space="preserve">
+    <value>Sökindexering</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.headline">
+    <value>Inställningar för sökindex</value>
+  </data>
+  <data name="accelerator.settings.headline" xml:space="preserve">
+    <value>Inställningar</value>
+  </data>
+  <data name="accelerator.settings.index.template.headlines" xml:space="preserve">
+    <value>Varianter listas efter följande fält</value>
+  </data>
+  <data name="fieldtemplate.productarea.productwithonevariant.name" xml:space="preserve">
+    <value>Produkt med endast en variant</value>
+  </data>
+  <data name="fieldtemplate.productarea.productwithvariants.name" xml:space="preserve">
+    <value>Produkt med varianter</value>
+  </data>
+  <data name="fieldtemplate.productarea.productwithvariantslist.name" xml:space="preserve">
+    <value>Produkt med varianter som visas i en lista</value>
+  </data>
+  <data name="accelerator.filterfield.headline" xml:space="preserve">
+    <value>Fält som kan användas vid produktfiltrering på publika siten.</value>
+  </data>
+  <data name="accelerator.filtering.headline" xml:space="preserve">
+    <value>Produktfilter</value>
+  </data>
+  <data name="accelerator.filterfield.field" xml:space="preserve">
+    <value>Fält</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.template.general.templates.headline">
+    <value>Sökning i Acceleratorn baseras på valda fält. Om mallen inte har några valt fält baseras sökningen på alla fält.</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.template.template">
+    <value>Mall</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.template.fields">
+    <value>Fält</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.template.selectedfields">
+    <value>Valda fält</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.template.product.templates.headline">
+    <value>Produktmallar</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.template.category.templates.headline">
+    <value>Kategorimallar</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.template.page.templates.headline">
+    <value>Sidmallar</value>
+  </data>
+  <data name="accelerator.settings.searchindexing.template.block.templates.headline">
+    <value>Blockmallar</value>
+  </data>
+  <data name="fieldtemplate.websitearea.article.name" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="fieldtemplate.websitearea.article.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.article.fieldgroup.contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.websitearea.article.fieldgroup.list.name" xml:space="preserve">
+    <value>Länklista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.article.fieldgroup.image.name" xml:space="preserve">
+    <value>Bild</value>
+  </data>
+  <data name="fieldtemplate.websitearea.article.fieldgroup.filelist.name" xml:space="preserve">
+    <value>Fillista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.name" xml:space="preserve">
+    <value>Webbplats</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.logotype.name" xml:space="preserve">
+    <value>Logotyp</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.header.name" xml:space="preserve">
+    <value>Sidhuvud</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.search.name" xml:space="preserve">
+    <value>Sök</value>
+  </data>
+  <data name="fielddefinition.websitearea.footer.name">
+    <value>Sidfot</value>
+  </data>
+  <data name="fielddefinition.websitearea.footer.description">
+    <value>
+    </value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.footer.name" xml:space="preserve">
+    <value>Sidfot</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.navigation.name" xml:space="preserve">
+    <value>Navigering</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.leftnavigation.name" xml:space="preserve">
+    <value>Vänstermeny</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.productlists.name" xml:space="preserve">
+    <value>Produktlistor</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.productpage.name" xml:space="preserve">
+    <value>Produktsida</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.filters.name" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.checkout.name" xml:space="preserve">
+    <value>Kassa</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.customers.name" xml:space="preserve">
+    <value>Kunder</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.emails.name" xml:space="preserve">
+    <value>E-post</value>
+  </data>
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.orderconfirmationpage.name" xml:space="preserve">
+    <value>Orderbekräftelsesida</value>
+  </data>
+  <data name="fieldtemplate.blockarea.banner.name" xml:space="preserve">
+    <value>Banner</value>
+  </data>
+  <data name="fieldtemplate.blockarea.banner.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.blockarea.banner.fieldgroup.banners.name" xml:space="preserve">
+    <value>Banners</value>
+  </data>
+  <data name="fieldtemplate.blockarea.brand.name" xml:space="preserve">
+    <value>Märken</value>
+  </data>
+  <data name="fieldtemplate.blockarea.brand.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.blockarea.brand.fieldgroup.brands.name" xml:space="preserve">
+    <value>Märken</value>
+  </data>
+  <data name="fieldtemplate.websitearea.brandlist.name" xml:space="preserve">
+    <value>Varumärkeslista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.brandlist.fieldgroup.general.name" xml:space="preserve">
+    <value>Märken</value>
+  </data>
+  <data name="fieldtemplate.websitearea.brand.name" xml:space="preserve">
+    <value>Varumärkessida</value>
+  </data>
+  <data name="fieldtemplate.websitearea.brand.fieldgroup.general.name" xml:space="preserve">
+    <value>Märken</value>
+  </data>
+  <data name="fieldtemplate.websitearea.checkout.name" xml:space="preserve">
+    <value>Kassa</value>
+  </data>
+  <data name="fieldtemplate.websitearea.checkout.fieldgroup.termsandconditions.name" xml:space="preserve">
+    <value>Köpvillkor</value>
+  </data>
+  <data name="fieldtemplate.customerarea.b2cpersontemplate.name" xml:space="preserve">
+    <value>Person B2C</value>
+  </data>
+  <data name="fieldtemplate.customerarea.b2cpersontemplate.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.customerarea.b2bpersontemplate.name" xml:space="preserve">
+    <value>Person B2B</value>
+  </data>
+  <data name="fieldtemplate.customerarea.b2bpersontemplate.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.customerarea.grouptemplate.name" xml:space="preserve">
+    <value>Grupp</value>
+  </data>
+  <data name="fieldtemplate.customerarea.grouptemplate.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.customerarea.organizationtemplate.name" xml:space="preserve">
+    <value>Organisation</value>
+  </data>
+  <data name="fieldtemplate.customerarea.organizationtemplate.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.customerarea.targetgrouptemplate.name" xml:space="preserve">
+    <value>Målgrupp</value>
+  </data>
+  <data name="fieldtemplate.customerarea.targetgrouptemplate.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.error.name" xml:space="preserve">
+    <value>Felmeddelandesida</value>
+  </data>
+  <data name="fieldtemplate.websitearea.error.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.error.fieldgroup.Contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.websitearea.pagenotfound.name" xml:space="preserve">
+    <value>Sidan kan inte hittas (404)</value>
+  </data>
+  <data name="fieldtemplate.websitearea.pagenotfound.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.pagenotfound.fieldgroup.Contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.websitearea.forgotpassword.name" xml:space="preserve">
+    <value>Glömt lösenord-sida</value>
+  </data>
+  <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.forgotpassword.name" xml:space="preserve">
+    <value>Glömt lösenord</value>
+  </data>
+  <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.email.name" xml:space="preserve">
+    <value>E-post för glömt lösenord</value>
+  </data>
+  <data name="fieldtemplate.websitearea.home.name" xml:space="preserve">
+    <value>Startsida</value>
+  </data>
+  <data name="fieldtemplate.websitearea.home.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.landing.name" xml:space="preserve">
+    <value>Landningssida</value>
+  </data>
+  <data name="fieldtemplate.websitearea.landing.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.login.name" xml:space="preserve">
+    <value>Inloggningssida</value>
+  </data>
+  <data name="fieldtemplate.websitearea.login.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.login.fieldgroup.login.name" xml:space="preserve">
+    <value>Inloggning</value>
+  </data>
+  <data name="fieldtemplate.websitearea.login.fieldgroup.forgotpassword.name" xml:space="preserve">
+    <value>Glömt lösenord</value>
+  </data>
+  <data name="fieldtemplate.websitearea.megamenu.name" xml:space="preserve">
+    <value>Huvudmenylänk</value>
+  </data>
+  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.link.name" xml:space="preserve">
+    <value>Länk</value>
+  </data>
+  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.megamenu.name" xml:space="preserve">
+    <value>Huvudmeny</value>
+  </data>
+  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.megamenucolumn.name" xml:space="preserve">
+    <value>Huvudmenykolumn</value>
+  </data>
+  <data name="fieldtemplate.websitearea.mypages.name" xml:space="preserve">
+    <value>Mina sidor</value>
+  </data>
+  <data name="fieldtemplate.websitearea.mypages.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.mypages.fieldgroup.contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.websitearea.mypages.fieldgroup.image.name" xml:space="preserve">
+    <value>Bild</value>
+  </data>
+  <data name="fieldtemplate.websitearea.mypages.fieldgroup.linklist.name" xml:space="preserve">
+    <value>Länklista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.newslist.name" xml:space="preserve">
+    <value>Nyhetslista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.newslist.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.newslist.fieldgroup.contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.websitearea.newslist.fieldgroup.linklist.name" xml:space="preserve">
+    <value>Länklista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.newslist.fieldgroup.filelist.name" xml:space="preserve">
+    <value>Fillista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.news.name" xml:space="preserve">
+    <value>Nyhet</value>
+  </data>
+  <data name="fieldtemplate.websitearea.news.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.news.fieldgroup.contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.websitearea.news.fieldgroup.linklist.name" xml:space="preserve">
+    <value>Länklista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.news.fieldgroup.filelist.name" xml:space="preserve">
+    <value>Fillista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.news.fieldgroup.image.name" xml:space="preserve">
+    <value>Bild</value>
+  </data>
+  <data name="fieldtemplate.websitearea.orderconfirmationemail.name" xml:space="preserve">
+    <value>Bekräftelsemeddelande</value>
+  </data>
+  <data name="fieldtemplate.websitearea.orderconfirmationemail.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.orderconfirmation.name" xml:space="preserve">
+    <value>Orderbekräftelse</value>
+  </data>
+  <data name="fieldtemplate.websitearea.orderconfirmation.fieldgroup.contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.websitearea.orderhistory.name" xml:space="preserve">
+    <value>Orderhistorik</value>
+  </data>
+  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.linklist.name" xml:space="preserve">
+    <value>Länklista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.order.name" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="fieldtemplate.websitearea.order.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.websitearea.order.fieldgroup.contents.name" xml:space="preserve">
+    <value>Huvudinnehåll</value>
+  </data>
+  <data name="fieldtemplate.blockarea.product.name" xml:space="preserve">
+    <value>Produkter</value>
+  </data>
+  <data name="fieldtemplate.blockarea.product.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.blockarea.product.fieldgroup.products.name" xml:space="preserve">
+    <value>Produkter</value>
+  </data>
+  <data name="fieldtemplate.websitearea.productlist.name" xml:space="preserve">
+    <value>Poduktlista</value>
+  </data>
+  <data name="fieldtemplate.websitearea.productlist.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.blockarea.productsandbanner.name" xml:space="preserve">
+    <value>Produkter och banner</value>
+  </data>
+  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.banner.name" xml:space="preserve">
+    <value>Banner</value>
+  </data>
+  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.products.name" xml:space="preserve">
+    <value>Produkter</value>
+  </data>
+  <data name="fieldtemplate.productarea.category.name" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="fieldtemplate.websitearea.searchresult.name" xml:space="preserve">
+    <value>Sökresultat</value>
+  </data>
+  <data name="fieldtemplate.websitearea.searchresult.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.blockarea.slider.name" xml:space="preserve">
+    <value>Slider</value>
+  </data>
+  <data name="fieldtemplate.blockarea.slider.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.blockarea.slider.fieldgroup.slides.name" xml:space="preserve">
+    <value>Slides</value>
+  </data>
+  <data name="fieldtemplate.blockarea.video.name" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="fieldtemplate.blockarea.video.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fieldtemplate.blockarea.video.fieldgroup.video.name" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="fieldtemplate.websitearea.welcomeemail.name" xml:space="preserve">
+    <value>Välkomstmeddelande</value>
+  </data>
+  <data name="fieldtemplate.websitearea.welcomeemail.fieldgroup.general.name" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="fielddefinition.customerarea.socialsecuritynumber.name" xml:space="preserve">
+    <value>Personnummer</value>
+  </data>
+  <data name="fielddefinition.customerarea.socialsecuritynumber.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.customerarea.legalregistrationnumber.name" xml:space="preserve">
+    <value>Organisationsnummer</value>
+  </data>
+  <data name="fielddefinition.customerarea.legalregistrationnumber.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.logotypemain.name" xml:space="preserve">
+    <value>Logotyp (huvudbild)</value>
+  </data>
+  <data name="fielddefinition.websitearea.logotypemain.description" xml:space="preserve">
+    <value>En logotyp som används för webbplatsens ramverk.</value>
+  </data>
+  <data name="fielddefinition.websitearea.logotypeicon.name" xml:space="preserve">
+    <value>Logotyp (ikon)</value>
+  </data>
+  <data name="fielddefinition.websitearea.logotypeicon.description" xml:space="preserve">
+    <value>En logotyp som används på till exempel webbläsarflikar. Rekommenderad storlek är 250 × 250 pixel.</value>
+  </data>
+  <data name="fielddefinition.websitearea.headerlayout.name" xml:space="preserve">
+    <value>Sidhuvudtyp</value>
+  </data>
+  <data name="fielddefinition.websitearea.headerlayout.description" xml:space="preserve">
+    <value>Välj mellan två typer av sidhuvuden. Med alternativet En rad visas en rad med bland annat logotyp, toppmeny och varukorg. Med alternativet Två rader visas en rad med bland annat logotyp, varukorg och sökfält samt en rad med navigeringslänkar till kategorier.</value>
+  </data>
+  <data name="fielddefinition.websitearea.checkoutpage.name" xml:space="preserve">
+    <value>Kassa</value>
+  </data>
+  <data name="fielddefinition.websitearea.checkoutpage.description" xml:space="preserve">
+    <value>Den sida som visas när kunden klickar på länken eller ikonen Kassa.</value>
+  </data>
+  <data name="fielddefinition.websitearea.mypagespage.name" xml:space="preserve">
+    <value>Mina sidor</value>
+  </data>
+  <data name="fielddefinition.websitearea.mypagespage.description" xml:space="preserve">
+    <value>Den sida som visas när kunden klickar på länken eller ikonen Mina sidor</value>
+  </data>
+  <data name="fielddefinition.websitearea.additionalheaderlinks.name" xml:space="preserve">
+    <value>Extra länkar i sidhuvudet</value>
+  </data>
+  <data name="fielddefinition.websitearea.additionalheaderlinks.description" xml:space="preserve">
+    <value>Extra länkar som visas längst upp till höger på webbplatsen, bredvid länkarna till sökfunktionen och inloggningssidan.</value>
+  </data>
+  <data name="fielddefinition.websitearea.searchresultpage.name" xml:space="preserve">
+    <value>Sökresultat</value>
+  </data>
+  <data name="fielddefinition.websitearea.searchresultpage.description" xml:space="preserve">
+    <value>Den sida som visas efter en sökning.</value>
+  </data>
+  <data name="fielddefinition.websitearea.footerheader.name" xml:space="preserve">
+    <value>Huvud</value>
+  </data>
+  <data name="fielddefinition.websitearea.footerheader.description" xml:space="preserve">
+    <value>Sidfotskolumnens huvud.</value>
+  </data>
+  <data name="fielddefinition.websitearea.footerlinklist.name" xml:space="preserve">
+    <value>Länkar</value>
+  </data>
+  <data name="fielddefinition.websitearea.footerlinklist.description" xml:space="preserve">
+    <value>En lista med länkar som visas i sidfotskolumnen.</value>
+  </data>
+  <data name="fielddefinition.websitearea.footertext.name" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="fielddefinition.websitearea.footertext.description" xml:space="preserve">
+    <value>HTML-innehåll som visas i sidfotskolumnen.</value>
+  </data>
+  <data name="fielddefinition.websitearea.navigationtheme.name" xml:space="preserve">
+    <value>Navigering</value>
+  </data>
+  <data name="fielddefinition.websitearea.navigationtheme.description" xml:space="preserve">
+    <value>Välj navigering baserat på antingen kategori eller filter.</value>
+  </data>
+  <data name="fielddefinition.websitearea.infirstlevelcategories.name" xml:space="preserve">
+    <value>På kategoriernas översta nivå</value>
+  </data>
+  <data name="fielddefinition.websitearea.infirstlevelcategories.description" xml:space="preserve">
+    <value>Visar eller döljer vänstermenyn på sidorna med den översta kategorinivån.</value>
+  </data>
+  <data name="fielddefinition.websitearea.inbrandpages.name" xml:space="preserve">
+    <value>På märkessidor</value>
+  </data>
+  <data name="fielddefinition.websitearea.inbrandpages.description" xml:space="preserve">
+    <value>Visar eller döljer vänstermenyn på sidor med information om och produkter från ett visst märke.</value>
+  </data>
+  <data name="fielddefinition.websitearea.inproductlistpages.name" xml:space="preserve">
+    <value>På sidor med produktlistor</value>
+  </data>
+  <data name="fielddefinition.websitearea.inproductlistpages.description" xml:space="preserve">
+    <value>Visar eller döljer vänstermenyn på sidor med produktlistor.</value>
+  </data>
+  <data name="fielddefinition.websitearea.inarticlepages.name" xml:space="preserve">
+    <value>På artikelsidor</value>
+  </data>
+  <data name="fielddefinition.websitearea.inarticlepages.description" xml:space="preserve">
+    <value>Visar eller döljer vänstermenyn på sidor med vanligt innehåll.</value>
+  </data>
+  <data name="fielddefinition.websitearea.productsperpage.name" xml:space="preserve">
+    <value>Antal produkter per sida</value>
+  </data>
+  <data name="fielddefinition.websitearea.productsperpage.description" xml:space="preserve">
+    <value>Antal produkter som visas per sida.</value>
+  </data>
+  <data name="fielddefinition.websitearea.showbuybutton.name" xml:space="preserve">
+    <value>Visa knappen Köp</value>
+  </data>
+  <data name="fielddefinition.websitearea.showbuybutton.description" xml:space="preserve">
+    <value>Visa eller dölj knappen Köp bredvid varje produkt i produktlistor.</value>
+  </data>
+  <data name="fielddefinition.websitearea.showquantityfieldproductlist.name" xml:space="preserve">
+    <value>Visa ett fält för antal</value>
+  </data>
+  <data name="fielddefinition.websitearea.showquantityfieldproductlist.description" xml:space="preserve">
+    <value>Ange om ett fält för att ange kvantiteten av en produkt ska visas.</value>
+  </data>
+  <data name="fielddefinition.websitearea.showquantityfieldproductpage.name" xml:space="preserve">
+    <value>Visa ett fält för antal</value>
+  </data>
+  <data name="fielddefinition.websitearea.showquantityfieldproductpage.description" xml:space="preserve">
+    <value>Ange om ett fält för att ange kvantiteten av en produkt ska visas.</value>
+  </data>
+  <data name="fielddefinition.websitearea.filtersordering.name" xml:space="preserve">
+    <value>Ordning på filtren</value>
+  </data>
+  <data name="fielddefinition.websitearea.filtersordering.description" xml:space="preserve">
+    <value>Ange den ordning som filtren ska visas i.</value>
+  </data>
+  <data name="fielddefinition.websitearea.filtersindexedbysearchengines.name" xml:space="preserve">
+    <value>Indexera i sökmotorer</value>
+  </data>
+  <data name="fielddefinition.websitearea.filtersindexedbysearchengines.description" xml:space="preserve">
+    <value>Ange de produktfilter som ska indexeras av sökmotorerna.</value>
+  </data>
+  <data name="fielddefinition.websitearea.checkoutmode.name" xml:space="preserve">
+    <value>Tillåt privatpersoner (B2C) eller företag (B2B)</value>
+  </data>
+  <data name="fielddefinition.websitearea.checkoutmode.description" xml:space="preserve">
+    <value>Välj om privatpersoner eller företag, eller både och, ska kunna handla på webbplatsen.</value>
+  </data>
+  <data name="fielddefinition.websitearea.allowcustomerseditlogin.name" xml:space="preserve">
+    <value>Kunderna får ändra inloggningsuppgifter</value>
+  </data>
+  <data name="fielddefinition.websitearea.allowcustomerseditlogin.description" xml:space="preserve">
+    <value>Ange om kunderna ska kunna byta användarnamn och lösenord.</value>
+  </data>
+  <data name="fielddefinition.websitearea.senderemailaddress.name" xml:space="preserve">
+    <value>E-postadress för utskick</value>
+  </data>
+  <data name="fielddefinition.websitearea.senderemailaddress.description" xml:space="preserve">
+    <value>Den e-postadress som används för att skicka meddelanden till kunder.</value>
+  </data>
+  <data name="fielddefinition.websitearea.orderconfirmaionemailcontent.name" xml:space="preserve">
+    <value>Orderbekräftelse</value>
+  </data>
+  <data name="fielddefinition.websitearea.orderconfirmaionemailcontent.description" xml:space="preserve">
+    <value>En länk till en sida med det innehåll som ska skickas som orderbekräftelse via e-post.</value>
+  </data>
+  <data name="fielddefinition.websitearea.orderconfirmationpage.name" xml:space="preserve">
+    <value>Orderbekräftelsesida</value>
+  </data>
+  <data name="fielddefinition.websitearea.orderconfirmationpage.description" xml:space="preserve">
+    <value>Den sida som visas som orderbekräftelse.</value>
+  </data>
+  <data name="fielddefinition.websitearea.termsandconditionslinkpage.name" xml:space="preserve">
+    <value>Köpvillkor</value>
+  </data>
+  <data name="fielddefinition.websitearea.termsandconditionslinkpage.description" xml:space="preserve">
+    <value>Köpvillkor visas på sidan.</value>
+  </data>
+  <data name="fielddefinition.websitearea.useconfirmationwidget.name" xml:space="preserve">
+    <value>Använd betalleverantör's bekräftelse</value>
+  </data>
+  <data name="fielddefinition.websitearea.useconfirmationwidget.description" xml:space="preserve">
+    <value>Använd bekräftelse från betalleverantör om möjligt.</value>
+  </data>
+  <data name="fielddefinition.blockarea.blocktitle.name" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="fielddefinition.blockarea.blocktitle.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.blocktext.name" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="fielddefinition.blockarea.blocktext.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.link.name" xml:space="preserve">
+    <value>Länk</value>
+  </data>
+  <data name="fielddefinition.blockarea.link.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.productlinktext.name" xml:space="preserve">
+    <value>Länktext</value>
+  </data>
+  <data name="fielddefinition.blockarea.productlinktext.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.bannerlinktopage.name" xml:space="preserve">
+    <value>Länk till sida</value>
+  </data>
+  <data name="fielddefinition.blockarea.bannerlinktopage.description" xml:space="preserve">
+    <value>Prioritet mellan länkar är: kategori, sida, produkt.</value>
+  </data>
+  <data name="fielddefinition.blockarea.bannerlinktocategory.name">
+    <value>Länk till kategori</value>
+  </data>
+  <data name="fielddefinition.blockarea.bannerlinktocategory.description">
+    <value>Prioritet mellan länkar är: kategori, sida, produkt.</value>
+  </data>
+  <data name="fielddefinition.blockarea.bannerlinktoproduct.name">
+    <value>Länk till produkt</value>
+  </data>
+  <data name="fielddefinition.blockarea.bannerlinktoproduct.description">
+    <value>Prioritet mellan länkar är: kategori, sida, produkt.</value>
+  </data>
+  <data name="fielddefinition.blockarea.linktext.name" xml:space="preserve">
+    <value>Länktext</value>
+  </data>
+  <data name="fielddefinition.blockarea.linktext.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.actiontext.name">
+    <value>Call to action text</value>
+  </data>
+  <data name="fielddefinition.blockarea.actiontext.description">
+    <value>
+    </value>
+  </data>
+  <data name="fielddefinition.blockarea.blockvideo.name" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="fielddefinition.blockarea.blockvideo.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.brandslinklist.name" xml:space="preserve">
+    <value>Brands</value>
+  </data>
+  <data name="fielddefinition.blockarea.brandslinklist.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.banners.name" xml:space="preserve">
+    <value>Banners</value>
+  </data>
+  <data name="fielddefinition.blockarea.banners.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.categorylink.name" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="fielddefinition.blockarea.categorylink.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.productlistlink.name" xml:space="preserve">
+    <value>Produktlista</value>
+  </data>
+  <data name="fielddefinition.blockarea.productlistlink.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.productslinklist.name" xml:space="preserve">
+    <value>Produkter</value>
+  </data>
+  <data name="fielddefinition.blockarea.productslinklist.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.numberofproducts.name" xml:space="preserve">
+    <value>Antal produkter (2-4)</value>
+  </data>
+  <data name="fielddefinition.blockarea.numberofproducts.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.productsorting.name" xml:space="preserve">
+    <value>Sortering</value>
+  </data>
+  <data name="fielddefinition.blockarea.productsorting.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.linktocategory.name" xml:space="preserve">
+    <value>Länk till kategori</value>
+  </data>
+  <data name="fielddefinition.blockarea.linktocategory.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.linktopage.name" xml:space="preserve">
+    <value>Länk till sida</value>
+  </data>
+  <data name="fielddefinition.blockarea.linktopage.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.showproducttotheright.name" xml:space="preserve">
+    <value>Produkter till höger</value>
+  </data>
+  <data name="fielddefinition.blockarea.showproducttotheright.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.slider.name" xml:space="preserve">
+    <value>Slider</value>
+  </data>
+  <data name="fielddefinition.blockarea.slider.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.blockarea.blockimagepointer.name" xml:space="preserve">
+    <value>Bild</value>
+  </data>
+  <data name="fielddefinition.blockarea.blockimagepointer.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.title.name" xml:space="preserve">
+    <value>Rubrik</value>
+  </data>
+  <data name="fielddefinition.websitearea.title.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.introduction.name" xml:space="preserve">
+    <value>Ingress</value>
+  </data>
+  <data name="fielddefinition.websitearea.introduction.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.text.name" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="fielddefinition.websitearea.text.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.links.name" xml:space="preserve">
+    <value>Länkar</value>
+  </data>
+  <data name="fielddefinition.websitearea.links.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.image.name" xml:space="preserve">
+    <value>Bild</value>
+  </data>
+  <data name="fielddefinition.websitearea.image.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.files.name" xml:space="preserve">
+    <value>Filer</value>
+  </data>
+  <data name="fielddefinition.websitearea.files.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.pagesize.name" xml:space="preserve">
+    <value>Antal produkter som visas per sida</value>
+  </data>
+  <data name="fielddefinition.websitearea.pagesize.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.titlefilterselector.name" xml:space="preserve">
+    <value>Rubrik</value>
+  </data>
+  <data name="fielddefinition.websitearea.titlefilterselector.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.errormessage.name" xml:space="preserve">
+    <value>Felmeddelande</value>
+  </data>
+  <data name="fielddefinition.websitearea.errormessage.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.numberofnewsperpage.name" xml:space="preserve">
+    <value>Antal nyheter som visas per sida</value>
+  </data>
+  <data name="fielddefinition.websitearea.numberofnewsperpage.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.newsdate.name" xml:space="preserve">
+    <value>Nyhetsdatum</value>
+  </data>
+  <data name="fielddefinition.websitearea.newsdate.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.categorypointer.name" xml:space="preserve">
+    <value>Produktkategori pekare</value>
+  </data>
+  <data name="fielddefinition.websitearea.categorypointer.description" xml:space="preserve">
+    <value>Produktkategori pekare</value>
+  </data>
+  <data name="fielddefinition.websitearea.alternativeimagedescription.name" xml:space="preserve">
+    <value>Alternativ bildbeskrivning</value>
+  </data>
+  <data name="fielddefinition.websitearea.alternativeimagedescription.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.welcomeemailsubject.name" xml:space="preserve">
+    <value>Ämne</value>
+  </data>
+  <data name="fielddefinition.websitearea.welcomeemailsubject.description" xml:space="preserve">
+    <value>The subject header of the email sent for welcome email to new customers.</value>
+  </data>
+  <data name="fielddefinition.websitearea.welcomeemailtext.name" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="fielddefinition.websitearea.welcomeemailtext.description" xml:space="preserve">
+    <value>Meddelandetexten i det välkomstmeddelande som skickas till nya kunder.</value>
+  </data>
+  <data name="fielddefinition.websitearea.orderconfirmationemailsubject.name" xml:space="preserve">
+    <value>Ämne</value>
+  </data>
+  <data name="fielddefinition.websitearea.orderconfirmationemailsubject.description" xml:space="preserve">
+    <value>Ämnesraden i bekräftelsemeddelandet.</value>
+  </data>
+  <data name="fielddefinition.websitearea.numberofordersperpage.name" xml:space="preserve">
+    <value>Antal beställningar per sida</value>
+  </data>
+  <data name="fielddefinition.websitearea.numberofordersperpage.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.orderlink.name" xml:space="preserve">
+    <value>Beställ länk</value>
+  </data>
+  <data name="fielddefinition.websitearea.orderlink.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.productlistpointer.name" xml:space="preserve">
+    <value>Produktuppsättning pekare</value>
+  </data>
+  <data name="fielddefinition.websitearea.productlistpointer.description" xml:space="preserve">
+    <value>Produktens pekare</value>
+  </data>
+  <data name="fielddefinition.websitearea.mayusereditlogin.name" xml:space="preserve">
+    <value>Användaren kan ändra användarnamn och lösenord</value>
+  </data>
+  <data name="fielddefinition.websitearea.mayusereditlogin.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordlink.name" xml:space="preserve">
+    <value>Länk till glömt lösenord-sida</value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordlink.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordsubject.name">
+    <value>Rubrik</value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordsubject.description">
+    <value>
+    </value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordbody.name">
+    <value>Innehåll</value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordbody.description">
+    <value>Texten i e-postmeddelandet som skickas när användare begär ett nytt lösenord. Använd {LINK} och {EXPIRES} som platshållare för länk och utgångstid.</value>
+  </data>
+  <data name="fielddefinition.websitearea.redirectlink.name">
+    <value>Efter inloggning, gå till denna sida</value>
+  </data>
+  <data name="fielddefinition.websitearea.redirectlink.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenucategory.name" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenucategory.description" xml:space="preserve">
+    <value>Om du anger en kategori leder länken till kategorin. Om du inte anger någon kategori leder länken till den sida du anger.</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenupage.name" xml:space="preserve">
+    <value>Sida</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenupage.description" xml:space="preserve">
+    <value>Om du anger en kategori leder länken till kategorin. Om du inte anger någon kategori leder länken till den sida du anger.</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenushowcontent.name" xml:space="preserve">
+    <value>Visa innehållet på huvudmenyn</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenushowcontent.description" xml:space="preserve">
+    <value>Om den här kryssrutan är markerad öppnas huvudmenyn när du klickar på länken i menyn. Om kryssrutan inte är markerad öppnas den sida eller kategori som länken leder till.</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenushowsubcategories.name" xml:space="preserve">
+    <value>Visa underkategorier</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenushowsubcategories.description" xml:space="preserve">
+    <value>Om den här kryssrutan är markerad, och om länkens mål är en kategori, visas underkategorierna för den kategorin på huvudmenyn.</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenucolumnheader.name" xml:space="preserve">
+    <value>Kolumnhuvud</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenucolumnheader.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenucategories.name" xml:space="preserve">
+    <value>Kategorier</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenucategories.description" xml:space="preserve">
+    <value>Innehållet i kolumnen visas i prioriterad ordning om något innehåll har valts: kategorier, sidor, filter eller innehållet i editorn.</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenupages.name" xml:space="preserve">
+    <value>Sidor</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenupages.description" xml:space="preserve">
+    <value>Innehållet i kolumnen visas i prioriterad ordning om något innehåll har valts: kategorier, sidor, filter eller innehållet i editorn.</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenufilters.name" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenufilters.description" xml:space="preserve">
+    <value>Innehållet i kolumnen visas i prioriterad ordning om något innehåll har valts: kategorier, sidor, filter eller innehållet i editorn.</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenueditor.name" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenueditor.description" xml:space="preserve">
+    <value>Innehållet i kolumnen visas i prioriterad ordning om något innehåll har valts: kategorier, sidor, filter eller innehållet i editorn.</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenuadditionallink.name" xml:space="preserve">
+    <value>Extra länk</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenuadditionallink.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenulinktocategory.name" xml:space="preserve">
+    <value>Länk till kategori</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenulinktocategory.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenulinktopage.name" xml:space="preserve">
+    <value>Länk till sida</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenulinktopage.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.brand.name" xml:space="preserve">
+    <value>Märke</value>
+  </data>
+  <data name="fielddefinition.productarea.brand.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.color.name" xml:space="preserve">
+    <value>Färg</value>
+  </data>
+  <data name="fielddefinition.productarea.color.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.news.name" xml:space="preserve">
+    <value>Nyhet</value>
+  </data>
+  <data name="fielddefinition.productarea.news.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.productsheet.name" xml:space="preserve">
+    <value>Produktblad</value>
+  </data>
+  <data name="fielddefinition.productarea.productsheet.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.specification.name" xml:space="preserve">
+    <value>Produktegenskaper</value>
+  </data>
+  <data name="fielddefinition.productarea.specification.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.acceleratorfilterfields.name" xml:space="preserve">
+    <value>Visa som filter på sajten</value>
+  </data>
+  <data name="fielddefinition.productarea.acceleratorfilterfields.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.size.name" xml:space="preserve">
+    <value>Storlek</value>
+  </data>
+  <data name="fielddefinition.productarea.size.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.weight.name" xml:space="preserve">
+    <value>Vikt</value>
+  </data>
+  <data name="fielddefinition.productarea.weight.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.agegroup.name" xml:space="preserve">
+    <value>Åldersgrupp</value>
+  </data>
+  <data name="fielddefinition.productarea.agegroup.description" xml:space="preserve">
+    <value>Google Shopping fält</value>
+  </data>
+  <data name="fielddefinition.productarea.adult.name" xml:space="preserve">
+    <value>Vuxen</value>
+  </data>
+  <data name="fielddefinition.productarea.adult.description" xml:space="preserve">
+    <value>Google Shopping fält</value>
+  </data>
+  <data name="fielddefinition.productarea.condition.name" xml:space="preserve">
+    <value>Skick</value>
+  </data>
+  <data name="fielddefinition.productarea.condition.description" xml:space="preserve">
+    <value>Google Shopping fält</value>
+  </data>
+  <data name="fielddefinition.productarea.gender.name" xml:space="preserve">
+    <value>Kön</value>
+  </data>
+  <data name="fielddefinition.productarea.gender.description" xml:space="preserve">
+    <value>Google Shopping fält</value>
+  </data>
+  <data name="fielddefinition.productarea.gtin.name" xml:space="preserve">
+    <value>Global Handel Artikelnummer</value>
+  </data>
+  <data name="fielddefinition.productarea.gtin.description" xml:space="preserve">
+    <value>Google Shopping fält</value>
+  </data>
+  <data name="fielddefinition.productarea.isbundle.name" xml:space="preserve">
+    <value>Är flerpack</value>
+  </data>
+  <data name="fielddefinition.productarea.isbundle.description" xml:space="preserve">
+    <value>Google Shopping fält</value>
+  </data>
+  <data name="fielddefinition.productarea.mpn.name" xml:space="preserve">
+    <value>Tillverkarens Varunummer</value>
+  </data>
+  <data name="fielddefinition.productarea.mpn.description" xml:space="preserve">
+    <value>Google Shopping fält</value>
+  </data>
+  <data name="fielddefinition.productarea.googleproductcategory.name" xml:space="preserve">
+    <value>Produkt Kategori</value>
+  </data>
+  <data name="fielddefinition.productarea.googleproductcategory.description" xml:space="preserve">
+    <value>Google Shopping fält</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenucolumn.name" xml:space="preserve">
+    <value>Huvudmenykolumn</value>
+  </data>
+  <data name="fielddefinition.websitearea.megamenucolumn.description" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="fielddefinition.productarea.organizationspointer.name">
+    <value>Lista med organisationer</value>
+  </data>
+  <data name="accelerator.settings.index.template.null.label">
+    <value>Gruppera inte</value>
+  </data>
+    <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.emaillocked.name" xml:space="preserve">
+    <value>E-post vid låst konto</value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordlockedsubject.name">
+    <value>Rubrik</value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordlockedsubject.description">
+    <value>
+    </value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordlockedbody.name">
+    <value>Innehåll</value>
+  </data>
+  <data name="fielddefinition.websitearea.forgottenpasswordlockedbody.description">
+    <value>Texten i e-postmeddelandet som skickas när användare begär ett nytt lösenord och kontot är låst</value>
+  </data>
+  <data name="fielddefinition.productarea.type.name">
+    <value>Typ</value>
+  </data>
+  <data name="fielddefinition.productarea.type.description">
+    <value>
+    </value>
+  </data>
+</root>

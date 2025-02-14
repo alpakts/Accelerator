@@ -1,0 +1,8 @@
+﻿@model Litium.Accelerator.ViewModels.ProductFieldViewModel
+
+@if (!string.IsNullOrEmpty(Model.Value))
+{
+    @Model.Name
+    <br />
+    @Html.Raw(Model.Value)
+}

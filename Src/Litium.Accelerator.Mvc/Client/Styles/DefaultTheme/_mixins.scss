@@ -1,0 +1,135 @@
+/* Breakpoint */
+@mixin mobile {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+@mixin large-mobile {
+    @media (max-width: #{$large-mobile-width - 1px}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+@mixin mobile-tablet {
+    @media (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+@mixin tablet-desktop {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+@mixin transition($attr: all, $time: 0.3s, $type: ease) {
+    -moz-transition: #{$attr} #{$time} #{$type};
+    -o-transition: #{$attr} #{$time} #{$type};
+    -webkit-transition: #{$attr} #{$time} #{$type};
+    transition: #{$attr} #{$time} #{$type};
+}
+@mixin textoverflow($type: ellipsis) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin expand {
+    width: 100%;
+}
+@mixin button--expand {
+    padding: rem($fontsize-large);
+    font-size: rem($fontsize-large);
+    @include expand;
+}
+@mixin link--black-light {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-black-light;
+        text-decoration: none;
+    }
+}
+@mixin link--block {
+    display: inline-block;
+    & > &__link--block {
+        padding: rem(15px 7.5px);
+        @include link--black-light;
+        display: flex;
+        align-items: center;
+        &:hover {
+            background-color: $color-grey-lighter;
+        }
+    }
+    & > &__link--block > &__icon {
+        font-style: normal;
+        font-size: rem(24px);
+        width: rem(24px);
+        height: rem(24px);
+        line-height: rem(24px);
+        @include tablet-desktop {
+            margin-right: rem(5px);
+        }
+    }
+}
+@mixin placeholder {
+    color: $color-grey;
+    font-weight: 300;
+}
+/* icon */
+@mixin icon {
+    width: rem(24px);
+    height: rem(24px);
+}
+@mixin icon--medium {
+    width: rem(16px);
+    height: rem(16px);
+}
+@mixin icon--small {
+    width: rem(10px);
+    height: rem(10px);
+}
+@mixin icon--bag($color: 333) {
+    background: url('../../images/bag.svg') center no-repeat;
+}
+@mixin icon--profile($color: 333) {
+    background: url('../../images/user.svg') center no-repeat;
+}
+@mixin icon--magnifier($color: 333) {
+    background: url('../../images/magnifier.svg') center no-repeat;
+}
+@mixin icon--menu($color: 555) {
+    background: url('../../images/menu.svg') center no-repeat;
+}
+@mixin icon--cross($color: 333) {
+    background: url('../../images/cross.svg') center no-repeat;
+}
+@mixin icon--caret-down($color: 333) {
+    background: url('../../images/caret-down.svg') center no-repeat;
+}
+@mixin icon--checked($color: 333) {
+    background: url('../../images/checked.svg') center no-repeat;
+}
+@mixin icon--pencil($color: 333) {
+    background: url('../../images/pencil.svg') center no-repeat;
+}
+@mixin icon--bin($color: 333) {
+    background: url('../../images/bin.svg') center no-repeat;
+}
+@mixin icon--rotate-arrow($color: 333) {
+    background: url('../../images/rotate-arrow.svg') center no-repeat;
+}
+@mixin icon--close($color: 333) {
+    background: url('../../images/close.svg') center no-repeat;
+}
+@mixin icon--check-mark($color: 333) {
+    background: url('../../images/check-mark.svg') center no-repeat;
+}

@@ -1,0 +1,24 @@
+﻿@model Litium.Accelerator.ViewModels.Block.ProductBlockViewModel
+
+<div class="row">
+    <h2 class="columns small-12 product-list__header text--center">@Model.Title</h2>
+</div>
+@if (!string.IsNullOrWhiteSpace(Model.FooterLinkUrl) && !string.IsNullOrWhiteSpace(Model.FooterLinkText))
+{
+    <div class="row">
+        <div class="columns small-12 text--right">
+            <a class="product-list__link" href="@Model.FooterLinkUrl">@Model.FooterLinkText</a>
+        </div>
+    </div>
+}
+@if (Model.Products != null && Model.Products.Any())
+{
+    <ul class="row product-list">
+        @foreach (var product in Model.Products)
+        {
+            <li class="product-list__item columns small-6 medium-4 large-3">
+                @Html.DisplayFor(x => product)
+            </li>
+        }
+    </ul>
+}

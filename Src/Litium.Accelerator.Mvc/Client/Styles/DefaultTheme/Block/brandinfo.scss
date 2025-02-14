@@ -1,0 +1,12 @@
+.brand-info {
+    &__title {
+        margin-bottom: rem(25px);
+        font-size: rem(32px);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__image {
+        text-align: center;
+    }
+}

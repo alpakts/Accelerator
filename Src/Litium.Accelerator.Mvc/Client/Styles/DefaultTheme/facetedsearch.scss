@@ -1,0 +1,240 @@
+.faceted-search {
+    padding-left: 0;
+    margin-top: 0;
+    @include tablet-desktop {
+        &__group {
+            margin-top: rem(15px);
+            overflow: hidden;
+            @include transition(height);
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+    }
+    &__group-header {
+        list-style: none;
+        font-size: rem($fontsize-h4);
+        font-weight: 700;
+        color: $color-primary;
+        margin-bottom: rem(5px);
+    }
+    &__item {
+        list-style: none;
+        display: flex;
+    }
+    &__show-more {
+        font-size: rem($fontsize-normal);
+        font-weight: 300;
+        cursor: pointer;
+        display: block;
+        padding: rem(10px 0);
+    }
+}
+.faceted-filter {
+    white-space: nowrap;
+    &__input {
+        display: none;
+    }
+    &__label {
+        color: $color-black;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        font-size: rem($fontsize-normal);
+        line-height: 2em;
+        &:before {
+            content: '';
+            display: inline-block;
+            border: rem(1px) solid $color-grey-darkest;
+            width: rem(16px);
+            height: rem(16px);
+            margin: rem(0 5px 0 0);
+            @include transition(border);
+        }
+        &:hover:before {
+            border: 1px solid $color-black;
+        }
+    }
+    &__quantity {
+        color: $color-black-light;
+    }
+    &__input:checked ~ &__label {
+        font-weight: bold;
+        &:before {
+            @include icon--checked(111);
+            background-size: 75%;
+        }
+    }
+}
+
+.compact-filter {
+    &.category-theme {
+        margin-left: rem(-7px);
+        margin-right: rem(-7px);
+    }
+    .columns {
+        padding: rem(0 7px);
+    }
+    .accordion {
+        &__header-container {
+            display: flex;
+            border-bottom: none;
+            padding: 0;
+            background: $color-grey-lightest;
+        }
+        &__header {
+            width: 100%;
+            background-color: $color-primary;
+            color: $color-white;
+            border: none;
+            text-transform: capitalize;
+            margin: rem(15px 0);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &.active {
+                border: none;
+                font-weight: normal;
+            }
+
+            @media (max-width: $large-mobile-width) {
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+        }
+        &__panel {
+            border: none;
+            background: $color-grey-lightest;
+            padding: 1px 0;
+        }
+    }
+
+    .faceted-search {
+        &.faceted-search--compact {
+            margin: 0;
+        }
+        &__group {
+            margin-top: 0;
+            margin-bottom: rem(10px);
+            position: relative;
+            list-style: none;
+            @include tablet-desktop {
+                overflow: visible;
+            }
+        }
+        &__item {
+            margin-bottom: 10px;
+        }
+        &__group-header {
+            display: flex;
+            align-items: center;
+            font-size: $fontsize-large;
+            padding: rem(5px 10px);
+            background-color: $color-primary;
+            color: $color-white;
+            cursor: pointer;
+            font-weight: 300;
+            &:after {
+                display: none;
+                content: '';
+                @include icon--caret-down(FFF);
+                margin-left: auto;
+                width: rem(16px);
+                height: rem(16px);
+            }
+            &--show-compact {
+                &:after {
+                    transform: rotate(180deg);
+                }
+                & ~ .faceted-search__sublist {
+                    display: block;
+                }
+            }
+        }
+        &__sublist {
+            display: none;
+            margin-left: 0;
+            background-color: $color-white;
+            position: absolute;
+            top: calc(100% - 1px);
+            left: rem(7px);
+            right: rem(7px);
+            padding: rem(10px 10px 0 10px);
+            z-index: 1;
+            user-select: none;
+            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+            border: 1px solid $color-grey-darker;
+            &:before {
+                content: '';
+                background-color: $color-white;
+                width: rem(12px);
+                height: rem(12px);
+                display: inline-block;
+                z-index: 999;
+                position: absolute;
+                top: rem(-6px);
+                left: rem(14px);
+                transform: rotate(45deg);
+                border: 1px solid;
+                border-color: $color-grey-darker transparent transparent
+                    $color-grey-darker;
+            }
+        }
+    }
+    .filter {
+        padding: rem(15px 10px);
+        &__container {
+            margin-top: rem(40px);
+            background-color: $color-grey-lightest;
+            position: relative;
+            #facetedSearchCompact,
+            #sortCompact {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &__button {
+            padding: rem(16px);
+            flex: 1;
+            font-size: rem($fontsize-large);
+            color: $color-white;
+            background-color: $color-primary;
+            cursor: pointer;
+            @include transition(background-color);
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                background-color: $color-primary-dark;
+            }
+        }
+    }
+}
+
+.selected-filter {
+    padding: rem(0 10px 10px);
+    &__tag {
+        margin-left: rem(5px);
+        margin-bottom: rem(5px);
+        padding: rem(5px 10px);
+        display: inline-block;
+        background-color: $color-grey-lightest;
+        cursor: pointer;
+        border-radius: 3px;
+        @include transition(all);
+        &:after {
+            margin-left: rem(5px);
+            content: '';
+            display: inline-block;
+            width: rem(12px);
+            height: rem(12px);
+            @include icon--cross(666);
+        }
+        &:hover {
+            background-color: $color-grey;
+        }
+    }
+}

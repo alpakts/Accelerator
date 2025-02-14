@@ -1,0 +1,103 @@
+﻿@model Litium.Accelerator.ViewModels.MyPages.MyDetailsViewModel
+@using Litium.Web;
+
+@using (Html.BeginForm("SaveMyDetails", "MyPages"))
+{
+    <fieldset class="form-fieldset" @(Model.IsSystemAccount ? "disabled": "")>
+        @Html.AntiForgeryToken()
+        <p>
+            @Html.LabelFor(x => x.CustomerNumber, "mypage.person.customernumber".AsWebsiteText()) :
+            @Html.DisplayFor(x => x.CustomerNumber)
+            @Html.HiddenFor(x => x.CustomerNumber)
+        </p>
+
+        <div class="row">
+            <div class="columns small-12 medium-4">
+                @Html.LabelFor(x => x.FirstName, "mypage.person.firstname".AsWebsiteText(), new { @class = "form__label" })
+                @Html.TextBoxFor(x => x.FirstName, new { @class = "form__input", @autocomplete = "given-name" })
+                @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "form__validator--error" })
+            </div>
+            <div class="columns small-12 medium-4">
+                @Html.LabelFor(x => x.LastName, "mypage.person.lastname".AsWebsiteText(), new { @class = "form__label" })
+                @Html.TextBoxFor(x => x.LastName, new { @class = "form__input", @autocomplete = "family-name" })
+                @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "form__validator--error" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns small-12 medium-4">
+                <div>
+                    <strong>@Html.WebSiteString("mypage.deliveryaddress")</strong>
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.DeliveryAddress.CareOf, "mypage.address.careof".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.DeliveryAddress.CareOf, new { @class = "form__input", @autocomplete = "on" })
+                    @Html.ValidationMessageFor(x => x.DeliveryAddress.CareOf, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.DeliveryAddress.Address, "mypage.address.address".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.DeliveryAddress.Address, new { @class = "form__input", @autocomplete = "address-line1" })
+                    @Html.ValidationMessageFor(x => x.DeliveryAddress.Address, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.DeliveryAddress.ZipCode, "mypage.address.zip".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.DeliveryAddress.ZipCode, new { @class = "form__input", @autocomplete = "postal-code" })
+                    @Html.ValidationMessageFor(x => x.DeliveryAddress.ZipCode, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.DeliveryAddress.City, "mypage.address.city".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.DeliveryAddress.City, new { @class = "form__input", @autocomplete = "on" })
+                    @Html.ValidationMessageFor(x => x.DeliveryAddress.City, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.DeliveryAddress.Country, "mypage.address.country".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.DropDownListFor(x => x.DeliveryAddress.Country, new SelectList(Model.Countries, "Value", "Text", Model.DeliveryAddress?.Country), new { @class = "form__input", @autocomplete = "country-name", @onchange = " document.getElementById('" + @Html.IdFor(x => x.AlternativeDeliveryAddress.Country) + "').options.selectedIndex = this.selectedIndex;" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.DeliveryAddress.PhoneNumber, "mypage.address.phone".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.DeliveryAddress.PhoneNumber, new { @class = "form__input", @autocomplete = "tel" })
+                </div>
+            </div>
+
+            <div class="columns small-12 medium-4">
+                <div>
+                    <strong>@Html.WebSiteString("mypage.alternativeaddress")</strong>
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.AlternativeDeliveryAddress.CareOf, "mypage.address.careof".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.AlternativeDeliveryAddress.CareOf, new { @class = "form__input", @autocomplete = "on" })
+                    @Html.ValidationMessageFor(x => x.AlternativeDeliveryAddress.CareOf, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.AlternativeDeliveryAddress.Address, "mypage.address.address".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.AlternativeDeliveryAddress.Address, new { @class = "form__input", @autocomplete = "address-line1" })
+                    @Html.ValidationMessageFor(x => x.AlternativeDeliveryAddress.Address, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.AlternativeDeliveryAddress.ZipCode, "mypage.address.zip".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.AlternativeDeliveryAddress.ZipCode, new { @class = "form__input", @autocomplete = "postal-code" })
+                    @Html.ValidationMessageFor(x => x.AlternativeDeliveryAddress.ZipCode, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.AlternativeDeliveryAddress.City, "mypage.address.city".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.AlternativeDeliveryAddress.City, new { @class = "form__input", @autocomplete = "on" })
+                    @Html.ValidationMessageFor(x => x.AlternativeDeliveryAddress.City, string.Empty, new { @class = "form__validator--error" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.AlternativeDeliveryAddress.Country, "mypage.address.country".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.DropDownListFor(x => x.AlternativeDeliveryAddress.Country, new SelectList(Model.Countries, "Value", "Text", Model.AlternativeDeliveryAddress?.Country),
+                    new { @class = "form__input", @autocomplete = "country-name", @onchange = " document.getElementById('" + @Html.IdFor(x => x.DeliveryAddress.Country) + "').options.selectedIndex = this.selectedIndex;" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.AlternativeDeliveryAddress.PhoneNumber, "mypage.address.phone".AsWebsiteText(), new { @class = "form__label" })
+                    @Html.TextBoxFor(x => x.AlternativeDeliveryAddress.PhoneNumber, new { @class = "form__input", @autocomplete = "tel" })
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input type="submit" class="form__button" value="@Html.WebSiteString("general.update")" />
+            </div>
+        </div>
+    </fieldset>
+}

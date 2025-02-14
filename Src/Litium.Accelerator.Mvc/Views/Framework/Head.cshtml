@@ -1,0 +1,52 @@
+﻿@model Litium.Accelerator.ViewModels.Framework.HeadViewModel
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@Model.Title</title>
+<link rel="stylesheet" type="text/css" href="/ui/css/site.min.css" asp-append-version="true" />
+@foreach (var fav in Model.Favicons)
+{
+    <link rel="@fav.Rel" href="@fav.Href" type="@fav.Type" />
+}
+@if (!string.IsNullOrWhiteSpace(Model.MetaDescription))
+{
+    <meta name="description" content="@Model.MetaDescription" />
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Canonical))
+{
+    <link rel="canonical" href="@Model.Canonical" />
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.MetaRobots))
+{
+    <meta name="robots" content="@Model.MetaRobots" />
+}
+    <meta name="generator" content="Litium" />
+@if (Model.OpenGraph != null)
+{
+    <meta property="og:title" content="@Model.OpenGraph.Title" />
+    <meta property="og:type" content="website" />
+    @if (Model.OpenGraph.ImageVisible && Model.OpenGraph.ImageUrl != null)
+    {
+    <meta property="og:image" content="@Model.OpenGraph.ImageUrl" />
+        @if (Model.OpenGraph.ImageUrl.StartsWith("https://"))
+        {
+    <meta property="og:image:secure_url" content="@Model.OpenGraph.ImageUrl" />
+        }
+    }
+    @if (Model.OpenGraph.LogotypeVisible && Model.OpenGraph.LogotypeImageUrl != null)
+    {
+    <meta property="og:image" content="@Model.OpenGraph.LogotypeImageUrl" />
+        @if (Model.OpenGraph.LogotypeImageUrl.StartsWith("https://"))
+        {
+    <meta property="og:image:secure_url" content="@Model.OpenGraph.LogotypeImageUrl" />
+        }
+    }
+    <meta property="og:url" content="@Model.OpenGraph.Url" />
+    <meta property="og:description" content="@Html.Encode(Model.OpenGraph.MetaDescription)" />
+    <meta property="og:locale" content="@Model.OpenGraph.Locale" />
+    <meta property="og:site_name" content="@Model.OpenGraph.WebSiteTitle" />
+}
+
+@Html.Raw(Model.TrackingScripts)

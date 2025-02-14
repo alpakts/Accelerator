@@ -1,0 +1,66 @@
+﻿@using Litium.Web;
+@using Litium.Accelerator.Constants;
+@model Litium.Accelerator.ViewModels.Brand.BrandViewModel
+@{
+    var responsiveDefinition = new ResponsiveImageDefinition()
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (400),
+            new (800),
+            new (1000),
+            new (1314),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("100vw"),
+        },
+    };
+}
+<div id="search-result" class="row">
+    <div class="small-12 columns">
+        @if (Model.Blocks.Any() && !Model.ContainsFilter)
+        {
+            <h1 class="structural">@Html.DisplayFor(x => x.Title)</h1>
+            @await Component.BlockContainerAsync(Model.Blocks, BlockContainerNameConstant.Header)
+        }
+
+        @if (Model.ShowRegularHeader)
+        {
+            <div class="product__group-header">
+                <h1>@Model.Title</h1>
+                @Html.ImageFor(x => x.Image, htmlAttributes: new { @class = "product__group-image" }, renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+                @Model.Text
+            </div>
+        }
+        @if ((Model.Pagination != null && Model.Pagination.TotalCount > 1) || Model.ContainsFilter)
+        {
+            <div id="facetedSearchCompact" class="compact-filter"></div>
+        }
+        @if (Model.ShowFilterHeader)
+        {
+            <h1>@Html.DisplayFor(x => x.Title) <span>(@Model.Pagination.TotalCount)</span></h1>
+        }
+        <div>
+            @if (Model.Pagination != null && Model.Pagination.TotalCount > 0)
+            {
+                if (Model.Pagination.TotalCount > 1 || Model.ContainsFilter)
+                {
+                    <vc:category-filtering-navigation-controller total-hits="@Model.Pagination.TotalCount" />
+                }
+                if (Model.Products != null && Model.Products.Any())
+                {
+                    <div class="product-list">
+                        <ul class="row product-list">
+                            @foreach (var product in Model.Products)
+                            {
+                                <li class="product-list__item columns small-6 medium-4 large-3">@Html.DisplayFor(x => product, new { maxWidth = 371 })</li>
+                            }
+                        </ul>
+                    </div>
+                }
+            }
+            @Html.DisplayFor(x => x.Pagination)
+        </div>
+    </div>
+</div>

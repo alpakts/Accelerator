@@ -1,0 +1,131 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "field-types": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "Litium.Accelerator.FieldTypes/src",
+      "sourceRoot": "Litium.Accelerator.FieldTypes/src",
+      "prefix": "litium-extensions",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "extraWebpackConfig": "Litium.Accelerator.FieldTypes/webpack.js",
+            "aot": true,
+            "outputPath": "Litium.Accelerator.FieldTypes/dist",
+            "index": "Litium.Accelerator.FieldTypes/src/Index.cshtml",
+            "main": "Litium.Accelerator.FieldTypes/src/Accelerator/main.ts",
+            "tsConfig": "Litium.Accelerator.FieldTypes/tsconfig.json",
+            "deployUrl": "/Litium/dist/web/Accelerator/"
+          },
+          "configurations": {
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "commonChunk": false,
+              "vendorChunk": false
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "Litium.Accelerator.FieldTypes/src/Accelerator/environments/environment.ts",
+                  "with": "Litium.Accelerator.FieldTypes/src/Accelerator/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "namedChunks": true,
+              "extractLicenses": false,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "commonChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "Litium.Accelerator.FieldTypes/src/**/*.ts",
+              "Litium.Accelerator.FieldTypes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "accelerator-extensions": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "Litium.Accelerator.Administration.Extensions/src",
+      "sourceRoot": "Litium.Accelerator.Administration.Extensions/src",
+      "prefix": "accelerator-extensions",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "extraWebpackConfig": "Litium.Accelerator.Administration.Extensions/webpack.js",
+            "aot": true,
+            "outputPath": "Litium.Accelerator.Administration.Extensions/dist",
+            "index": "Litium.Accelerator.FieldTypes/src/Index.cshtml",
+            "main": "Litium.Accelerator.Administration.Extensions/src/AcceleratorExtensions/main.ts",
+            "tsConfig": "Litium.Accelerator.Administration.Extensions/tsconfig.json",
+            "deployUrl": "/Litium/dist/web/AcceleratorExtensions/"
+          },
+          "configurations": {
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "commonChunk": false,
+              "vendorChunk": false
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "Litium.Accelerator.Administration.Extensions/src/AcceleratorExtensions/environments/environment.ts",
+                  "with": "Litium.Accelerator.Administration.Extensions/src/AcceleratorExtensions/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "commonChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "Litium.Accelerator.Administration.Extensions/src/**/*.ts",
+              "Litium.Accelerator.Administration.Extensions/src/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "field-types"
+}

@@ -1,0 +1,33 @@
+<page-layout [loading$]="[loading$]"
+    [header]="'accelerator.settings.searchindexing.headline' | translate"
+    [subHeader]="'accelerator.settings.searchindexing.template.general.templates.headline' | translate">
+    <form content (ngSubmit)="submit()" [formGroup]="form">
+        <button-container [rightAlign]="true">
+            <danger-button (click)="reset()" [text]="'General.Cancel'" 
+            [disabled]="!form.dirty"></danger-button>
+            <primary-button [disabled]="!form.dirty"></primary-button>
+        </button-container>
+
+        <div formArrayName="groupedTemplates">
+            <expandable-group
+                *ngFor="let templateGroup of data?.groupedTemplates; let templateGroupIndex = index; trackBy: trackByTitle"
+                [formGroupName]="templateGroupIndex"
+                [title]="templateGroup.title"
+            >
+                <ng-container formArrayName="templates">
+                    <form-field [formGroupName]="templateIndex" [label]="template.title | translate"
+                        *ngFor="let template of templateGroup.templates; let templateIndex = index; trackBy: trackById">
+                        <field-selector [manualFetch]="true"
+                            formControlName="selectedFields" 
+                            [idSelector]="idSelector"
+                            [textSelector]="textSelector"
+                            [fields]="template.fields || []"
+                            [showRemoveAll]="true"
+                            [sortable]="false"
+                        ></field-selector>
+                    </form-field>
+                </ng-container>
+            </expandable-group>
+        </div>
+    </form>
+</page-layout>

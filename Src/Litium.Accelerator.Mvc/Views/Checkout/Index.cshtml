@@ -1,0 +1,12 @@
+﻿@model Litium.Accelerator.ViewModels.Checkout.CheckoutViewModel
+
+<div id="checkout"></div>
+
+    <script type="text/javascript">
+        window.__litium = window.__litium || {};
+        window.__litium.preloadState = window.__litium.preloadState || {};
+        window.__litium.preloadState.checkout = {
+            payload: @Html.Json(Model),
+            errors:   @Html.Json(Model.ErrorMessages)
+        };
+    </script>

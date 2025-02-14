@@ -1,0 +1,44 @@
+.simple-table {
+    background-color: $color-white;
+    word-break: break-word;
+    .row:nth-of-type(odd):not(:first-of-type) {
+        background-color: $color-white-dark;
+    }
+
+    &__cell--no-break-word {
+        word-break: keep-all;
+    }
+    .columns {
+        padding: rem(10px);
+    }
+    .simple-table__header {
+        border-bottom: 1px solid $color-grey;
+        font-weight: 700;
+        text-transform: capitalize;
+        .columns {
+            padding: rem(20px 10px);
+        }
+    }
+    .table__icon {
+        display: inline-block;
+        width: rem(20px);
+        height: rem(20px);
+        margin: rem(0 5px);
+        &--edit {
+            @include icon--pencil;
+        }
+        &--delete {
+            @include icon--bin;
+        }
+        &--accept {
+            @include icon--checked;
+        }
+        &--cancel {
+            @include icon--cross;
+            background-size: 75%;
+        }
+        &--reorder {
+            @include icon--rotate-arrow;
+        }
+    }
+}

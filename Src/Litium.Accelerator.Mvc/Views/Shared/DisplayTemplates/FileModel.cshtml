@@ -1,0 +1,12 @@
+﻿@model Litium.Web.Models.FileModel
+@{
+    var cssClass = ViewData["CssClass"] as string;
+    <a href="@Model.Url" class="@cssClass">
+        @Model.Filename
+        <span class="file-size">
+            @{ var fileSize = Model.Size / (decimal)1024; }
+            (@fileSize.ToString("N0") kB)
+        </span>
+    </a>
+}
+

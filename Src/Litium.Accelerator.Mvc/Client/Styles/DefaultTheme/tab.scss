@@ -1,0 +1,51 @@
+.tab {
+    &__header-container {
+        display: flex;
+        justify-content: center;
+    }
+    &__header {
+        cursor: pointer;
+        padding: rem(15px 25px);
+        display: inline-block;
+        color: $color-black-lighter;
+        font-weight: 400;
+        text-transform: uppercase;
+        @include textoverflow();
+    }
+    &__radio {
+        display: none;
+    }
+    &__content {
+        display: none;
+        padding: rem(15px 15px);
+        background-color: $color-grey-lightest;
+        &--small-padding {
+            padding: rem(14px);
+        }
+    }
+    @for $i from 1 through 10 {
+        .tab__radio:nth-of-type(#{$i}):checked {
+            & ~ .tab__header-container .tab__header:nth-of-type(#{$i}), & ~ .tab-mobile-container .tab__header-container .tab__header:nth-of-type(#{$i}) {
+                cursor: default;
+                border-bottom: none;
+                color: $color-black;
+                background-color: $color-grey-lightest;
+            }
+            & ~ .tab__content-container .tab__content:nth-of-type(#{$i}) {
+                display: block;
+            }
+        }
+    }
+    .tab-mobile-container {
+        @include mobile {
+            display: flex;
+            overflow: auto;
+            .tab__header-container {
+                .tab__header {
+                    padding-left: rem(15px);
+                    padding-right: rem(15px);
+                }
+            }
+        }
+    }
+}

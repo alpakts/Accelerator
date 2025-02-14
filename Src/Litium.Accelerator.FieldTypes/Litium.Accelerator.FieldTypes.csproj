@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net9.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dist\*.js" />
+    <EmbeddedResource Include="dist\*.js.map" Condition=" '$(Configuration)' == 'Debug' " />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Litium.Web.Administration.Abstractions" Version="8.20.1" />
+  </ItemGroup>
+</Project>

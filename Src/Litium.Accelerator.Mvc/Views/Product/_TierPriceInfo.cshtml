@@ -1,0 +1,37 @@
+﻿@model Litium.Web.Models.Products.ProductPriceModel
+
+@if (Model.TierPrices.Any())
+{
+    <div class="row-inner product-detail__tier-prices">
+        <div class="small-12 columns">
+            @foreach (var price in Model.TierPrices)
+            {
+                <div class="row-inner">
+                    <div class="small-6 columns">
+                        @if (Model.TierPrices.Count == 1)
+                        {
+                            @($"{price.MinimumQuantityFormatted} {price.UnitOfMeasurementTitle}")
+                        }
+                        else if (price.NextMinimumQuantity == null)
+                        {
+                            @($"{price.MinimumQuantityFormatted}+")
+                        }
+                        else if (price.MinimumQuantity == price.NextMinimumQuantity)
+                        {
+                            @($"{price.MinimumQuantityFormatted} {price.UnitOfMeasurementTitle}")
+                        }
+                        else
+                        {
+                            @($"{price.MinimumQuantityFormatted} - {price.NextMinimumQuantityFormatted} {price.UnitOfMeasurementTitle}")
+                        }
+                    </div>
+                    <div class="small-6 columns">
+                        @price.FormatPrice(true)/@price.UnitOfMeasurementTitle
+                    </div>
+                </div>
+                <meta itemprop="price" content="@price.Price" />
+            }
+            <meta itemprop="priceCurrency" content="@Model.Currency.Id" />
+        </div>
+    </div>
+}

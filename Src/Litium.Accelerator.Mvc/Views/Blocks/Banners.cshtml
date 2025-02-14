@@ -1,0 +1,85 @@
+﻿@using Litium.ComponentModel
+@model Litium.Accelerator.ViewModels.Block.BannersBlockViewModel
+@{
+    var hasBanner = Model.Banners != null && Model.Banners.Any();
+    var bannerPerRow = hasBanner ? Math.Min(Model.Banners.Count, 4) : 1;
+    var largeColumn = 12 / bannerPerRow;
+
+    Func<int, ResponsiveImageDefinition> BannerSelector = i =>
+    {
+        var sizeDef = i switch
+        {
+            4 => new SizeDefinition[]
+                {
+                    new ("(min-width: 1440px)", "306px"),
+                    new ("(min-width: 1040px)", "calc(40vw + 74px)"),
+                    new ("calc(98.61vw - 16px)"),
+                },
+            3 => new SizeDefinition[]
+                {
+                    new ("(min-width: 1440px)", "418px"),
+                    new ("(min-width: 1040px)", "calc(26.58vw + 41px)"),
+                    new ("calc(98.61vw - 16px)"),
+                },
+            2 => new SizeDefinition[]
+                {
+                    new ("(min-width: 1440px)", "642px"),
+                    new ("(min-width: 1040px)", "calc(40vw + 74px)"),
+                    new ("calc(98.61vw - 16px)"),
+                },
+            _ => new SizeDefinition[]
+                {
+                    new ("(min-width: 1420px)", "1314px"),
+                    new ("94vw")
+                }
+        };
+
+        return new()
+        {
+            SrcSets = new SrcSetDefinition[]
+            {
+                new (280),
+                new (720),
+                new (1040),
+                new (1284),
+                new (1670),
+                new (1830),
+                new (1980),
+            },
+            Sizes = sizeDef,
+        };
+    };
+}
+
+@if (hasBanner)
+{
+    <div class="row">
+        @foreach (var banner in Model.Banners)
+        {
+            var text = banner.LinkText;
+            if (string.IsNullOrEmpty(text))
+            {
+                text = banner.ActionText;
+            }
+            else if (!string.IsNullOrEmpty(banner.ActionText))
+            {
+                text += " - " + banner.ActionText;
+            }
+
+            <div class="columns small-12 large-@largeColumn @(largeColumn == 12 ? "single-banner" : "multiple-banner")">
+                <div class="teaser">
+                    <a href="@(banner.LinkUrl.NullIfEmpty()??"#")" alt="@text" title="@text" class="banner-block__image-link" rel="@(string.IsNullOrEmpty(banner.LinkUrl) ? "nofollow" : null)">
+                        @Html.ImageFor(x => banner.Image, maxSize: largeColumn == 12 ? new Size(1314, -1) : new Size(786, -1), htmlAttributes: new { @class = "banner-block__image" }, renderSizeAttributes: true, responsiveDefinition: BannerSelector(bannerPerRow))
+                    </a>
+                    <div class="banner-text">
+                        <h1 class="banner-text__title">@banner.LinkText</h1>
+                        @if (!string.IsNullOrWhiteSpace(banner.ActionText))
+                        {
+                            <span class="banner-text__button">@banner.ActionText</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

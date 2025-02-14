@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="accelerator.filterfield.inherited" xml:space="preserve">
+    <value>Inherit from parent</value>
+  </data>
+  <data name="accelerator.filterfield.options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="accelerator.filterfield.FilterNews" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="accelerator.filterfield.FilterPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="accelerator.filterfield.PreDefined" xml:space="preserve">
+    <value>Predefined</value>
+  </data>
+  <data name="accelerator.settings.index.template.field" xml:space="preserve">
+    <value>Variant field</value>
+  </data>
+  <data name="accelerator.settings.index.template.fieldtemplate" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="accelerator.validation.number" xml:space="preserve">
+    <value>The number should be greater than or equal to zero</value>
+  </data>
+  <data name="accelerator.validation.discountcode.notvalid" xml:space="preserve">
+    <value>We could not find a valid discount for this code.</value>
+  </data>
+  <data name="accelerator.validation.cart.doesnotcontainsproduct" xml:space="preserve">
+    <value>Your cart is empty. This is probably due to inactivity.</value>
+  </data>
+  <data name="accelerator.validation.deliverymethod.nolongersupported" xml:space="preserve">
+    <value>Selected delivery method is no longer supported, a different method is selected automatically, please review your order.</value>
+  </data>
+  <data name="accelerator.validation.ordertotal.haschanged" xml:space="preserve">
+    <value>Order total has changed since last time the cart was re-calculated. Please check your shopping cart before placing the order.</value>
+  </data>
+  <data name="accelerator.validation.paymentmethod.nolongersupported" xml:space="preserve">
+    <value>Selected payment method is no longer supported.</value>
+  </data>
+  <data name="accelerator.validation.product.nolongeravailableforsale" xml:space="preserve">
+    <value>Some products are no longer available for sale, since last time the cart was re-calculated. Please check your shopping cart before placing the order.</value>
+  </data>
+  <data name="accelerator.validation.productprices.haschanged" xml:space="preserve">
+    <value>Product prices have changed since last time the cart was re-calculated. Please check your shopping cart before placing the order.</value>
+  </data>
+  <data name="accelerator.validation.product.outofstock" xml:space="preserve">
+    <value>{0} is out of stock right now. Product is removed from your shopping cart.</value>
+  </data>
+  <data name="accelerator.validation.product.notenoughinstock" xml:space="preserve">
+    <value>There are not enough {0} in stock. Shopping cart has been updated with the stock amount that we can deliver.</value>
+  </data>
+  <data name="accelerator.deployment.import.header" xml:space="preserve">
+    <value>Install Accelerator package</value>
+  </data>
+  <data name="accelerator.deployment.name.label" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="accelerator.deployment.domainname.label" xml:space="preserve">
+    <value>Domain name:</value>
+  </data>
+  <data name="accelerator.deployment.packagename.label" xml:space="preserve">
+    <value>Package name:</value>
+  </data>
+  <data name="accelerator.deployment.import.button" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="accelerator.deployment.export.header" xml:space="preserve">
+    <value>Export Accelerator files</value>
+  </data>
+  <data name="accelerator.deployment.channel.label" xml:space="preserve">
+    <value>Export channel:</value>
+  </data>
+  <data name="accelerator.deployment.folder.label" xml:space="preserve">
+    <value>Export folder:</value>
+  </data>
+  <data name="accelerator.deployment.export.button" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="accelerator.deployment.validation.required" xml:space="preserve">
+    <value>Mandatory field</value>
+  </data>
+  <data name="accelerator.deployment.validation.space" xml:space="preserve">
+    <value>Space (' ') is not valid</value>
+  </data>
+  <data name="accelerator.deployment.import.success" xml:space="preserve">
+    <value>The package has been installed</value>
+  </data>
+  <data name="accelerator.deployment.export.success" xml:space="preserve">
+    <value>The files have been exorted</value>
+  </data>
+  <data name="accelerator.deployment.validation.domainnameexists" xml:space="preserve">
+    <value>The domain name already exists, please use another.</value>
+  </data>
+  <data name="accelerator.deployment.validation.urlpath" xml:space="preserve">
+    <value>The domain name cannot include multiple '/'.</value>
+  </data>
+  <data name="accelerator.deployment.validation.channelexists" xml:space="preserve">
+    <value>The channel name already exists, please use another.</value>
+  </data>
+  <data name="accelerator.deployment.error" xml:space="preserve">
+    <value>An error ocurred during the installation. Check the event log for further trouble shooting.</value>
+  </data>
+  <data name="accelerator.deployment.field.definitions.notmatching" xml:space="preserve">
+    <value>Accelrator can't be deployed. Field definitions in system is not matching what accelerator need. Check the event log for further trouble shooting.</value>
+  </data>
+  <data name="accelerator.general.action.removeall" xml:space="preserve">
+    <value>Remove all</value>
+  </data>
+  <data name="fieldtemplate.customerarea.defaultgrouptemplate.name">
+    <value>Default Group Template</value>
+  </data>
+  <data name="Brand" xml:space="preserve">
+    <value>Brands</value>
+  </data>
+  <data name="ListAllBrand" xml:space="preserve">
+    <value>Lists brands. The selection is defined in the page you select</value>
+  </data>
+  <data name="ListAllProductByField" xml:space="preserve">
+    <value>Lists brands. The selection is defined in the page you select</value>
+  </data>
+  <data name="ListAllCategories" xml:space="preserve">
+    <value>Lists all subcategories of the selected category</value>
+  </data>
+  <data name="MegaMenuPages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="ProductByField" xml:space="preserve">
+    <value>Brands</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="SelectAccelarator" xml:space="preserve">
+    <value>Select accelerator for product display</value>
+  </data>
+  <data name="SelectAccelaratorText" xml:space="preserve">
+    <value>This setting instructs Litium where to find all files needed to show product information. Change this setting only if you are completely sure that you want to change from which folder these files are to be read.</value>
+  </data>
+  <data name="SelectProductByFieldListPage" xml:space="preserve">
+    <value>Select products by field list page</value>
+  </data>
+  <data name="SocialSecurityNumber" xml:space="preserve">
+    <value>Social security number</value>
+  </data>
+  <data name="roles.orderapprover.name" xml:space="preserve">
+    <value>Order approver</value>
+  </data>
+  <data name="roles.orderplacer.name" xml:space="preserve">
+    <value>Order placer</value>
+  </data>
+</root>

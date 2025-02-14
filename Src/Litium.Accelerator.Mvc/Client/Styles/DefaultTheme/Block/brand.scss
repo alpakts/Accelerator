@@ -1,0 +1,38 @@
+.brand-block {
+    background: $color-grey-lightest;
+    color: $color-black-light;
+    &__header {
+        margin: auto;
+        max-width: rem(400px);
+        text-align: center;
+    }
+    &__title {
+        font-size: rem(36px);
+        border-bottom: 1px solid $color-grey-light;
+        padding: rem(10px 0 5px);
+        margin-bottom: rem(10px);
+        color: $color-black-light;
+    }
+    &__link {
+        font-style: italic;
+        text-decoration: underline;
+        color: $color-black-light;
+        text-align: center;
+        display: block;
+        &:focus,&:active,&:hover {
+            color: $color-black-light;
+        }
+    }
+    &__image-link {
+        padding: rem(10px 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    &__image {
+        width: 100%;
+        max-width: 100%;
+    }
+}

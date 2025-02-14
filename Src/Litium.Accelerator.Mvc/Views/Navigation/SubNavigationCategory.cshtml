@@ -1,0 +1,19 @@
+﻿@using Litium.Accelerator.ViewModels.Framework
+@model SubNavigationLinkModel
+
+@if (Model != null)
+{
+    <nav class="subnav" role="navigation">
+        <h3 class="subnav__header">
+            @if (Model.Url != null)
+            {
+                <a href="@Model.Url">@Model.Name</a>
+            }
+            else
+            {
+                @Model.Name
+            }
+        </h3>
+        <partial name="_navigation-link.cshtml" model="Model" />
+    </nav>
+}

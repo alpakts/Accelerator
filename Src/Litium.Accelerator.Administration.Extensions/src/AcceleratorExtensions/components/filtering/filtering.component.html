@@ -1,0 +1,21 @@
+<page-layout [loading$]="[loading$]"
+    [header]="'accelerator.filtering.headline' | translate">
+    <form content (ngSubmit)="submit()" [formGroup]="form">
+        <button-container [rightAlign]="true">
+            <danger-button [text]="'General.Cancel'" 
+                (click)="reset()" [disabled]="!form.dirty">
+            </danger-button>
+            <primary-button [disabled]="!form.dirty"></primary-button>
+        </button-container>
+
+        <expandable-group [title]="'accelerator.filterfield.headline' | translate">
+            <form-field [label]="'accelerator.filterfield.field' | translate">
+                <field-selector [manualFetch]="true"
+                    formControlName="items" 
+                    [idSelector]="idSelector"
+                    [fields]="filterOptions || []"
+                ></field-selector>
+            </form-field>
+        </expandable-group>
+    </form>
+</page-layout>

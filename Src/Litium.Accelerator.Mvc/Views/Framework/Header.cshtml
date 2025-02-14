@@ -1,0 +1,64 @@
+﻿@model Litium.Accelerator.ViewModels.Framework.HeaderViewModel 
+@using Litium.Web.Mvc
+@{
+    var logoHeight = Model.IsBigHeader ? 60 : 50;
+    var headerClass = Model.IsBigHeader ? "extended-header" : "compact-header";
+    var headerRow = Model.HeaderName == "OneRow" ? "header__row--one-row" : "";
+
+    var responsiveDefinition = new ResponsiveImageDefinition
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (174),
+            new (180),
+            new (200),
+            new (220),
+            new (260),
+            new (300),
+            new (340),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("(min-width: 1040px)", "calc(1.02vw + 156px)"),
+            new ("(min-width: 420px)", "203px"),
+            new ("calc(89vw - 153px)"),
+        },
+    };
+}
+
+<header id="header" role="banner" class="header">
+    <div class="header__row @headerClass @headerRow">
+        <a href="@Model.StartPageUrl" class="header__logo">
+            @Html.ImageFor(x => x.Logo, maxSize: new System.Drawing.Size(-1, logoHeight), renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+        </a>
+        <div class="header__components">
+            @if (Model.TopLinkList.Any())
+            {
+                foreach (var link in Model.TopLinkList)
+                {
+                    if (link != null)
+                    {
+                        <div class="top-link">
+                            <a class="top-link__link--block" href="@link.Href">
+                                <span class="top-link__title">@link.Text</span>
+                            </a>
+                        </div>
+                    }
+                }
+            }
+            <div id="quickSearch"></div>
+            @{
+                var currentPage = User.Identity.IsAuthenticated ? Model.MyPage : Model.LoginPage;
+            }
+            <div class="profile">
+                <a href="@currentPage.Href" class="profile__link--block" rel="nofollow" alt="@currentPage.Text" title="@currentPage.Text">
+                    <i class="profile__icon"></i>
+                    <span class="profile__title hide">@currentPage.Text</span>
+                </a>
+            </div>
+            <div id="miniCart" class="cart cart--mini"></div>
+        </div>
+        <div class="header__break"></div>
+        <nav role="navigation" class="navbar" id="navbar"></nav>
+    </div>
+</header>

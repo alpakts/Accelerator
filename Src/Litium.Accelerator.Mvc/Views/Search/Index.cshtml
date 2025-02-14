@@ -1,0 +1,62 @@
+﻿@using Litium.Accelerator.ViewModels.Search;
+@using Litium.Web;
+@using System.Linq;
+
+@model SearchResultViewModel
+@{
+    var hasResults = Model.Products.Count() > 0 || Model.OtherSearchResult?.Total > 0;
+}
+
+<div id="search-result" class="row">
+    <div class="columns small-12">
+        <div class="hit-count">
+            <h2 class="hit-count__header">
+                @("searchresult.searchresultfor".AsWebsiteText()) "<span class="query">@Model.SearchTerm</span>":
+                @if (hasResults)
+                {
+                    <span class="hit-count__content">
+                        @($"{Model.Pagination.TotalCount} {"searchresult.products".AsWebsiteText()}")
+                    </span>
+                }
+            </h2>
+            @if (!hasResults)
+            {
+                <span class="hit-count__content">
+                    @Html.Raw("searchresult.nohit".AsWebsiteText())
+                </span>
+            }
+        </div>
+        @if (Model.OtherSearchResult != null && Model.OtherSearchResult.Items.Value.Any())
+        {
+            <div class="other-hits">
+                <ul class="other-hits__list-page">
+                    @foreach (var related in Model.OtherSearchResult.Items.Value)
+                    {
+                        <li class="other-hits__page">
+                            <a href="@related.Url">@related.Name</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+
+        @if (Model.ContainsFilter || (Model.Products.Any() && Model.Products.Count() > 1))
+        {
+            <div id="facetedSearchCompact" class="compact-filter"></div>
+            <vc:category-filtering-navigation-controller total-hits="@Model.Pagination.TotalCount" />
+        }
+
+        @if (Model.Products.Any())
+        {
+            <div class="product-list">
+                <ul class="row product-list">
+                    @foreach (var product in Model.Products)
+                    {
+                        <li class="product-list__item columns small-6 medium-4 large-3">@Html.DisplayFor(x => product, new { maxWidth = 371 })</li>
+                    }
+                </ul>
+            </div>
+            @Html.DisplayFor(x => x.Pagination)
+        }
+    </div>
+</div>

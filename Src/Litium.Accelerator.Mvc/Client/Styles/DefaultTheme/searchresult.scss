@@ -1,0 +1,26 @@
+.hit-count {
+    &__header {
+        font-size: rem(32px);
+    }
+    &__content {
+        color: $color-black-lighter;
+    }
+}
+.other-hits {
+    &__header {
+        font-size: rem($fontsize-h4);
+        margin: rem(5px 0);
+    }
+    &__list-page {
+        margin-top: rem(5px);
+    }
+    &__page {
+        font-size: rem(14px);
+        font-weight: 300;
+        display: inline-block;
+        margin-right: rem(4px);
+        &:not(:last-of-type):after {
+            content: ',';
+        }
+    }
+}

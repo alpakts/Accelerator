@@ -1,0 +1,9 @@
+﻿@using Litium.Accelerator.Fields
+@model Litium.Accelerator.ViewModels.ProductFieldViewModel
+
+@if (!string.IsNullOrEmpty(Model.Value))
+{
+    @Model.Name
+    <br />
+    <a href="@Model.Value" target="_blank">@(((MediaResourceFieldFormatArgs)Model.Args).FileName)</a>
+}

@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="accelerator.filterfield.inherited" xml:space="preserve">
+    <value>Arv från förälder</value>
+  </data>
+  <data name="accelerator.filterfield.options" xml:space="preserve">
+    <value>Egenskaper</value>
+  </data>
+  <data name="accelerator.filterfield.FilterNews" xml:space="preserve">
+    <value>Nyheter</value>
+  </data>
+  <data name="accelerator.filterfield.FilterPrice" xml:space="preserve">
+    <value>Pris</value>
+  </data>
+  <data name="accelerator.filterfield.PreDefined" xml:space="preserve">
+    <value>Fördefinerade</value>
+  </data>
+  <data name="accelerator.settings.index.template.field" xml:space="preserve">
+    <value>Variant fält</value>
+  </data>
+  <data name="accelerator.settings.index.template.fieldtemplate" xml:space="preserve">
+    <value>Fältmall</value>
+  </data>
+  <data name="accelerator.validation.number" xml:space="preserve">
+    <value>Numret måste vara större än eller lika med noll</value>
+  </data>
+  <data name="accelerator.validation.discountcode.notvalid" xml:space="preserve">
+    <value>Vi kunde inte hitta en giltig rabatt för den här koden.</value>
+  </data>
+  <data name="accelerator.validation.cart.doesnotcontainsproduct" xml:space="preserve">
+    <value>Din varukorg är tom. Det beror antagligen på att du varit inaktiv för länge.</value>
+  </data>
+  <data name="accelerator.validation.deliverymethod.nolongersupported" xml:space="preserve">
+    <value>Valt leveranssätt stöds inte längre. Ett annat leveranssätt har valts automatiskt, var vänlig se över din order.</value>
+  </data>
+  <data name="accelerator.validation.ordertotal.haschanged" xml:space="preserve">
+    <value>Totalsumman har ändrats sedan kundvagnen uppdaterades senast. Var vänlig kontrollera din kundvagn innan du lägger ordern.</value>
+  </data>
+  <data name="accelerator.validation.paymentmethod.nolongersupported" xml:space="preserve">
+    <value>Vald betalningsmetod stöds inte längre.</value>
+  </data>
+  <data name="accelerator.validation.product.nolongeravailableforsale" xml:space="preserve">
+    <value>En del produkter är inte längre tillgängliga för köp sedan kundvagnen uppdaterades senast.</value>
+  </data>
+  <data name="accelerator.validation.productprices.haschanged" xml:space="preserve">
+    <value>Produktpriser har ändrats sedan kundvagnen uppdaterades senast. Var vänlig kontrollera din kundvagn innan du lägger ordern.</value>
+  </data>
+  <data name="accelerator.validation.product.outofstock" xml:space="preserve">
+    <value>{0} är för tillfället slut i lager. Produkten har plockats bort från din kundvagn.</value>
+  </data>
+  <data name="accelerator.validation.product.notenoughinstock" xml:space="preserve">
+    <value>Det finns inte tillräckligt många {0} i lager. Din kundvagn har uppdaterats med det antal som vi kan leverera.</value>
+  </data>
+  <data name="accelerator.deployment.import.header">
+    <value>Installera Accelerator-paket</value>
+  </data>
+  <data name="accelerator.deployment.name.label" xml:space="preserve">
+    <value>Namn:</value>
+  </data>
+  <data name="accelerator.deployment.domainname.label" xml:space="preserve">
+    <value>Domännamn:</value>
+  </data>
+  <data name="accelerator.deployment.packagename.label" xml:space="preserve">
+    <value>Paketnamn:</value>
+  </data>
+  <data name="accelerator.deployment.import.button" xml:space="preserve">
+    <value>Importera</value>
+  </data>
+  <data name="accelerator.deployment.export.header" xml:space="preserve">
+    <value>Exportera Accelerator-filer</value>
+  </data>
+  <data name="accelerator.deployment.channel.label" xml:space="preserve">
+    <value>Exportera kanal:</value>
+  </data>
+  <data name="accelerator.deployment.folder.label" xml:space="preserve">
+    <value>Mapp för export:</value>
+  </data>
+  <data name="accelerator.deployment.export.button" xml:space="preserve">
+    <value>Exportera</value>
+  </data>
+  <data name="accelerator.deployment.validation.required" xml:space="preserve">
+    <value>Obligatoriskt fält</value>
+  </data>
+  <data name="accelerator.deployment.validation.space" xml:space="preserve">
+    <value>Tecknet (' ') är inte tillåtet</value>
+  </data>
+  <data name="accelerator.deployment.import.success" xml:space="preserve">
+    <value>Paketet har installerats</value>
+  </data>
+  <data name="accelerator.deployment.export.success" xml:space="preserve">
+    <value>Filerna har exporterats</value>
+  </data>
+  <data name="accelerator.deployment.validation.domainnameexists">
+    <value>Domännamnet finns redan, var god ange ett annat.</value>
+  </data>
+  <data name="accelerator.deployment.validation.urlpath" xml:space="preserve">
+    <value>Domännamnet får inte innehålla flera "/".</value>
+  </data>
+  <data name="accelerator.deployment.validation.channelexists">
+    <value>Kanalnamnet  finns redan, vänligen ange ett annat.</value>
+  </data>
+  <data name="accelerator.deployment.error" xml:space="preserve">
+    <value>Ett fel inträffade under installationen. Kontrollera händelseloggen för vidare felsökning.</value>
+  </data>
+  <data name="accelerator.deployment.field.definitions.notmatching" xml:space="preserve">
+    <value>Acceleratorn kan inte installeras då fältuppsättning inte uppfyller kraven för vad acceleratorn behöver. Kontrollera händelseloggen för vidare felsökning.</value>
+  </data>
+  <data name="accelerator.general.action.removeall">
+    <value>Ta bort allt</value>
+  </data>
+  <data name="fieldtemplate.customerarea.defaultgrouptemplate.name">
+    <value>Standardgruppmall</value>
+  </data>
+  <data name="Brand" xml:space="preserve">
+    <value>Varumärken</value>
+  </data>
+  <data name="ListAllBrand" xml:space="preserve">
+    <value>Listar varumärken. Urvalet definieras av den sida du väljer</value>
+  </data>
+  <data name="ListAllProductByField" xml:space="preserve">
+    <value>Listar varumärken. Urvalet definieras av den sida du väljer</value>
+  </data>
+  <data name="ListAllCategories" xml:space="preserve">
+    <value>Listar alla underkategorier till vald kategori</value>
+  </data>
+  <data name="MegaMenuPages" xml:space="preserve">
+    <value>Sidor</value>
+  </data>
+  <data name="ProductByField" xml:space="preserve">
+    <value>Varumärken</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategorier</value>
+  </data>
+  <data name="SelectAccelarator" xml:space="preserve">
+    <value>Välj accelerator för produktvisning</value>
+  </data>
+  <data name="SelectAccelaratorText" xml:space="preserve">
+    <value>Den här inställningen talar om för Litium var alla filer som används för produktvisning finns. Ändra bara denna inställning om du är helt säker på att du vill ändra vilken katalog dessa filer ska läsas från.</value>
+  </data>
+  <data name="SelectProductByFieldListPage" xml:space="preserve">
+    <value>Välj produkter grupperade per fält sida</value>
+  </data>
+  <data name="SocialSecurityNumber" xml:space="preserve">
+    <value>Personnummer</value>
+  </data>
+  <data name="roles.orderapprover.name" xml:space="preserve">
+    <value>Ordergodkännare</value>
+  </data>
+  <data name="roles.orderplacer.name" xml:space="preserve">
+    <value>Orderläggare</value>
+  </data>
+</root>

@@ -1,0 +1,32 @@
+.subnav {
+    &--compact {
+        padding: rem(0 20px 10px);
+    }
+    &__header {
+        font-size: rem($fontsize-h1);
+    }
+    &__list {
+        padding-left: rem(14px);
+        margin: 0;
+    }
+    &>&__list {
+        padding-left: 0;
+    }
+    &__link {
+        padding: rem(5px 0);
+        display: inline-block;
+        font-size: rem($fontsize-normal);
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+    }
+    &__item {
+        list-style:none;
+    }
+    &__item.active>&__link {
+        font-weight: 400;
+    }
+    &>&__list>&__item>&__link {
+        font-size: rem($fontsize-large);
+        text-transform: uppercase;
+    }
+}

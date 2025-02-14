@@ -1,0 +1,66 @@
+﻿@model Litium.Accelerator.ViewModels.Order.OrderConfirmationViewModel
+
+<div class="row">
+    <div class="small-12 columns">
+        <div class="simple-table order-summary order-confirmation">
+            <div class="row medium-unstack no-margin simple-table__header">
+                <div class="columns small-12 medium-6">
+                    <h2>@Model.Title</h2>
+                </div>            
+            </div>
+            <div class="row medium-unstack no-margin simple-table__header">
+                <div class="columns small-6 medium-6">
+                    <h3>@Html.WebSiteString("orderdetail.deliveryaddress")</h3>
+                    <div class="order-confirmation__delivery">
+                        @foreach (var delivery in Model.Order.Deliveries)
+                        {
+                            <div>
+                                @{
+                                    if (string.IsNullOrEmpty(Model.Order.CompanyName))
+                                    {
+                                        @delivery.Address.FirstName@:&nbsp;@delivery.Address.LastName
+                                    }
+                                    else
+                                    {
+                                        @Model.Order.CompanyName
+                                    }
+                                }
+                            </div>
+                            <div>
+                                @delivery.Address.Address1
+                            </div>
+                            <div>
+                                @delivery.Address.Zip @delivery.Address.City
+                            </div>
+                            <div>
+                                @delivery.Address.Country
+                            </div>
+                        }
+                    </div>
+                </div> 
+                <div class="columns small-6 medium-6 text--right">
+                    <h3>@Html.WebSiteString("orderdetail.ordernumber"): <span>@Model.Order.ExternalOrderID</span></h3>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <h3>@Html.WebSiteString("orderdetail.customernumber"): <span>@Model.Order.CustomerInfo.CustomerNumber</span></h3>
+                    }
+                </div>
+            </div>         
+        </div>
+
+        @await Html.PartialAsync("_OrderSummary", Model.Order)
+
+        <div class="simple-table order-summary">
+            <div class="row medium-unstack no-margin simple-table__header">
+                <div class="columns small-12 medium-6">
+                    @Html.WebSiteString("orderdetail.information")
+                </div>
+            </div>
+            <div class="row small-unstack no-margin">
+                <div class="columns small-12">
+                    @Model.Text
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

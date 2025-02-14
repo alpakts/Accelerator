@@ -1,0 +1,69 @@
+@include tablet-desktop {
+    .header .header__row--one-row {
+        flex-wrap: nowrap;
+        .header__break {
+            display: none;
+        }
+        .navbar {
+            order : 1;
+            flex : 1 1 50%;
+            .navbar__menu {
+                flex-wrap: wrap;
+            }
+
+            > .navbar__menu {
+                height: 100%;
+            }
+        }
+        .header__logo {
+            margin: 0;
+            order : 2;
+            justify-content: center;
+            align-items: flex-start;
+            flex: 1 1 rem(200px);
+            padding: rem(8px 0);
+        }
+        .header__components {
+            order : 3;
+            flex : 1 1 50%;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-content: flex-start;
+        }
+        .quick-search {
+            display: flex;
+            margin-left: auto;
+            position: relative;
+            .quick-search__form {
+                display: none;
+                left: rem(-85px);
+                right: auto;
+                top: rem(6px);
+                width: rem(220px);
+                background-color: #fff;
+                align-items: center;
+                &>.quick-search__icon {
+                    margin-left: rem(5px);
+                    cursor: pointer;
+                    display: block;
+                    width: rem(29px);
+                }
+            }
+            .quick-search__link--block {
+                display: flex;
+                &:hover {
+                    background-color: $color-white;
+                }
+            }
+            .quick-search__submit-button {
+                display: none;
+            }
+            .quick-search__reset-icon {
+                right: rem(10px);
+            }
+        }
+        .cart {
+            padding-right: 0;
+        }
+    }
+}

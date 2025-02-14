@@ -1,0 +1,8 @@
+$rem-fallback: true; // used in sass-rem
+@import 'sass-rem';
+
+@import 'foundation-sites/scss/foundation';
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;

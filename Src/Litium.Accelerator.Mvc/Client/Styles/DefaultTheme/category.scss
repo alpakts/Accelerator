@@ -1,0 +1,43 @@
+.category-navigation {
+    &__link {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        height: 70px;
+        @include mobile {
+            height: 100px;
+        }
+    }
+    &__sublink {
+        &:after {
+            content : ',';
+        }
+        &:last-of-type:after {
+            content: '';
+        }
+    }
+    &__heading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height : 100%;
+        display: flex;
+        align-items : center;
+        justify-content : center;
+        color : $color-white;
+        background-color : rgba(0,0,0,0.2);
+        @include transition(all);
+        margin: 0;
+        text-align: center;
+    }
+    &__link:hover &__heading {
+        background-color : rgba(0,0,0,0.5);
+        transform: scale(1.1);
+    }
+    &__image {
+        width : 100%;
+        height : 100%;
+        object-fit: cover;
+    }
+}

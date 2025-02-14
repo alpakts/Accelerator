@@ -1,0 +1,66 @@
+.header {
+    position: relative;
+    width: 100%;
+    &__row {
+        max-width: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__components {
+        display: flex;
+        margin-left: auto;
+        @include tablet-desktop {
+            padding-right: 20px;
+        }
+    }
+    &__break {
+        width: 100%;
+    }
+    &__logo {
+        display: flex;
+        padding: rem(8px);
+        margin-right: auto;
+        img {
+            max-width: 100%;
+            margin: 0 auto auto;
+        }
+        @include mobile {
+            padding: 0;
+            margin: rem(10px 0);
+            flex: 1;
+            order : 1;
+            padding-left: rem(30px);
+        }
+    }
+    &__break {
+        width: 100%;
+        @include mobile {
+            display: none;
+        }
+    }
+}
+@include mobile {
+    .header {
+        position: sticky;
+        top: 0;
+        box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+        background-color: $color-white;
+        z-index: 9;
+        margin-bottom: rem(20px);
+    }
+    .navbar {
+        order : 0;
+    }
+    .header__logo {
+        order : 1;
+    }
+    .header__components {
+        order: 2;
+    }
+}
+.logout-btn {
+    display: inline-block;
+    @include mobile-tablet {
+        margin-right: rem(15px);
+    }
+}

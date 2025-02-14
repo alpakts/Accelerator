@@ -1,0 +1,17 @@
+.profile {
+    @include link--block;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    .profile__title {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        @include icon;
+        @include icon--profile;
+    }
+}

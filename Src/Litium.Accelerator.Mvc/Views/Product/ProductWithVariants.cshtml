@@ -1,0 +1,115 @@
+﻿@using Litium.Accelerator.Mvc.Extensions
+@using Litium.Accelerator.ViewModels.Product
+@model ProductPageViewModel
+
+<div class="row" itemscope itemtype="http://schema.org/Product">
+    <div class="small-12 medium-7 columns">@await Html.PartialAsync("_Images", Model)</div>
+    <div class="small-12 medium-5 columns">
+        <div class="product-detail">
+            <hgroup>
+                @if (!string.IsNullOrEmpty(Model.ProductItem.Brand))
+                {
+                    <h2 class="product-detail__brand" itemprop="brand">@Model.ProductItem.Brand</h2>
+                }
+                <h1 class="product-detail__name" itemprop="name">@Model.ProductItem.Name</h1>
+            </hgroup>
+            @if (!string.IsNullOrEmpty(Model.ProductItem.Description))
+            {
+                <div itemprop="description" class="product-detail__description">@Model.ProductItem.Description</div>
+            }
+            @if (Model.ProductItem.Price != null && Model.ProductItem.Price.Price != null)
+            {
+                <meta itemprop="sku" content="@Model.ProductItem.Price.Price.UnitOfMeasurementTitle" />
+            }
+
+            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <link itemprop="url" href="@Model.ProductItem.Url" />
+                <div class="product-detail__price-info">
+                    @Html.DisplayFor(x => x.ProductItem.Price)
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            @if (Model.Colors != null && Model.Colors.Any())
+                            {
+                                <h2 class="product-detail__color-text">@Model.ColorText</h2>
+                                <ul class="product-detail__variant-color" data-filter="sizefilter" id="colorfilter">
+                                    @foreach (var item in Model.Colors)
+                                    {
+                                        <li class="product-detail__selector-item variant-@item.Value.ToLower()">
+                                            <a class="product-detail__selector-link @GetFilterStyle(item)" href="@item.Url">@item.Title</a>
+                                        </li>
+                                    }
+                                </ul>
+                            }
+                            @if (Model.Sizes != null && Model.Sizes.Any())
+                            {
+                                <h2 class="product-detail__size-text">@Model.SizeText</h2>
+                                <ul class="product-detail__variant-size" data-filter="colorfilter" id="sizefilter">
+                                    @foreach (var item in Model.Sizes)
+                                    {
+                                        <li class="product-detail__selector-item variant-@item.Value.ToLower()">
+                                            <a class="product-detail__selector-link @GetFilterStyle(item)" href="@item.Url">@item.Title</a>
+                                        </li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+                @await Html.PartialAsync("_StockStatus", Model.ProductItem)
+                @await Html.PartialAsync("_TierPriceInfo", Model.ProductItem.Price)
+            </div>
+
+            @if (Model.ProductItem.ShowQuantityField)
+            {
+                <div class="row-inner product-detail__quantity-container" id="BuyProductContainer">
+                    <div class="small-6 columns">
+                        <label for="@Model.ProductItem.QuantityFieldId">
+                            @Html.WebSiteString("product.quantity")
+                        </label>
+                    </div>
+                    <div class="small-6 large-3 columns">
+                        <input id="@Model.ProductItem.QuantityFieldId" type="number" class="form__input product-detail__quantity-input" data-buy-quantity-input value="1" min="0" max="999" maxlength="3" />
+                    </div>
+                </div>
+            }
+            @Html.BuyButton(x => x.ProductItem, cssClass: "product-detail__buy-button", isBuyButton: true)
+
+            <div class="product-detail__social-share">
+                @Html.Raw(Html.WebSiteString("product.socialsharingscript"))
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_InformationTabs", Model)
+
+@if (Model.BrandPage != null)
+{
+    @await Html.PartialAsync("_BrandInfo", Model.BrandPage)
+}
+
+@await Html.PartialAsync("_MostSold", Model)
+
+@await Html.PartialAsync("_RelatedProducts", Model.AccessoriesProducts)
+
+@await Html.PartialAsync("_RelatedProducts", Model.SimilarProducts)
+
+@functions
+{
+    string GetFilterStyle(ProductPageViewModel.ProductFilterItem item)
+    {
+        var cssClass = "";
+        if (!item.Enabled)
+        {
+            cssClass += " product-detail__selector-link--disabled";
+        }
+        if (item.IsActive)
+        {
+            cssClass += " product-detail__selector-link--active";
+        }
+        return cssClass;
+    }
+}

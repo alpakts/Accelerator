@@ -1,0 +1,85 @@
+﻿@using Litium.Accelerator.Constants;
+@using Litium.Web;
+@using Litium.Web.Mvc;
+@model Litium.Accelerator.ViewModels.MyPages.MyPagesViewModel
+
+<div class="row">
+    <div class="small-12">
+        <p class="text--right">
+            @Html.LinkFor(x => x.LogoutLink, "login.logout".AsWebsiteText(), htmlAttributes: new { @class = "logout-btn" })
+        </p>
+
+        <section class="tab">
+
+            <input type="radio" class="tab__radio" id="@MyPagesTabConstants.MyDetails" name="tab-radio" @(Model.CurrentTab == MyPagesTabConstants.MyDetails ? "checked" : "") />
+            @if (Model.IsBusinessCustomer)
+            {
+                if (Model.HasApproverRole)
+                {
+                    <input type="radio" class="tab__radio" id="@MyPagesTabConstants.Persons" name="tab-radio" @(Model.CurrentTab == MyPagesTabConstants.Persons ? "checked" : "") />
+                }
+                <input type="radio" class="tab__radio" id="@MyPagesTabConstants.Addresses" name="tab-radio" @(Model.CurrentTab == MyPagesTabConstants.Addresses ? "checked" : "") />
+            }
+            @if (Model.MayUserEditLogin)
+            {
+                <input type="radio" class="tab__radio" id="@MyPagesTabConstants.LoginInfo" name="tab-radio" @(Model.CurrentTab == MyPagesTabConstants.LoginInfo ? "checked" : "") />
+            }
+            <input type="radio" class="tab__radio" id="@MyPagesTabConstants.OrderHistory" name="tab-radio" @(Model.CurrentTab == MyPagesTabConstants.OrderHistory ? "checked" : "") />
+
+            <div class="tab-mobile-container">
+                <nav class="tab__header-container">
+                    <label class="tab__header" for="@MyPagesTabConstants.MyDetails"> @Html.WebSiteString("mypage.info.title") </label>
+                    @if (Model.IsBusinessCustomer)
+                    {
+                        if (Model.HasApproverRole)
+                        {
+                            <label class="tab__header" for="@MyPagesTabConstants.Persons"> @Html.WebSiteString("mypage.person.title") </label>
+                        }
+                        <label class="tab__header" for="@MyPagesTabConstants.Addresses"> @Html.WebSiteString("mypage.address.title") </label>
+                    }
+                    @if (Model.MayUserEditLogin)
+                    {
+                        <label class="tab__header" for="@MyPagesTabConstants.LoginInfo"> @Html.WebSiteString("mypage.login.title") </label>
+                    }
+                    <label class="tab__header" for="@MyPagesTabConstants.OrderHistory"> @Html.WebSiteString("mypage.order.title") </label>
+                </nav>
+            </div>
+
+            <section class="tab__content-container">
+                <div class="tab__content">
+                    @if (Model.IsBusinessCustomer)
+                    {
+                        @await Html.PartialAsync("_BusinessCustomerDetailsPanel", Model.BusinessCustomerDetailsPanel)
+                    }
+                    else
+                    {
+                        @await Html.PartialAsync("_MyDetailsPanel", Model.MyDetailsPanel)
+                    }
+                </div>
+                @if (Model.IsBusinessCustomer)
+                {
+                    if (Model.HasApproverRole)
+                    {
+                        <div class="tab__content">
+                            <div id="myPagePersons"></div>
+                        </div>
+                    }
+                    <div class="tab__content">
+                        <div id="myPageAddresses"></div>
+                    </div>
+                }
+                @if (Model.MayUserEditLogin)
+                {
+                    <div class="tab__content">
+                        @await Html.PartialAsync("_LoginInfoPanel", Model.LoginInfoPanel)
+                    </div>
+                }
+                <div class="tab__content">
+                    <div id="orderHistoryPage" class="order-history"></div>
+                </div>
+
+            </section>
+        </section>
+
+    </div>
+</div>

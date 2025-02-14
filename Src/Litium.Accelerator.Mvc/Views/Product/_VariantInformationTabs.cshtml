@@ -1,0 +1,65 @@
+﻿@model Litium.Accelerator.ViewModels.Product.ProductPageViewModel
+@{
+    var isTabActivated = false;
+    var groups = Model.ProductFieldGroups.Where(x => x.ProductFields.Count() != 0).ToList();
+}
+<div class="row-inner">
+    <div class="small-12 columns product-info__container">
+        <section class="tab">
+            @if (Model.Variants?.Any() ?? false)
+            {
+                <input type="radio" class="tab__radio" id="product-information" name="tab-radio" @(!isTabActivated ? "checked" : string.Empty)/>
+                isTabActivated = true;
+            }
+
+            @foreach (var group in groups)
+            {
+                <input type="radio" class="tab__radio" id="product-@group.HtmlGroupId" name="tab-radio" @(!isTabActivated ? "checked" : string.Empty)/>
+                isTabActivated = true;
+            }
+            <div class="tab-mobile-container">
+                <nav class="tab__header-container">
+                    @if (Model.Variants?.Any() ?? false)
+                    {
+                        <label class="tab__header" for="product-information"> @Html.WebSiteString("product.description") </label>
+                    }
+
+                    @foreach (var group in groups)
+                    {
+                        <label class="tab__header" for="product-@group.HtmlGroupId"> @(group.Name ?? group.GroupId)</label>
+                    }
+                </nav>
+            </div>
+            <section class="tab__content-container">
+                @if (Model.Variants?.Any() ?? false)
+                {
+                    <div class="tab__content tab__content--small-padding">
+                        @foreach (var variant in Model.Variants)
+                        {
+                            @await Html.PartialAsync("_VariantItem", variant)
+                        }
+                    </div>
+                }
+
+                @foreach (var group in groups)
+                {
+                    <div class="tab__content tab__content--small-padding">
+                        <div class="row-inner">
+                            <div class="small-12 medium-8 columns" data-equalizer-watch>
+                                <h2 class="product-info__title">
+                                    @(group.Name ?? group.GroupId)
+                                </h2>
+
+                                @foreach (var item in group.ProductFields)
+                                {
+                                    <p>
+                                        @await Html.PartialAsync("_" + item.ViewName, item)
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </section>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+.banner-block {
+    &__image-link {
+        padding: rem(10px 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    &__image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+.banner-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    top: 50%;
+    max-height: 100%;
+    pointer-events: none;
+    &__title {
+        color: $color-white;
+        font-size: rem(120px);
+        line-height: 1;
+        font-weight: 400;
+        display: block;
+        font-family: $font-family;
+        margin-bottom: 0;
+
+        .multiple-banner.large-4 & {
+            font-size: rem(80px);
+        }
+
+        .multiple-banner.large-3 & {
+            font-size: rem(40px);
+        }
+
+        @include tablet {
+            .multiple-banner &, .multiple-banner.large-4 & {
+                font-size: rem(40px);
+            }
+            .multiple-banner.large-3 & {
+                font-size: rem(80px);
+            }
+            .multiple-banner.large-6 & {
+                font-size: rem(80px);
+            }
+        }
+
+        @include mobile {
+            font-size: rem(40px);
+            .multiple-banner.large-3 &, .multiple-banner.large-4 & {
+                font-size: rem(40px);
+            }
+        }
+    }
+    &__button {
+        margin-top: rem(65px);
+        background-color: $color-primary;
+        color: $color-white;
+        display: inline-block;
+        font-size: rem(13px);
+        padding: rem(11px 20px 10px);
+        border-radius: rem(20px);
+        outline: none;
+        cursor: pointer;
+        min-width: rem(145px);
+        max-width: 100%;
+        white-space: nowrap;
+
+        .multiple-banner.large-3 & {
+            margin-top: rem(50px);
+        }
+
+        @include tablet {
+            .multiple-banner.large-3 & {
+                margin-top: rem(65px);
+            }
+        }
+
+        @include mobile {
+            margin-top: rem(40px);
+            padding: rem(8px 20px);
+            border-radius: rem(17.5px);
+            .multiple-banner.large-3 & {
+                margin-top: rem(40px);
+                min-width: rem(95px);
+            }
+        }
+    }
+}
+@include tablet {
+    .multiple-banner.large-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

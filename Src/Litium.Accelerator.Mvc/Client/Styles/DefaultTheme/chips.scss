@@ -1,0 +1,36 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: rem(35px);
+  color: $color-grey-darkest;
+  background-color: $color-grey-lightest;
+  border-radius: rem(20px);
+  margin-bottom: rem(10px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    padding: rem(10px) 0;
+  }
+  &__label {
+    padding: 0 rem(12px);
+  }
+  &__icon {
+    width: rem(18px);
+    height: rem(18px);
+    margin: 0 rem(8px) 0 0;
+    &:last-child {
+      margin-right: rem(10px);
+    }
+    &--delete {
+      @include icon--close;
+      cursor: pointer;
+    }
+    &--check {
+      @include icon--check-mark;
+    }
+  }
+}

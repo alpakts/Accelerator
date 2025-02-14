@@ -1,0 +1,23 @@
+﻿@using Litium.Accelerator.Constants
+@model Litium.Accelerator.ViewModels.Product.CategoryPageViewModel
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<span>Category name : @Model.Name </span>
+<br />
+<span>Category description : @Model.Description </span>
+<br />
+<span>Category SystemId : @Model.SystemId </span>
+@if (Model.Products != null)
+{
+    <h1>Products</h1>
+    foreach (var product in Model.Products)
+    {
+        <span>Product name : @product.Name </span>
+        <br />
+        <span>Product description : @product.Description </span>
+        <br />
+    }
+}
+
+----------------------
+
+@await Component.BlockContainerAsync(Model.Blocks, BlockContainerNameConstant.Header)

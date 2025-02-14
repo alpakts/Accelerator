@@ -1,0 +1,47 @@
+﻿@using Litium.Web.Mvc;
+@using Litium.Web;
+@model Litium.Accelerator.ViewModels.Login.LoginViewModel
+
+<div class="full-height">
+    <div class="form__container">
+        @if (!User.Identity.IsAuthenticated || Model.InsufficientPermissions)
+        {
+            <h1>@Model.Title</h1>
+            if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+            {
+                <div class="form__validator">
+                    <small class="form__validator--error">@Model.ErrorMessage</small>
+                </div>
+            }
+            using (Html.BeginForm("Login", "Login"))
+            {
+                @Html.AntiForgeryToken()
+                <fieldset class="form">
+                    <div>
+                        @Html.HiddenFor(x => x.RedirectUrl)
+                        @Html.LabelFor(x => x.LoginForm.UserName, "login.username".AsWebsiteText(), new { @class = "form__label" })
+                        @Html.TextBoxFor(x => x.LoginForm.UserName, new { @class = "form__input", @autocomplete = "username" })
+                        @Html.ValidationMessageFor(x => x.LoginForm.UserName, string.Empty, new { @class = "form__validator--error" })
+                    </div>
+                    <div>
+                        @Html.LabelFor(x => x.LoginForm.Password, "login.password".AsWebsiteText(), new { @class = "form__label" })
+                        @Html.PasswordFor(x => x.LoginForm.Password, new { @class = "form__input", @autocomplete = "current-password" })
+                        @Html.ValidationMessageFor(x => x.LoginForm.Password, string.Empty, new { @class = "form__validator--error" })
+                    </div>
+                    <input type="submit" class="form__button form__button--expand" value="@Html.WebSiteString("login.loginbuttontext")" />
+                    @if (Model.ForgottenPasswordLink != null && !string.IsNullOrEmpty(Model.ForgottenPasswordLink.Href))
+                    {
+                        <a href="@(Model.ForgottenPasswordLink.Href)?RedirectUrl=@Html.UrlEncoder.Encode(Model.RedirectUrl)">@Html.WebSiteString("login.clicktogotoforgotpasswordpage")</a>
+                    }
+                </fieldset>
+            }
+        }
+        else
+        {
+            <fieldset class="form">
+                <p>@(string.Format("login.alreadylogin".AsWebsiteText(), User.Identity.Name))</p>
+                @Html.ActionLink("login.logout".AsWebsiteText(), "Logout", "Login", null, new { @class = "button submit small" })
+            </fieldset>
+        }
+    </div>
+</div>

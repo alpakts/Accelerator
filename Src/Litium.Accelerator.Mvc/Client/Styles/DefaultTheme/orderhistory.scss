@@ -1,0 +1,24 @@
+.order-history {
+    background-color: $color-white;
+    padding: rem(15px);
+    @include breakpoint(small only) {
+        & > .row {
+            border: 1px solid #ddd;
+        }
+
+        & > .row:nth-child(n + 3) {
+            border-top: none;
+        }
+    }
+    .table__icon {
+        cursor: pointer;
+    }
+    .buy-button {
+        &--loading, &--success {
+            .table__icon--reorder {
+                cursor: not-allowed;
+                opacity: .5;
+            }
+        }
+    }
+}

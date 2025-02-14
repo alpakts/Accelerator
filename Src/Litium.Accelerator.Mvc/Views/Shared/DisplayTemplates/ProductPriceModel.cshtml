@@ -1,0 +1,38 @@
+﻿@using Litium.Web;
+@model Litium.Web.Models.Products.ProductPriceModel
+
+@if (Model.Price != null)
+{
+    decimal price = 0m;
+    if (Model.CampaignPrice != null)
+    {
+        <span class="product__campaign-price">
+            @{
+                @Model.CampaignPrice.FormatPrice(true)
+                price = Model.CampaignPrice.Price;
+             }
+        </span>
+        <span class="product__old-price">
+            (@Model.Price.FormatPrice(true))
+        </span>
+    }
+    else
+    {
+        <span class="price">
+            @if (Model.TierPrices.Any())
+            {
+                @("product.pricefrom".AsWebsiteText())
+                var priceItem = Model.TierPrices.OrderBy(x => x.Price).First();
+                @priceItem.FormatPrice(true)
+                price = priceItem.Price;
+            }
+            else
+            {
+                @Model.Price.FormatPrice(true)
+                price = Model.Price.Price;
+            }
+        </span>
+    }
+    <meta itemprop="price" content="@price" />
+    <meta itemprop="priceCurrency" content="@Model.Currency.Id" />
+}

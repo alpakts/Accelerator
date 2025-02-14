@@ -1,0 +1,24 @@
+.button {
+    font-size: rem(16px);
+    padding: rem(10px);
+    cursor: pointer;
+    outline: none;
+    background-color: $color-primary;
+    color: $color-white;
+    text-transform: capitalize;
+    &.link {
+        text-decoration: underline;
+        background-color: transparent;
+        color: $color-link;
+        border: none;
+    }
+    &.expanded {
+        @include button-expand;
+    }
+    &.rounded {
+        @include border-rounded;
+    }
+    &[disabled] {
+        background-color: $color-grey-darkest;
+    }
+}

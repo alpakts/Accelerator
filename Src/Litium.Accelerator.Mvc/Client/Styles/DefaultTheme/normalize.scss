@@ -1,0 +1,92 @@
+body {
+    font-family: $font-family;
+    color: $color-black;
+}
+a {
+    line-height: inherit;
+    color: $color-black;
+    text-decoration: none;
+    cursor: pointer;
+    &:focus,
+    &:hover,
+    &:active {
+        color: $color-black;
+    }
+}
+h1,
+h2,
+h3 {
+    font-weight: 900;
+}
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: rem(0 0 8px 0);
+    line-height: 1.4;
+}
+p {
+    margin: rem(0 0 20px);
+}
+.row {
+    max-width: 84rem;
+}
+.row-inner {
+    margin: rem(0 -10px);
+    display: flex;
+    flex-flow: row wrap;
+    @media print, screen and (min-width: 40em) {
+        margin: rem(0 -15px);
+    }
+}
+figure {
+    margin: 0;
+}
+ul {
+    padding-left: 0;
+    li {
+        list-style: none;
+    }
+}
+.text {
+    &--right {
+        text-align: right;
+    }
+    &--center {
+        text-align: center;
+    }
+    @include mobile {
+        &__mobile--left {
+            text-align: left;
+        }
+        &__mobile--right {
+            text-align: right;
+        }
+    }
+}
+.full-height {
+    min-height: calc(100vh - 300px);
+}
+.row.no-margin {
+    margin-left: 0;
+    margin-right: 0;
+}
+.column.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+ul.bulleted-list {
+    // keep same style in ckeditor
+    padding: 0 0 0 20px;
+    li {
+        list-style: inherit;
+    }
+}

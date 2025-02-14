@@ -1,0 +1,27 @@
+.accordion {
+    &__header-container {
+        border-bottom : rem(1px) solid $color-grey;
+    }
+    &__header {
+        display : inline-block;
+        padding : rem(10px 20px);
+        cursor: pointer;
+        margin-bottom : rem(-1px);
+        border : rem(1px) solid #ccc;
+        &.active {
+            background-color : $color-white;
+            cursor: default;
+            border-bottom-color : $color-white;
+        }
+    }
+    &__panel {
+        display : none;
+        border: rem(1px) solid $color-grey;
+        border-top: none;
+        background-color : #fff;
+        padding : rem(20px);
+        &.active {
+            display : block;
+        }
+    }
+}

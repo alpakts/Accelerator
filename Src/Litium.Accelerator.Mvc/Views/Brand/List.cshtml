@@ -1,0 +1,23 @@
+﻿@model Litium.Accelerator.ViewModels.Brand.BrandListViewModel
+<div class="brands-list__container">
+    <h1 class="brands-list__header">@Model.TitleFilterSelector</h1>
+    @foreach (var row in Model.Nodes)
+    {
+        <ul class="brands-list row expanded">
+            @foreach (var letterGroup in row)
+            {
+                <li class="small-12 medium-@(12 / Model.MaxColumns) columns">
+                    <div class="brands-list__group">
+                        <span class="brands-list__group-letter">@letterGroup.Value.Name</span>
+                        <ul class="brands-list__sublist">
+                            @foreach (var brand in letterGroup)
+                            {
+                                <li class="brands-list__sublist-item"><a href="@brand.Value.Url">@brand.Value.Name</a> <span>(@brand.Value.ExtraInfo)</span></li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            }
+        </ul>
+    }
+</div>

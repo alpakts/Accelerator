@@ -1,0 +1,41 @@
+﻿@using System.Drawing
+@using Litium.Accelerator.ViewModels.Framework
+
+@model IEnumerable<ContentLinkModel>
+
+@if (Model != null && Model.Any())
+{
+    <ul class="row small-up-2 large-up-5">
+        @foreach (var category in Model)
+        {
+            <li class="column column-block">
+                <div class="category-navigation">
+                    <a href="@category.Url" class="category-navigation__link" role="navigation">
+                        @{
+                            if (category.Image != null)
+                            {
+                                @Html.ImageFor(x => category.Image, maxSize: new Size(361, 361), htmlAttributes: new { @class = "category-navigation__image" }, renderSizeAttributes: true)
+                            }
+                        }
+                        <h2 class="category-navigation__heading">
+                            @category.Name
+                        </h2>
+                    </a>
+                    @{
+                        if (category.Links != null && category.Links.Any())
+                        {
+                            <ul>
+                                @foreach (var child in category.Links)
+                                {
+                                    <li class="category-navigation__sublink">
+                                        <a href="@child.Url">@child.Name</a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    }
+                </div>
+            </li>
+        }
+    </ul>
+}

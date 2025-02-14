@@ -1,0 +1,36 @@
+@using Litium.Accelerator.Constants
+@using Litium.Accelerator.Mvc.Extensions
+@model Litium.Accelerator.ViewModels.Framework.ClientContextViewModel
+
+<script type="text/javascript">
+	window.localStorage.setItem('requestVerificationToken', '@Model.RequestVerificationToken');
+	window.__litium = window.__litium || {};
+	window.__litium.requestContext = @Html.Json(Model.SiteSetting);
+	window.__litium.preloadState = window.__litium.preloadState || {};
+	window.__litium.preloadState.cart = @Html.Json(Model.Cart);
+	window.__litium.preloadState.navigation = @Html.Json(Model.Navigation);
+	window.__litium.preloadState.myPage = @Html.Json(new {
+		persons = new {},
+		addresses = new {},
+		orders = new {
+			currentPage = 1,
+		},
+		isBusinessCustomer = Model.IsBusinessCustomer,
+		hasApproverRole = Model.HasApproverRole
+	});
+
+	window.__litium.constants = {
+		role: {
+			approver: "@RolesConstants.RoleOrderApprover",
+			buyer: "@RolesConstants.RoleOrderPlacer",
+		},
+		countries: @Html.Json(Model.Countries),
+		checkoutMode: {
+			privateCustomers: @((int)CheckoutMode.PrivateCustomers),
+			companyCustomers: @((int)CheckoutMode.CompanyCustomers),
+			both: @((int)CheckoutMode.Both)
+		},
+	};
+	window.__litium.quickSearchUrl = @Html.Json(Model.QuickSearchUrl);
+	window.__litium.translation = @Html.Json(Model.Texts);
+</script>

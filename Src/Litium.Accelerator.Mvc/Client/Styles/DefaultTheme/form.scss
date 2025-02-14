@@ -1,0 +1,149 @@
+.form {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    &--inline-block {
+        display: inline-block;
+    }
+
+    &--no-event {
+        pointer-events: none;
+    }
+
+    &__validator {
+        &--error {
+            display: block;
+            font-size: rem($fontsize-small);
+            font-weight: normal;
+            font-style: italic;
+            color: $color-error;
+        }
+        &--top-narrow {
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__message {
+        &--error {
+            color: $color-error;
+        }
+    }
+
+    &__container {
+        margin: auto;
+        padding: 0 15px;
+        width: 100%;
+        max-width: rem(500px);
+    }
+
+    &__label {
+        display: block;
+        font-size: rem($fontsize-normal);
+        color: $color-black-light;
+        &--required {
+            &:after {
+                content: '*';
+            }
+        }
+        &--inline {
+            display: inline;
+            margin-right: 10px;
+        }
+    }
+
+    &__select {
+        -webkit-appearance: none;
+    }
+
+    &__button {
+        &, &:focus, &:active, &:hover {
+            padding: rem(16px);
+            background-color: $color-primary;
+            color: $color-white;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin-bottom: rem(16px);
+        }
+
+        &--expand {
+            @include button--expand;
+        }
+    }
+
+    &__link {
+        font-weight: 300;
+        font-size: rem($fontsize-normal);
+    }
+
+    &__control {
+        display: inline-block;
+        margin-bottom: rem(16px);
+    }
+
+    &__space {
+        width: rem(10px);
+        display: inline-block;
+    }
+
+    &__radio {
+        margin-right: 5px;
+    }
+
+    &__input {
+        border-radius: 0;
+        background-color: $color-white;
+        border: 1px solid $color-grey;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+        display: block;
+        width: 100%;
+        margin: rem(0 0 16px 0);
+        padding: rem(8px);
+        height: rem(40px);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        @include transition(box-shadow);
+        @include transition(border-color);
+        &:hover {
+            border-color: $color-grey-darkest;
+        }
+        &:focus {
+            border-color: $color-grey-darkest;
+            outline: none;
+            box-shadow: 0 0 5px $color-grey-darkest;
+        }
+    }
+}
+
+
+.form-fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+
+    &[disabled]{
+        input, input:hover, input:focus, select, select:hover, select:focus {
+            border-color: rgba(118, 118, 118, 0.2);
+            background-color: #f2f2f2;
+            color: #999;
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+        input[type=submit] {
+            background-color: #999;
+            color: #fff;
+        }
+    }
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.field-validation-error {
+    margin-top: -1rem;
+}

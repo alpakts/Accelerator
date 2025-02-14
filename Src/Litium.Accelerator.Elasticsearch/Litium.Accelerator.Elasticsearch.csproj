@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net9.0</TargetFrameworks>
+    <RootNamespace>Litium.Accelerator.Search</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Litium.Accelerator\Litium.Accelerator.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Litium.Elasticsearch.Abstractions" Version="8.20.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <LitiumLocalization Include="Resources\*.resx" />
+  </ItemGroup>
+</Project>

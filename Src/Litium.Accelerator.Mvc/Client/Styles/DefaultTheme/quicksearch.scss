@@ -1,0 +1,120 @@
+.quick-search {
+    @include link--block;
+    @include tablet {
+        display: flex;
+
+    }
+    @include mobile {
+        margin: 0;
+        position: static;
+    }
+    &__title {
+        text-transform: uppercase;
+        @include mobile {
+            display: none;
+        }
+    }
+    &__input, &__submit-button {
+        &,&:focus{
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+    &__input {
+        padding-left: rem(10px);
+        padding-right: rem(5px);
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        -webkit-appearance: none;
+        @include mobile {
+            flex : 1;
+        }
+    }
+    &__input::-webkit-input-placeholder {
+        @include placeholder;
+    }
+    &__input::-moz-placeholder {
+        @include placeholder;
+    }
+    &__input:-ms-input-placeholder {
+        @include placeholder;
+    }
+    &__input:-moz-placeholder {
+        @include placeholder;
+    }
+    &__link--block>&__icon {
+        pointer-events: none;
+    }
+    & &__link--block {
+        display: none;
+        @include mobile {
+            display: flex;
+        }
+    }
+    &__form {
+        z-index: 10;
+        position: absolute;
+        top: rem(72px);
+        right: rem(20px);
+        margin: rem(0 0 0 auto);
+        height: rem(42px);
+        border: rem(1px) solid $color-grey-dark;
+        display: flex;
+        @include mobile {
+            margin-top : 0;
+            position: absolute;
+            left: rem(10px);
+            right: rem(10px);
+            top : 100%;
+        }
+        @include tablet {
+            flex: 1;
+        }
+        @include mobile {
+            display: none;
+            & + .quick-search-result {
+                display: none;
+            }
+        }
+        &--force-show {
+            display: flex!important;
+            & + .quick-search-result {
+                display: block;
+            }
+        }
+        &>.quick-search__icon {
+            display: none;
+        }
+    }
+    &__submit-button {
+        width: rem(40px);
+        height: rem(40px);
+        cursor: pointer;
+        background-color: $color-white;
+        @include mobile {
+            background-color: $color-primary;
+            width: rem(100px);
+        }
+    }
+    &__submit-icon,&__icon {
+        color: $color-black-light;
+        display: inline-block;
+        @include icon;
+        @include icon--magnifier;
+    }
+    &__submit-icon {
+        @include mobile {
+            display: none;
+        }
+    }
+    &__submit-title {
+        color: $color_white;
+        display: inline-block;
+        @include tablet-desktop {
+            display: none;
+        }
+    }
+}
