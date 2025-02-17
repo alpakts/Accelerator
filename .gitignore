@@ -1,6 +1,6 @@
 /data
 /volumes
-
+/shared
 # Visual Studio ile ilgili dosyalar
 .vs/
 *.suo
