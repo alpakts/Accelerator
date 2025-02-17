@@ -22,5 +22,6 @@
         public const string Order = "Order";
         public const string WelcomeEmail = "WelcomeEmail";
         public const string OrderConfirmation = "OrderConfirmation";
+        public const string Author = "Author";
     }
 }

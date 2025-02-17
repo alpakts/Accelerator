@@ -17,6 +17,7 @@ namespace Litium.Accelerator.Mvc.Definitions
         private readonly IDictionary<(Type areaType, string id), (Type controllerType, string action)> _controllerMapping = new Dictionary<(Type areaType, string id), (Type controllerType, string action)>
         {
             [(typeof(Websites.WebsiteArea), PageTemplateNameConstants.Article)] = (typeof(Controllers.Article.ArticleController), nameof(Controllers.Article.ArticleController.Index)),
+            [(typeof(Websites.WebsiteArea), PageTemplateNameConstants.Author)] = (typeof(Controllers.Author.AuthorController), nameof(Controllers.Author.AuthorController.Index)),
             [(typeof(Websites.WebsiteArea), PageTemplateNameConstants.BrandList)] = (typeof(Controllers.Brand.BrandController), nameof(Controllers.Brand.BrandController.List)),
             [(typeof(Websites.WebsiteArea), PageTemplateNameConstants.Brand)] = (typeof(Controllers.Brand.BrandController), nameof(Controllers.Brand.BrandController.Index)),
             [(typeof(Websites.WebsiteArea), PageTemplateNameConstants.Checkout)] = (typeof(Controllers.Checkout.CheckoutController), nameof(Controllers.Checkout.CheckoutController.Index)),

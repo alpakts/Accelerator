@@ -141,13 +141,13 @@
   <data name="accelerator.settings.index.template.null.label" xml:space="preserve">
     <value>Do not group</value>
   </data>
-  <data name="fieldtemplate.productarea.productwithonevariant.name">
+  <data name="fieldtemplate.productarea.productwithonevariant.name" xml:space="preserve">
     <value>Product with only one variant</value>
   </data>
-  <data name="fieldtemplate.productarea.productwithvariants.name">
+  <data name="fieldtemplate.productarea.productwithvariants.name" xml:space="preserve">
     <value>Product with variants</value>
   </data>
-  <data name="fieldtemplate.productarea.productwithvariantslist.name">
+  <data name="fieldtemplate.productarea.productwithvariantslist.name" xml:space="preserve">
     <value>Product with variants shown in a list</value>
   </data>
   <data name="accelerator.filterfield.headline" xml:space="preserve">
@@ -183,1061 +183,1009 @@
   <data name="accelerator.settings.searchindexing.template.block.templates.headline" xml:space="preserve">
     <value>Block templates</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.footer.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.footer.name" xml:space="preserve">
     <value>Footer</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.navigation.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.navigation.name" xml:space="preserve">
     <value>Navigation</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.leftnavigation.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.leftnavigation.name" xml:space="preserve">
     <value>Left navigation</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.productlists.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.productlists.name" xml:space="preserve">
     <value>Product lists</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.productpage.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.productpage.name" xml:space="preserve">
     <value>Product page</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.filters.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.filters.name" xml:space="preserve">
     <value>Filters</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.checkout.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.checkout.name" xml:space="preserve">
     <value>Checkout</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.customers.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.customers.name" xml:space="preserve">
     <value>Customers</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.emails.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.emails.name" xml:space="preserve">
     <value>Emails</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.orderconfirmationpage.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.orderconfirmationpage.name" xml:space="preserve">
     <value>Order confirmation page</value>
   </data>
-  <data name="fieldtemplate.blockarea.banner.name">
+  <data name="fieldtemplate.blockarea.banner.name" xml:space="preserve">
     <value>Banner</value>
   </data>
-  <data name="fieldtemplate.blockarea.banner.fieldgroup.general.name">
+  <data name="fieldtemplate.blockarea.banner.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.blockarea.banner.fieldgroup.banners.name">
+  <data name="fieldtemplate.blockarea.banner.fieldgroup.banners.name" xml:space="preserve">
     <value>Banners</value>
   </data>
-  <data name="fieldtemplate.blockarea.brand.name">
+  <data name="fieldtemplate.blockarea.brand.name" xml:space="preserve">
     <value>Brands</value>
   </data>
-  <data name="fieldtemplate.blockarea.brand.fieldgroup.general.name">
+  <data name="fieldtemplate.blockarea.brand.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.blockarea.brand.fieldgroup.brands.name">
+  <data name="fieldtemplate.blockarea.brand.fieldgroup.brands.name" xml:space="preserve">
     <value>Brands</value>
   </data>
-  <data name="fieldtemplate.websitearea.brandlist.name">
+  <data name="fieldtemplate.websitearea.brandlist.name" xml:space="preserve">
     <value>Brand list</value>
   </data>
-  <data name="fieldtemplate.websitearea.brandlist.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.brandlist.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.brand.name">
+  <data name="fieldtemplate.websitearea.brand.name" xml:space="preserve">
     <value>Brand page</value>
   </data>
-  <data name="fieldtemplate.websitearea.brand.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.brand.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.checkout.name">
+  <data name="fieldtemplate.websitearea.checkout.name" xml:space="preserve">
     <value>Checkout</value>
   </data>
-  <data name="fieldtemplate.websitearea.checkout.fieldgroup.termsandconditions.name">
+  <data name="fieldtemplate.websitearea.checkout.fieldgroup.termsandconditions.name" xml:space="preserve">
     <value>Terms &amp; Conditions</value>
   </data>
-  <data name="fieldtemplate.customerarea.b2cpersontemplate.name">
+  <data name="fieldtemplate.customerarea.b2cpersontemplate.name" xml:space="preserve">
     <value>Person B2C</value>
   </data>
-  <data name="fieldtemplate.customerarea.b2cpersontemplate.fieldgroup.general.name">
+  <data name="fieldtemplate.customerarea.b2cpersontemplate.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.customerarea.b2bpersontemplate.name">
+  <data name="fieldtemplate.customerarea.b2bpersontemplate.name" xml:space="preserve">
     <value>Person B2B</value>
   </data>
-  <data name="fieldtemplate.customerarea.b2bpersontemplate.fieldgroup.general.name">
+  <data name="fieldtemplate.customerarea.b2bpersontemplate.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.customerarea.grouptemplate.name">
+  <data name="fieldtemplate.customerarea.grouptemplate.name" xml:space="preserve">
     <value>Group</value>
   </data>
-  <data name="fieldtemplate.customerarea.grouptemplate.fieldgroup.general.name">
+  <data name="fieldtemplate.customerarea.grouptemplate.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.customerarea.organizationtemplate.name">
+  <data name="fieldtemplate.customerarea.organizationtemplate.name" xml:space="preserve">
     <value>Organization</value>
   </data>
-  <data name="fieldtemplate.customerarea.organizationtemplate.fieldgroup.general.name">
+  <data name="fieldtemplate.customerarea.organizationtemplate.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.customerarea.targetgrouptemplate.name">
+  <data name="fieldtemplate.customerarea.targetgrouptemplate.name" xml:space="preserve">
     <value>Target group</value>
   </data>
-  <data name="fieldtemplate.customerarea.targetgrouptemplate.fieldgroup.general.name">
+  <data name="fieldtemplate.customerarea.targetgrouptemplate.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.error.name">
+  <data name="fieldtemplate.websitearea.error.name" xml:space="preserve">
     <value>Error page</value>
   </data>
-  <data name="fieldtemplate.websitearea.error.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.error.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.error.fieldgroup.Contents.name">
+  <data name="fieldtemplate.websitearea.error.fieldgroup.Contents.name" xml:space="preserve">
     <value>Main contents</value>
   </data>
-  <data name="fieldtemplate.websitearea.pagenotfound.name">
+  <data name="fieldtemplate.websitearea.pagenotfound.name" xml:space="preserve">
     <value>Page not found (404)</value>
   </data>
-  <data name="fieldtemplate.websitearea.pagenotfound.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.pagenotfound.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.pagenotfound.fieldgroup.Contents.name">
+  <data name="fieldtemplate.websitearea.pagenotfound.fieldgroup.Contents.name" xml:space="preserve">
     <value>Main contents</value>
   </data>
-  <data name="fieldtemplate.websitearea.forgotpassword.name">
+  <data name="fieldtemplate.websitearea.forgotpassword.name" xml:space="preserve">
     <value>Forgot password</value>
   </data>
-  <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.forgotpassword.name">
+  <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.forgotpassword.name" xml:space="preserve">
     <value>Forgot password</value>
   </data>
   <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.email.name" xml:space="preserve">
     <value>Forgot password email</value>
   </data>
-  <data name="fieldtemplate.websitearea.home.name">
+  <data name="fieldtemplate.websitearea.home.name" xml:space="preserve">
     <value>Home page</value>
   </data>
-  <data name="fieldtemplate.websitearea.home.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.home.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.landing.name">
+  <data name="fieldtemplate.websitearea.landing.name" xml:space="preserve">
     <value>Landing page</value>
   </data>
-  <data name="fieldtemplate.websitearea.landing.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.landing.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.login.name">
+  <data name="fieldtemplate.websitearea.login.name" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="fieldtemplate.websitearea.login.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.login.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.login.fieldgroup.login.name">
+  <data name="fieldtemplate.websitearea.login.fieldgroup.login.name" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="fieldtemplate.websitearea.login.fieldgroup.forgotpassword.name">
+  <data name="fieldtemplate.websitearea.login.fieldgroup.forgotpassword.name" xml:space="preserve">
     <value>Forgot Password</value>
   </data>
-  <data name="fieldtemplate.websitearea.megamenu.name">
+  <data name="fieldtemplate.websitearea.megamenu.name" xml:space="preserve">
     <value>Main menu link</value>
   </data>
-  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.link.name">
+  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.link.name" xml:space="preserve">
     <value>Link</value>
   </data>
-  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.megamenu.name">
+  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.megamenu.name" xml:space="preserve">
     <value>Mega menu</value>
   </data>
-  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.megamenucolumn.name">
+  <data name="fieldtemplate.websitearea.megamenu.fieldgroup.megamenucolumn.name" xml:space="preserve">
     <value>Mega menu column</value>
   </data>
-  <data name="fieldtemplate.websitearea.mypages.name">
+  <data name="fieldtemplate.websitearea.mypages.name" xml:space="preserve">
     <value>My pages</value>
   </data>
-  <data name="fieldtemplate.websitearea.mypages.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.mypages.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.mypages.fieldgroup.contents.name">
+  <data name="fieldtemplate.websitearea.mypages.fieldgroup.contents.name" xml:space="preserve">
     <value>Main contents</value>
   </data>
-  <data name="fieldtemplate.websitearea.mypages.fieldgroup.image.name">
+  <data name="fieldtemplate.websitearea.mypages.fieldgroup.image.name" xml:space="preserve">
     <value>Image</value>
   </data>
-  <data name="fieldtemplate.websitearea.mypages.fieldgroup.linklist.name">
+  <data name="fieldtemplate.websitearea.mypages.fieldgroup.linklist.name" xml:space="preserve">
     <value>List</value>
   </data>
-  <data name="fieldtemplate.websitearea.newslist.name">
+  <data name="fieldtemplate.websitearea.newslist.name" xml:space="preserve">
     <value>News list</value>
   </data>
-  <data name="fieldtemplate.websitearea.newslist.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.newslist.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.newslist.fieldgroup.contents.name">
+  <data name="fieldtemplate.websitearea.newslist.fieldgroup.contents.name" xml:space="preserve">
     <value>Main Contents</value>
   </data>
-  <data name="fieldtemplate.websitearea.newslist.fieldgroup.linklist.name">
+  <data name="fieldtemplate.websitearea.newslist.fieldgroup.linklist.name" xml:space="preserve">
     <value>List</value>
   </data>
-  <data name="fieldtemplate.websitearea.newslist.fieldgroup.filelist.name">
+  <data name="fieldtemplate.websitearea.newslist.fieldgroup.filelist.name" xml:space="preserve">
     <value>File list</value>
   </data>
-  <data name="fieldtemplate.websitearea.news.name">
+  <data name="fieldtemplate.websitearea.news.name" xml:space="preserve">
     <value>News page</value>
   </data>
-  <data name="fieldtemplate.websitearea.news.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.news.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.news.fieldgroup.contents.name">
+  <data name="fieldtemplate.websitearea.news.fieldgroup.contents.name" xml:space="preserve">
     <value>Main Contents</value>
   </data>
-  <data name="fieldtemplate.websitearea.news.fieldgroup.linklist.name">
+  <data name="fieldtemplate.websitearea.news.fieldgroup.linklist.name" xml:space="preserve">
     <value>List</value>
   </data>
-  <data name="fieldtemplate.websitearea.news.fieldgroup.filelist.name">
+  <data name="fieldtemplate.websitearea.news.fieldgroup.filelist.name" xml:space="preserve">
     <value>File list</value>
   </data>
-  <data name="fieldtemplate.websitearea.news.fieldgroup.image.name">
+  <data name="fieldtemplate.websitearea.news.fieldgroup.image.name" xml:space="preserve">
     <value>Image</value>
   </data>
-  <data name="fieldtemplate.websitearea.orderconfirmationemail.name">
+  <data name="fieldtemplate.websitearea.orderconfirmationemail.name" xml:space="preserve">
     <value>Order confirmation mail</value>
   </data>
-  <data name="fieldtemplate.websitearea.orderconfirmationemail.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.orderconfirmationemail.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.orderconfirmation.name">
+  <data name="fieldtemplate.websitearea.orderconfirmation.name" xml:space="preserve">
     <value>Order confirmation</value>
   </data>
-  <data name="fieldtemplate.websitearea.orderconfirmation.fieldgroup.contents.name">
+  <data name="fieldtemplate.websitearea.orderconfirmation.fieldgroup.contents.name" xml:space="preserve">
     <value>Main contents</value>
   </data>
-  <data name="fieldtemplate.websitearea.orderhistory.name">
+  <data name="fieldtemplate.websitearea.orderhistory.name" xml:space="preserve">
     <value>Order history</value>
   </data>
-  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.contents.name">
+  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.contents.name" xml:space="preserve">
     <value>Main contents</value>
   </data>
-  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.linklist.name">
+  <data name="fieldtemplate.websitearea.orderhistory.fieldgroup.linklist.name" xml:space="preserve">
     <value>List</value>
   </data>
-  <data name="fieldtemplate.websitearea.order.name">
+  <data name="fieldtemplate.websitearea.order.name" xml:space="preserve">
     <value>Order</value>
   </data>
-  <data name="fieldtemplate.websitearea.order.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.order.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.order.fieldgroup.contents.name">
+  <data name="fieldtemplate.websitearea.order.fieldgroup.contents.name" xml:space="preserve">
     <value>Main Contents</value>
   </data>
-  <data name="fieldtemplate.blockarea.product.name">
+  <data name="fieldtemplate.blockarea.product.name" xml:space="preserve">
     <value>Products</value>
   </data>
-  <data name="fieldtemplate.blockarea.product.fieldgroup.general.name">
+  <data name="fieldtemplate.blockarea.product.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.blockarea.product.fieldgroup.products.name">
+  <data name="fieldtemplate.blockarea.product.fieldgroup.products.name" xml:space="preserve">
     <value>Products</value>
   </data>
-  <data name="fieldtemplate.websitearea.productlist.name">
+  <data name="fieldtemplate.websitearea.productlist.name" xml:space="preserve">
     <value>Product list</value>
   </data>
-  <data name="fieldtemplate.websitearea.productlist.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.productlist.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.blockarea.productsandbanner.name">
+  <data name="fieldtemplate.blockarea.productsandbanner.name" xml:space="preserve">
     <value>Products and banner</value>
   </data>
-  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.general.name">
+  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.banner.name">
+  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.banner.name" xml:space="preserve">
     <value>Banner</value>
   </data>
-  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.products.name">
+  <data name="fieldtemplate.blockarea.productsandbanner.fieldgroup.products.name" xml:space="preserve">
     <value>Products</value>
   </data>
-  <data name="fieldtemplate.productarea.category.name">
+  <data name="fieldtemplate.productarea.category.name" xml:space="preserve">
     <value>Category</value>
   </data>
-  <data name="fieldtemplate.websitearea.searchresult.name">
+  <data name="fieldtemplate.websitearea.searchresult.name" xml:space="preserve">
     <value>Search result</value>
   </data>
-  <data name="fieldtemplate.websitearea.searchresult.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.searchresult.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.blockarea.slider.name">
+  <data name="fieldtemplate.blockarea.slider.name" xml:space="preserve">
     <value>Slider</value>
   </data>
-  <data name="fieldtemplate.blockarea.slider.fieldgroup.general.name">
+  <data name="fieldtemplate.blockarea.slider.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.blockarea.slider.fieldgroup.slides.name">
+  <data name="fieldtemplate.blockarea.slider.fieldgroup.slides.name" xml:space="preserve">
     <value>Slides</value>
   </data>
-  <data name="fieldtemplate.blockarea.video.name">
+  <data name="fieldtemplate.blockarea.video.name" xml:space="preserve">
     <value>Video</value>
   </data>
-  <data name="fieldtemplate.blockarea.video.fieldgroup.general.name">
+  <data name="fieldtemplate.blockarea.video.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.blockarea.video.fieldgroup.video.name">
+  <data name="fieldtemplate.blockarea.video.fieldgroup.video.name" xml:space="preserve">
     <value>Video</value>
   </data>
-  <data name="fieldtemplate.websitearea.welcomeemail.name">
+  <data name="fieldtemplate.websitearea.welcomeemail.name" xml:space="preserve">
     <value>Welcome mail</value>
   </data>
-  <data name="fieldtemplate.websitearea.welcomeemail.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.welcomeemail.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.article.name">
+  <data name="fieldtemplate.websitearea.article.name" xml:space="preserve">
     <value>Article</value>
   </data>
-  <data name="fieldtemplate.websitearea.article.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.article.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.article.fieldgroup.contents.name">
+  <data name="fieldtemplate.websitearea.article.fieldgroup.contents.name" xml:space="preserve">
     <value>Main contents</value>
   </data>
-  <data name="fieldtemplate.websitearea.article.fieldgroup.list.name">
+  <data name="fieldtemplate.websitearea.article.fieldgroup.list.name" xml:space="preserve">
     <value>List</value>
   </data>
-  <data name="fieldtemplate.websitearea.article.fieldgroup.image.name">
+  <data name="fieldtemplate.websitearea.article.fieldgroup.image.name" xml:space="preserve">
     <value>Image</value>
   </data>
-  <data name="fieldtemplate.websitearea.article.fieldgroup.filelist.name">
+  <data name="fieldtemplate.websitearea.article.fieldgroup.filelist.name" xml:space="preserve">
     <value>File List</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.name" xml:space="preserve">
     <value>Website</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.logotype.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.logotype.name" xml:space="preserve">
     <value>Logotype</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.header.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.header.name" xml:space="preserve">
     <value>Header</value>
   </data>
-  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.search.name">
+  <data name="fieldtemplate.websitearea.acceleratorwebsite.fieldgroup.search.name" xml:space="preserve">
     <value>Search</value>
   </data>
-  <data name="fielddefinition.customerarea.socialsecuritynumber.name">
+  <data name="fielddefinition.customerarea.socialsecuritynumber.name" xml:space="preserve">
     <value>SocialSecurityNumber</value>
   </data>
-  <data name="fielddefinition.customerarea.socialsecuritynumber.description">
-    <value>
-    </value>
+  <data name="fielddefinition.customerarea.socialsecuritynumber.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.customerarea.legalregistrationnumber.name">
+  <data name="fielddefinition.customerarea.legalregistrationnumber.name" xml:space="preserve">
     <value>LegalRegistrationNumber</value>
   </data>
-  <data name="fielddefinition.customerarea.legalregistrationnumber.description">
-    <value>
-    </value>
+  <data name="fielddefinition.customerarea.legalregistrationnumber.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.logotypemain.name">
+  <data name="fielddefinition.websitearea.logotypemain.name" xml:space="preserve">
     <value>Logotype (main)</value>
   </data>
-  <data name="fielddefinition.websitearea.logotypemain.description">
+  <data name="fielddefinition.websitearea.logotypemain.description" xml:space="preserve">
     <value>A logtype image that will be used for the website framework.</value>
   </data>
-  <data name="fielddefinition.websitearea.logotypeicon.name">
+  <data name="fielddefinition.websitearea.logotypeicon.name" xml:space="preserve">
     <value>Logotype (icon)</value>
   </data>
-  <data name="fielddefinition.websitearea.logotypeicon.description">
+  <data name="fielddefinition.websitearea.logotypeicon.description" xml:space="preserve">
     <value>A logotype image that will be used for example in web browser tabs. Recommended size is 250 x 250px.</value>
   </data>
-  <data name="fielddefinition.websitearea.headerlayout.name">
+  <data name="fielddefinition.websitearea.headerlayout.name" xml:space="preserve">
     <value>Header layout</value>
   </data>
-  <data name="fielddefinition.websitearea.headerlayout.description">
+  <data name="fielddefinition.websitearea.headerlayout.description" xml:space="preserve">
     <value>Select between two headers. The one row option has one row with logotype, top menu, cart and more. The two option has one row with logotype, cart search etc, and a second row for caegory navigation links.</value>
   </data>
-  <data name="fielddefinition.websitearea.checkoutpage.name">
+  <data name="fielddefinition.websitearea.checkoutpage.name" xml:space="preserve">
     <value>Checkout page</value>
   </data>
-  <data name="fielddefinition.websitearea.checkoutpage.description">
+  <data name="fielddefinition.websitearea.checkoutpage.description" xml:space="preserve">
     <value>The page where the user ends up after clicking the checkout icon or link in the header.</value>
   </data>
-  <data name="fielddefinition.websitearea.mypagespage.name">
+  <data name="fielddefinition.websitearea.mypagespage.name" xml:space="preserve">
     <value>My pages page</value>
   </data>
-  <data name="fielddefinition.websitearea.mypagespage.description">
+  <data name="fielddefinition.websitearea.mypagespage.description" xml:space="preserve">
     <value>The page where the user ends up after clicking the My pages icon or link in the header.</value>
   </data>
-  <data name="fielddefinition.websitearea.additionalheaderlinks.name">
+  <data name="fielddefinition.websitearea.additionalheaderlinks.name" xml:space="preserve">
     <value>Additional header links</value>
   </data>
-  <data name="fielddefinition.websitearea.additionalheaderlinks.description">
+  <data name="fielddefinition.websitearea.additionalheaderlinks.description" xml:space="preserve">
     <value>Additional links that will appear in the top right of the web site framework, next to the search and login links.</value>
   </data>
-  <data name="fielddefinition.websitearea.searchresultpage.name">
+  <data name="fielddefinition.websitearea.searchresultpage.name" xml:space="preserve">
     <value>Search result page</value>
   </data>
-  <data name="fielddefinition.websitearea.searchresultpage.description">
+  <data name="fielddefinition.websitearea.searchresultpage.description" xml:space="preserve">
     <value>The page where the user ends up after performing a search.</value>
   </data>
-  <data name="fielddefinition.websitearea.footerheader.name">
+  <data name="fielddefinition.websitearea.footerheader.name" xml:space="preserve">
     <value>Header</value>
   </data>
-  <data name="fielddefinition.websitearea.footerheader.description">
+  <data name="fielddefinition.websitearea.footerheader.description" xml:space="preserve">
     <value>The header of the footer column.</value>
   </data>
-  <data name="fielddefinition.websitearea.footerlinklist.name">
+  <data name="fielddefinition.websitearea.footerlinklist.name" xml:space="preserve">
     <value>Link list</value>
   </data>
-  <data name="fielddefinition.websitearea.footerlinklist.description">
+  <data name="fielddefinition.websitearea.footerlinklist.description" xml:space="preserve">
     <value>A list of links that are added to the footer column.</value>
   </data>
-  <data name="fielddefinition.websitearea.footertext.name">
+  <data name="fielddefinition.websitearea.footertext.name" xml:space="preserve">
     <value>Text</value>
   </data>
-  <data name="fielddefinition.websitearea.footertext.description">
+  <data name="fielddefinition.websitearea.footertext.description" xml:space="preserve">
     <value>HTML content that is added into the footer column.</value>
   </data>
-  <data name="fielddefinition.websitearea.navigationtheme.name">
+  <data name="fielddefinition.websitearea.navigationtheme.name" xml:space="preserve">
     <value>Navigation theme</value>
   </data>
-  <data name="fielddefinition.websitearea.navigationtheme.description">
+  <data name="fielddefinition.websitearea.navigationtheme.description" xml:space="preserve">
     <value>Select between a category based or filter based navigation framework.</value>
   </data>
-  <data name="fielddefinition.websitearea.infirstlevelcategories.name">
+  <data name="fielddefinition.websitearea.infirstlevelcategories.name" xml:space="preserve">
     <value>In first level categories</value>
   </data>
-  <data name="fielddefinition.websitearea.infirstlevelcategories.description">
+  <data name="fielddefinition.websitearea.infirstlevelcategories.description" xml:space="preserve">
     <value>Hides or shows the left menu of the pages showing the first category level.</value>
   </data>
-  <data name="fielddefinition.websitearea.inbrandpages.name">
+  <data name="fielddefinition.websitearea.inbrandpages.name" xml:space="preserve">
     <value>In brand pages</value>
   </data>
-  <data name="fielddefinition.websitearea.inbrandpages.description">
+  <data name="fielddefinition.websitearea.inbrandpages.description" xml:space="preserve">
     <value>Hides or shows the left menu of the pages showing information and products for a brand.</value>
   </data>
-  <data name="fielddefinition.websitearea.inproductlistpages.name">
+  <data name="fielddefinition.websitearea.inproductlistpages.name" xml:space="preserve">
     <value>In product list pages</value>
   </data>
-  <data name="fielddefinition.websitearea.inproductlistpages.description">
+  <data name="fielddefinition.websitearea.inproductlistpages.description" xml:space="preserve">
     <value>Hides or shows the left menu of pages that are poitning out a product list.</value>
   </data>
-  <data name="fielddefinition.websitearea.inarticlepages.name">
+  <data name="fielddefinition.websitearea.inarticlepages.name" xml:space="preserve">
     <value>In article pages</value>
   </data>
-  <data name="fielddefinition.websitearea.inarticlepages.description">
+  <data name="fielddefinition.websitearea.inarticlepages.description" xml:space="preserve">
     <value>Hides or shows the left menu of ordinary content pages.</value>
   </data>
-  <data name="fielddefinition.websitearea.productsperpage.name">
+  <data name="fielddefinition.websitearea.productsperpage.name" xml:space="preserve">
     <value>Products per page</value>
   </data>
-  <data name="fielddefinition.websitearea.productsperpage.description">
+  <data name="fielddefinition.websitearea.productsperpage.description" xml:space="preserve">
     <value>The number of products shown per page.</value>
   </data>
-  <data name="fielddefinition.websitearea.showbuybutton.name">
+  <data name="fielddefinition.websitearea.showbuybutton.name" xml:space="preserve">
     <value>Show buy button</value>
   </data>
-  <data name="fielddefinition.websitearea.showbuybutton.description">
+  <data name="fielddefinition.websitearea.showbuybutton.description" xml:space="preserve">
     <value>Whether to show buy button next to each product in product lists.</value>
   </data>
-  <data name="fielddefinition.websitearea.showquantityfieldproductlist.name">
+  <data name="fielddefinition.websitearea.showquantityfieldproductlist.name" xml:space="preserve">
     <value>Show quantity field</value>
   </data>
-  <data name="fielddefinition.websitearea.showquantityfieldproductlist.description">
+  <data name="fielddefinition.websitearea.showquantityfieldproductlist.description" xml:space="preserve">
     <value>Whether to show an input field for the number of products to buy.</value>
   </data>
-  <data name="fielddefinition.websitearea.showquantityfieldproductpage.name">
+  <data name="fielddefinition.websitearea.showquantityfieldproductpage.name" xml:space="preserve">
     <value>Show quantity field</value>
   </data>
-  <data name="fielddefinition.websitearea.showquantityfieldproductpage.description">
+  <data name="fielddefinition.websitearea.showquantityfieldproductpage.description" xml:space="preserve">
     <value>Whether to show an input field for the number of products to buy.</value>
   </data>
-  <data name="fielddefinition.websitearea.filtersordering.name">
+  <data name="fielddefinition.websitearea.filtersordering.name" xml:space="preserve">
     <value>Filters ordering</value>
   </data>
-  <data name="fielddefinition.websitearea.filtersordering.description">
+  <data name="fielddefinition.websitearea.filtersordering.description" xml:space="preserve">
     <value>Product filters will be shown in this order.</value>
   </data>
-  <data name="fielddefinition.websitearea.filtersindexedbysearchengines.name">
+  <data name="fielddefinition.websitearea.filtersindexedbysearchengines.name" xml:space="preserve">
     <value>Filters indexed by search engines</value>
   </data>
-  <data name="fielddefinition.websitearea.filtersindexedbysearchengines.description">
+  <data name="fielddefinition.websitearea.filtersindexedbysearchengines.description" xml:space="preserve">
     <value>The product filters that should be indexed by search enginges.</value>
   </data>
-  <data name="fielddefinition.websitearea.checkoutmode.name">
+  <data name="fielddefinition.websitearea.checkoutmode.name" xml:space="preserve">
     <value>Allow private or company customers (B2C or B2B)</value>
   </data>
-  <data name="fielddefinition.websitearea.checkoutmode.description">
+  <data name="fielddefinition.websitearea.checkoutmode.description" xml:space="preserve">
     <value>Select whether you want to allow private or company customers, or both, to buy from your site.</value>
   </data>
-  <data name="fielddefinition.websitearea.allowcustomerseditlogin.name">
+  <data name="fielddefinition.websitearea.allowcustomerseditlogin.name" xml:space="preserve">
     <value>Allow customers to edit login</value>
   </data>
-  <data name="fielddefinition.websitearea.allowcustomerseditlogin.description">
+  <data name="fielddefinition.websitearea.allowcustomerseditlogin.description" xml:space="preserve">
     <value>A setting that allows customers to edit their username and password.</value>
   </data>
-  <data name="fielddefinition.websitearea.senderemailaddress.name">
+  <data name="fielddefinition.websitearea.senderemailaddress.name" xml:space="preserve">
     <value>Sender email address</value>
   </data>
-  <data name="fielddefinition.websitearea.senderemailaddress.description">
+  <data name="fielddefinition.websitearea.senderemailaddress.description" xml:space="preserve">
     <value>The email address that will be used to send emails to customers.</value>
   </data>
-  <data name="fielddefinition.websitearea.orderconfirmaionemailcontent.name">
+  <data name="fielddefinition.websitearea.orderconfirmaionemailcontent.name" xml:space="preserve">
     <value>Order confirmaion email content</value>
   </data>
-  <data name="fielddefinition.websitearea.orderconfirmaionemailcontent.description">
+  <data name="fielddefinition.websitearea.orderconfirmaionemailcontent.description" xml:space="preserve">
     <value>A link to the page which content will be sent as order confirmation email content.</value>
   </data>
-  <data name="fielddefinition.websitearea.orderconfirmationpage.name">
+  <data name="fielddefinition.websitearea.orderconfirmationpage.name" xml:space="preserve">
     <value>Order confirmation page</value>
   </data>
-  <data name="fielddefinition.websitearea.orderconfirmationpage.description">
+  <data name="fielddefinition.websitearea.orderconfirmationpage.description" xml:space="preserve">
     <value>The page that will be displayed as order confirmation page.</value>
   </data>
-  <data name="fielddefinition.websitearea.termsandconditionslinkpage.name">
+  <data name="fielddefinition.websitearea.termsandconditionslinkpage.name" xml:space="preserve">
     <value>Terms &amp; Conditions</value>
   </data>
-  <data name="fielddefinition.websitearea.termsandconditionslinkpage.description">
+  <data name="fielddefinition.websitearea.termsandconditionslinkpage.description" xml:space="preserve">
     <value>Terms &amp; Conditions show on page.</value>
   </data>
-  <data name="fielddefinition.websitearea.useconfirmationwidget.name">
+  <data name="fielddefinition.websitearea.useconfirmationwidget.name" xml:space="preserve">
     <value>Use confirmation widget</value>
   </data>
-  <data name="fielddefinition.websitearea.useconfirmationwidget.description">
+  <data name="fielddefinition.websitearea.useconfirmationwidget.description" xml:space="preserve">
     <value>Use the confirmation widget from the payment provider, if supported.</value>
   </data>
-  <data name="fielddefinition.blockarea.blocktitle.name">
+  <data name="fielddefinition.blockarea.blocktitle.name" xml:space="preserve">
     <value>Title</value>
   </data>
-  <data name="fielddefinition.blockarea.blocktitle.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.blocktitle.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.blocktext.name">
+  <data name="fielddefinition.blockarea.blocktext.name" xml:space="preserve">
     <value>Text</value>
   </data>
-  <data name="fielddefinition.blockarea.blocktext.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.blocktext.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.link.name">
+  <data name="fielddefinition.blockarea.link.name" xml:space="preserve">
     <value>Link</value>
   </data>
-  <data name="fielddefinition.blockarea.link.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.link.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.bannerlinktopage.name">
+  <data name="fielddefinition.blockarea.bannerlinktopage.name" xml:space="preserve">
     <value>Link to page</value>
   </data>
-  <data name="fielddefinition.blockarea.bannerlinktopage.description">
+  <data name="fielddefinition.blockarea.bannerlinktopage.description" xml:space="preserve">
     <value>The priority of the link fields is: category, page, product</value>
   </data>
-  <data name="fielddefinition.blockarea.bannerlinktocategory.name">
+  <data name="fielddefinition.blockarea.bannerlinktocategory.name" xml:space="preserve">
     <value>Link to category</value>
   </data>
-  <data name="fielddefinition.blockarea.bannerlinktocategory.description">
+  <data name="fielddefinition.blockarea.bannerlinktocategory.description" xml:space="preserve">
     <value>The priority of the link fields is: category, page, product</value>
   </data>
-  <data name="fielddefinition.blockarea.bannerlinktoproduct.name">
+  <data name="fielddefinition.blockarea.bannerlinktoproduct.name" xml:space="preserve">
     <value>Link to product</value>
   </data>
-  <data name="fielddefinition.blockarea.bannerlinktoproduct.description">
+  <data name="fielddefinition.blockarea.bannerlinktoproduct.description" xml:space="preserve">
     <value>The priority of the link fields is: category, page, product</value>
   </data>
-  <data name="fielddefinition.blockarea.linktext.name">
+  <data name="fielddefinition.blockarea.linktext.name" xml:space="preserve">
     <value>Link text</value>
   </data>
-  <data name="fielddefinition.blockarea.linktext.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.linktext.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.actiontext.name">
+  <data name="fielddefinition.blockarea.actiontext.name" xml:space="preserve">
     <value>Call to action text</value>
   </data>
-  <data name="fielddefinition.blockarea.actiontext.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.actiontext.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.blockvideo.name">
+  <data name="fielddefinition.blockarea.blockvideo.name" xml:space="preserve">
     <value>Video</value>
   </data>
-  <data name="fielddefinition.blockarea.blockvideo.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.blockvideo.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.brandslinklist.name">
+  <data name="fielddefinition.blockarea.brandslinklist.name" xml:space="preserve">
     <value>Brands</value>
   </data>
-  <data name="fielddefinition.blockarea.brandslinklist.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.brandslinklist.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.banners.name">
+  <data name="fielddefinition.blockarea.banners.name" xml:space="preserve">
     <value>Banners</value>
   </data>
-  <data name="fielddefinition.blockarea.banners.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.banners.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.categorylink.name">
+  <data name="fielddefinition.blockarea.categorylink.name" xml:space="preserve">
     <value>Category</value>
   </data>
-  <data name="fielddefinition.blockarea.categorylink.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.categorylink.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.productlistlink.name">
+  <data name="fielddefinition.blockarea.productlistlink.name" xml:space="preserve">
     <value>Product list</value>
   </data>
-  <data name="fielddefinition.blockarea.productlistlink.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.productlistlink.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.productslinklist.name">
+  <data name="fielddefinition.blockarea.productslinklist.name" xml:space="preserve">
     <value>Products</value>
   </data>
-  <data name="fielddefinition.blockarea.productslinklist.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.productslinklist.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.numberofproducts.name">
+  <data name="fielddefinition.blockarea.numberofproducts.name" xml:space="preserve">
     <value>Number of products (2-4)</value>
   </data>
-  <data name="fielddefinition.blockarea.numberofproducts.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.numberofproducts.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.productsorting.name">
+  <data name="fielddefinition.blockarea.productsorting.name" xml:space="preserve">
     <value>Product sorting</value>
   </data>
-  <data name="fielddefinition.blockarea.productsorting.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.productsorting.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.linktocategory.name">
+  <data name="fielddefinition.blockarea.linktocategory.name" xml:space="preserve">
     <value>Link to category</value>
   </data>
-  <data name="fielddefinition.blockarea.linktocategory.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.linktocategory.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.linktopage.name">
+  <data name="fielddefinition.blockarea.linktopage.name" xml:space="preserve">
     <value>Link to page</value>
   </data>
-  <data name="fielddefinition.blockarea.linktopage.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.linktopage.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.productlinktext.name">
+  <data name="fielddefinition.blockarea.productlinktext.name" xml:space="preserve">
     <value>Link text</value>
   </data>
-  <data name="fielddefinition.blockarea.productlinktext.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.productlinktext.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.showproducttotheright.name">
+  <data name="fielddefinition.blockarea.showproducttotheright.name" xml:space="preserve">
     <value>Products to the right</value>
   </data>
-  <data name="fielddefinition.blockarea.showproducttotheright.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.showproducttotheright.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.slider.name">
+  <data name="fielddefinition.blockarea.slider.name" xml:space="preserve">
     <value>Slider</value>
   </data>
-  <data name="fielddefinition.blockarea.slider.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.slider.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.blockarea.blockimagepointer.name">
+  <data name="fielddefinition.blockarea.blockimagepointer.name" xml:space="preserve">
     <value>Image</value>
   </data>
-  <data name="fielddefinition.blockarea.blockimagepointer.description">
-    <value>
-    </value>
+  <data name="fielddefinition.blockarea.blockimagepointer.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.title.name">
+  <data name="fielddefinition.websitearea.title.name" xml:space="preserve">
     <value>Title</value>
   </data>
-  <data name="fielddefinition.websitearea.title.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.title.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.introduction.name">
+  <data name="fielddefinition.websitearea.introduction.name" xml:space="preserve">
     <value>Introduction</value>
   </data>
-  <data name="fielddefinition.websitearea.introduction.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.introduction.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.text.name">
+  <data name="fielddefinition.websitearea.text.name" xml:space="preserve">
     <value>Text</value>
   </data>
-  <data name="fielddefinition.websitearea.text.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.text.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.links.name">
+  <data name="fielddefinition.websitearea.links.name" xml:space="preserve">
     <value>Links</value>
   </data>
-  <data name="fielddefinition.websitearea.links.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.links.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.image.name">
+  <data name="fielddefinition.websitearea.image.name" xml:space="preserve">
     <value>Image</value>
   </data>
-  <data name="fielddefinition.websitearea.image.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.image.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.files.name">
+  <data name="fielddefinition.websitearea.files.name" xml:space="preserve">
     <value>Files</value>
   </data>
-  <data name="fielddefinition.websitearea.files.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.files.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.pagesize.name">
+  <data name="fielddefinition.websitearea.pagesize.name" xml:space="preserve">
     <value>Number of products shown per page</value>
   </data>
-  <data name="fielddefinition.websitearea.pagesize.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.pagesize.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.titlefilterselector.name">
+  <data name="fielddefinition.websitearea.titlefilterselector.name" xml:space="preserve">
     <value>Title</value>
   </data>
-  <data name="fielddefinition.websitearea.titlefilterselector.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.titlefilterselector.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.errormessage.name">
+  <data name="fielddefinition.websitearea.errormessage.name" xml:space="preserve">
     <value>Error message</value>
   </data>
-  <data name="fielddefinition.websitearea.errormessage.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.errormessage.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.numberofnewsperpage.name">
+  <data name="fielddefinition.websitearea.numberofnewsperpage.name" xml:space="preserve">
     <value>Number of news per page</value>
   </data>
-  <data name="fielddefinition.websitearea.numberofnewsperpage.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.numberofnewsperpage.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.newsdate.name">
+  <data name="fielddefinition.websitearea.newsdate.name" xml:space="preserve">
     <value>News date</value>
   </data>
-  <data name="fielddefinition.websitearea.newsdate.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.newsdate.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.categorypointer.name">
+  <data name="fielddefinition.websitearea.categorypointer.name" xml:space="preserve">
     <value>Product category pointer</value>
   </data>
-  <data name="fielddefinition.websitearea.categorypointer.description">
+  <data name="fielddefinition.websitearea.categorypointer.description" xml:space="preserve">
     <value>For connecting landing page and product category</value>
   </data>
-  <data name="fielddefinition.websitearea.alternativeimagedescription.name">
+  <data name="fielddefinition.websitearea.alternativeimagedescription.name" xml:space="preserve">
     <value>Alternative Image Description</value>
   </data>
-  <data name="fielddefinition.websitearea.alternativeimagedescription.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.alternativeimagedescription.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.welcomeemailsubject.name">
+  <data name="fielddefinition.websitearea.welcomeemailsubject.name" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="fielddefinition.websitearea.welcomeemailsubject.description">
+  <data name="fielddefinition.websitearea.welcomeemailsubject.description" xml:space="preserve">
     <value>Ämnesraden i det välkomstmeddelande som skickas till nya kunder.</value>
   </data>
-  <data name="fielddefinition.websitearea.welcomeemailtext.name">
+  <data name="fielddefinition.websitearea.welcomeemailtext.name" xml:space="preserve">
     <value>Welcome email text</value>
   </data>
-  <data name="fielddefinition.websitearea.welcomeemailtext.description">
+  <data name="fielddefinition.websitearea.welcomeemailtext.description" xml:space="preserve">
     <value>The content of the welcome email sent to new customers.</value>
   </data>
-  <data name="fielddefinition.websitearea.orderconfirmationemailsubject.name">
+  <data name="fielddefinition.websitearea.orderconfirmationemailsubject.name" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="fielddefinition.websitearea.orderconfirmationemailsubject.description">
+  <data name="fielddefinition.websitearea.orderconfirmationemailsubject.description" xml:space="preserve">
     <value>The subject header of the email sent for order confirmation emails.</value>
   </data>
-  <data name="fielddefinition.websitearea.numberofordersperpage.name">
+  <data name="fielddefinition.websitearea.numberofordersperpage.name" xml:space="preserve">
     <value>Number of orders per page</value>
   </data>
-  <data name="fielddefinition.websitearea.numberofordersperpage.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.numberofordersperpage.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.orderlink.name">
+  <data name="fielddefinition.websitearea.orderlink.name" xml:space="preserve">
     <value>Order link</value>
   </data>
-  <data name="fielddefinition.websitearea.orderlink.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.orderlink.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.productlistpointer.name">
+  <data name="fielddefinition.websitearea.productlistpointer.name" xml:space="preserve">
     <value>Product list pointer</value>
   </data>
-  <data name="fielddefinition.websitearea.productlistpointer.description">
+  <data name="fielddefinition.websitearea.productlistpointer.description" xml:space="preserve">
     <value>The product list pointer</value>
   </data>
-  <data name="fielddefinition.websitearea.mayusereditlogin.name">
+  <data name="fielddefinition.websitearea.mayusereditlogin.name" xml:space="preserve">
     <value>User can edit login username and password</value>
   </data>
-  <data name="fielddefinition.websitearea.mayusereditlogin.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.mayusereditlogin.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordlink.name">
+  <data name="fielddefinition.websitearea.forgottenpasswordlink.name" xml:space="preserve">
     <value>Link to forgotten password page</value>
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordlink.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.forgottenpasswordlink.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordsubject.name">
+  <data name="fielddefinition.websitearea.forgottenpasswordsubject.name" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordsubject.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.forgottenpasswordsubject.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordbody.name">
+  <data name="fielddefinition.websitearea.forgottenpasswordbody.name" xml:space="preserve">
     <value>Body</value>
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordbody.description">
+  <data name="fielddefinition.websitearea.forgottenpasswordbody.description" xml:space="preserve">
     <value>This is the content of the email sent when a user requests a new password. Use {LINK} and {EXPIRES} as placeholders for the link and expiration time.</value>
   </data>
-  <data name="fielddefinition.websitearea.redirectlink.name">
+  <data name="fielddefinition.websitearea.redirectlink.name" xml:space="preserve">
     <value>After login, go to this page</value>
   </data>
-  <data name="fielddefinition.websitearea.redirectlink.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.redirectlink.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.megamenucategory.name">
+  <data name="fielddefinition.websitearea.megamenucategory.name" xml:space="preserve">
     <value>Category</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenucategory.description">
+  <data name="fielddefinition.websitearea.megamenucategory.description" xml:space="preserve">
     <value>If a category is chosen, the link will redirect to the category in the first place. If no category is selected, the link will redirect to the page selected.</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenupage.name">
+  <data name="fielddefinition.websitearea.megamenupage.name" xml:space="preserve">
     <value>Page</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenupage.description">
+  <data name="fielddefinition.websitearea.megamenupage.description" xml:space="preserve">
     <value>If a category is chosen, the link will redirect to the category in the first place. If no category is selected, the link will redirect to the page selected.</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenushowcontent.name">
+  <data name="fielddefinition.websitearea.megamenushowcontent.name" xml:space="preserve">
     <value>Show mega menu content</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenushowcontent.description">
+  <data name="fielddefinition.websitearea.megamenushowcontent.description" xml:space="preserve">
     <value>When checked, the mega menu opens when the user clicks the link in the menu. If not checked, the user is redirected to the the link's target page or category when clicking the link in the menu.</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenushowsubcategories.name">
+  <data name="fielddefinition.websitearea.megamenushowsubcategories.name" xml:space="preserve">
     <value>Show sub categories</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenushowsubcategories.description">
+  <data name="fielddefinition.websitearea.megamenushowsubcategories.description" xml:space="preserve">
     <value>If a category is selected as the link's target, when checked, the mega menu lists the sub categories of that category.</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenucolumnheader.name">
+  <data name="fielddefinition.websitearea.megamenucolumnheader.name" xml:space="preserve">
     <value>Column header</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenucolumnheader.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.megamenucolumnheader.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.megamenucategories.name">
+  <data name="fielddefinition.websitearea.megamenucategories.name" xml:space="preserve">
     <value>Categories</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenucategories.description">
+  <data name="fielddefinition.websitearea.megamenucategories.description" xml:space="preserve">
     <value>Content for the column will be, in prioritized order and if any content is selected: categories, pages, filters or the content of the editor.</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenupages.name">
+  <data name="fielddefinition.websitearea.megamenupages.name" xml:space="preserve">
     <value>Pages</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenupages.description">
+  <data name="fielddefinition.websitearea.megamenupages.description" xml:space="preserve">
     <value>Content for the column will be, in prioritized order and if any content is selected: categories, pages, filters or the content of the editor.</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenufilters.name">
+  <data name="fielddefinition.websitearea.megamenufilters.name" xml:space="preserve">
     <value>Filters</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenufilters.description">
+  <data name="fielddefinition.websitearea.megamenufilters.description" xml:space="preserve">
     <value>Content for the column will be, in prioritized order and if any content is selected: categories, pages, filters or the content of the editor.</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenueditor.name">
+  <data name="fielddefinition.websitearea.megamenueditor.name" xml:space="preserve">
     <value>Editor</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenueditor.description">
+  <data name="fielddefinition.websitearea.megamenueditor.description" xml:space="preserve">
     <value>Content for the column will be, in prioritized order and if any content is selected: categories, pages, filters or the content of the editor.</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenuadditionallink.name">
+  <data name="fielddefinition.websitearea.megamenuadditionallink.name" xml:space="preserve">
     <value>Additional link</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenuadditionallink.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.megamenuadditionallink.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.megamenulinktocategory.name">
+  <data name="fielddefinition.websitearea.megamenulinktocategory.name" xml:space="preserve">
     <value>Link to category</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenulinktocategory.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.megamenulinktocategory.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.megamenulinktopage.name">
+  <data name="fielddefinition.websitearea.megamenulinktopage.name" xml:space="preserve">
     <value>Link to page</value>
   </data>
-  <data name="fielddefinition.websitearea.megamenulinktopage.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.megamenulinktopage.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.brand.name">
+  <data name="fielddefinition.productarea.brand.name" xml:space="preserve">
     <value>Brand</value>
   </data>
-  <data name="fielddefinition.productarea.brand.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.brand.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.color.name">
+  <data name="fielddefinition.productarea.color.name" xml:space="preserve">
     <value>Color</value>
   </data>
-  <data name="fielddefinition.productarea.color.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.color.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.news.name">
+  <data name="fielddefinition.productarea.news.name" xml:space="preserve">
     <value>News</value>
   </data>
-  <data name="fielddefinition.productarea.news.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.news.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.productsheet.name">
+  <data name="fielddefinition.productarea.productsheet.name" xml:space="preserve">
     <value>Product sheet</value>
   </data>
-  <data name="fielddefinition.productarea.productsheet.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.productsheet.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.specification.name">
+  <data name="fielddefinition.productarea.specification.name" xml:space="preserve">
     <value>Product specifications</value>
   </data>
-  <data name="fielddefinition.productarea.specification.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.specification.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.acceleratorfilterfields.name">
+  <data name="fielddefinition.productarea.acceleratorfilterfields.name" xml:space="preserve">
     <value>Show as filter on site</value>
   </data>
-  <data name="fielddefinition.productarea.acceleratorfilterfields.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.acceleratorfilterfields.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.organizationspointer.name">
+  <data name="fielddefinition.productarea.organizationspointer.name" xml:space="preserve">
     <value>Organization list</value>
   </data>
-  <data name="fielddefinition.productarea.organizationspointer.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.organizationspointer.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.size.name">
+  <data name="fielddefinition.productarea.size.name" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="fielddefinition.productarea.size.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.size.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.weight.name">
+  <data name="fielddefinition.productarea.weight.name" xml:space="preserve">
     <value>Weight</value>
   </data>
-  <data name="fielddefinition.productarea.weight.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.weight.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.productarea.agegroup.name">
+  <data name="fielddefinition.productarea.agegroup.name" xml:space="preserve">
     <value>Age group</value>
   </data>
-  <data name="fielddefinition.productarea.agegroup.description">
+  <data name="fielddefinition.productarea.agegroup.description" xml:space="preserve">
     <value>Google Shopping fält</value>
   </data>
-  <data name="fielddefinition.productarea.adult.name">
+  <data name="fielddefinition.productarea.adult.name" xml:space="preserve">
     <value>Adult</value>
   </data>
-  <data name="fielddefinition.productarea.adult.description">
+  <data name="fielddefinition.productarea.adult.description" xml:space="preserve">
     <value>Google Shopping field</value>
   </data>
-  <data name="fielddefinition.productarea.condition.name">
+  <data name="fielddefinition.productarea.condition.name" xml:space="preserve">
     <value>Condition</value>
   </data>
-  <data name="fielddefinition.productarea.condition.description">
+  <data name="fielddefinition.productarea.condition.description" xml:space="preserve">
     <value>Google Shopping field</value>
   </data>
-  <data name="fielddefinition.productarea.gender.name">
+  <data name="fielddefinition.productarea.gender.name" xml:space="preserve">
     <value>Gender</value>
   </data>
-  <data name="fielddefinition.productarea.gender.description">
+  <data name="fielddefinition.productarea.gender.description" xml:space="preserve">
     <value>Google Shopping field</value>
   </data>
-  <data name="fielddefinition.productarea.gtin.name">
+  <data name="fielddefinition.productarea.gtin.name" xml:space="preserve">
     <value>Global Trade Item Numbers</value>
   </data>
-  <data name="fielddefinition.productarea.gtin.description">
+  <data name="fielddefinition.productarea.gtin.description" xml:space="preserve">
     <value>Google Shopping field</value>
   </data>
-  <data name="fielddefinition.productarea.isbundle.name">
+  <data name="fielddefinition.productarea.isbundle.name" xml:space="preserve">
     <value>Is bundle</value>
   </data>
-  <data name="fielddefinition.productarea.isbundle.description">
+  <data name="fielddefinition.productarea.isbundle.description" xml:space="preserve">
     <value>Google Shopping field</value>
   </data>
-  <data name="fielddefinition.productarea.mpn.name">
+  <data name="fielddefinition.productarea.mpn.name" xml:space="preserve">
     <value>Manufacturer Part Number</value>
   </data>
-  <data name="fielddefinition.productarea.mpn.description">
+  <data name="fielddefinition.productarea.mpn.description" xml:space="preserve">
     <value>Google Shopping field</value>
   </data>
-  <data name="fielddefinition.productarea.googleproductcategory.name">
+  <data name="fielddefinition.productarea.googleproductcategory.name" xml:space="preserve">
     <value>Product Category</value>
   </data>
-  <data name="fielddefinition.productarea.googleproductcategory.description">
+  <data name="fielddefinition.productarea.googleproductcategory.description" xml:space="preserve">
     <value>Google Shopping field</value>
   </data>
-  <data name="fielddefinition.websitearea.footer.name">
+  <data name="fielddefinition.websitearea.footer.name" xml:space="preserve">
     <value>Footer</value>
   </data>
-  <data name="fielddefinition.websitearea.footer.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.footer.description" xml:space="preserve">
+    <value />
   </data>
   <data name="fielddefinition.websitearea.megamenucolumn.name" xml:space="preserve">
     <value>Mega menu column</value>
   </data>
   <data name="fielddefinition.websitearea.megamenucolumn.description" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
-  <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.general.name">
+  <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.general.name" xml:space="preserve">
     <value>General</value>
   </data>
   <data name="fieldtemplate.websitearea.forgotpassword.fieldgroup.emaillocked.name" xml:space="preserve">
     <value>Email when account is locked</value>
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordlockedsubject.name">
+  <data name="fielddefinition.websitearea.forgottenpasswordlockedsubject.name" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordlockedsubject.description">
-    <value>
-    </value>
+  <data name="fielddefinition.websitearea.forgottenpasswordlockedsubject.description" xml:space="preserve">
+    <value />
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordlockedbody.name">
+  <data name="fielddefinition.websitearea.forgottenpasswordlockedbody.name" xml:space="preserve">
     <value>Body</value>
   </data>
-  <data name="fielddefinition.websitearea.forgottenpasswordlockedbody.description">
+  <data name="fielddefinition.websitearea.forgottenpasswordlockedbody.description" xml:space="preserve">
     <value>This is the content of the email sent when a user requests a new password which account were locked</value>
   </data>
-  <data name="fielddefinition.productarea.type.name">
+  <data name="fielddefinition.productarea.type.name" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="fielddefinition.productarea.type.description">
-    <value>
-    </value>
+  <data name="fielddefinition.productarea.type.description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="fieldtemplate.websitearea.Author.name" xml:space="preserve">
+    <value>Author page</value>
   </data>
 </root>

@@ -264,7 +264,7 @@ namespace Litium.Accelerator.Definitions
             {
                 if (IsAlreadyExecuted<FieldTemplate>(item.Id, item.AreaType.Name))
                 {
-                    continue;
+                    //continue;
                 }
 
                 var currentField = _fieldTemplateService.Get<FieldTemplate>(item.AreaType, item.Id);
