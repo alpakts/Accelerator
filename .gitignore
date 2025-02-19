@@ -1,13 +1,14 @@
 /data
 /volumes
 /shared
+/files
 # Visual Studio ile ilgili dosyalar
 .vs/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
-
+/litiumprovider
 # Bin ve obj klasörleri (derleme dosyaları)
 bin/
 obj/

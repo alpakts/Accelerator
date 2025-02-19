@@ -1,0 +1,44 @@
+@model Litium.Accelerator.ViewModels.Block.AuthorBlockViewModel
+@using Litium.Web.Models.Websites
+@using Litium.Web.Models
+@using System.Drawing
+
+@{
+    var responsiveDefinition = new ResponsiveImageDefinition()
+    {
+        SrcSets = new SrcSetDefinition[]
+        {
+            new (400),
+            new (800),
+            new (1000),
+            new (1314),
+        },
+        Sizes = new SizeDefinition[]
+        {
+            new ("100vw"),
+        },
+    };
+}
+
+<div class="author-block">
+    @if (Model.Image != null)
+    {
+        <div class="author-image">
+            @Html.ImageFor(m => m.Image, maxSize: new Size(786, -1), htmlAttributes: new { @class = "author-block__image" }, renderSizeAttributes: true, responsiveDefinition: responsiveDefinition)
+        </div>
+    }
+    <div class="author-content">
+        @if (!string.IsNullOrEmpty(Model.Title))
+        {
+            <h2 class="author-block__title">@Model.Title</h2>
+        }
+        @if (!string.IsNullOrEmpty(Model.Text))
+        {
+            <div class="author-block__text">@Model.Text</div>
+        }
+        @if (!string.IsNullOrEmpty(Model.LinkUrl))
+        {
+            <a href="@Model.LinkUrl" class="author-block__link">@(Model.LinkText ?? "Read more")</a>
+        }
+    </div>
+</div> 

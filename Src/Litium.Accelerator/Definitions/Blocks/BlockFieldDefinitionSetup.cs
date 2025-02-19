@@ -19,6 +19,8 @@ namespace Litium.Accelerator.Definitions.Blocks
             fields.AddRange(ProductFields());
             fields.AddRange(ProductsAndBannerFields());
             fields.AddRange(SliderFields());
+            fields.AddRange(AuthorFields());
+
             foreach (var field in fields)
             {
                 field.UseInStorefront = true;
@@ -198,6 +200,39 @@ namespace Litium.Accelerator.Definitions.Blocks
                 {
                     Editable = true,
                     MultiCulture = true,
+                }
+            };
+            return fields;
+        }
+
+        private IEnumerable<FieldDefinition> AuthorFields()
+        {
+            var fields = new List<FieldDefinition>
+            {
+                new FieldDefinition<BlockArea>(BlockFieldNameConstants.BlockImagePointer, SystemFieldTypeConstants.MediaPointerImage)
+                {
+                    MultiCulture = true,
+                    Editable = true,
+                },
+                new FieldDefinition<BlockArea>(BlockFieldNameConstants.BlockTitle, SystemFieldTypeConstants.Text)
+                {
+                    MultiCulture = true,
+                    Editable = true,
+                },
+                new FieldDefinition<BlockArea>(BlockFieldNameConstants.BlockText, SystemFieldTypeConstants.Editor)
+                {
+                    MultiCulture = true,
+                    Editable = true,
+                },
+                new FieldDefinition<BlockArea>(BlockFieldNameConstants.LinkText, SystemFieldTypeConstants.Text)
+                {
+                    MultiCulture = true,
+                    Editable = true,
+                },
+                new FieldDefinition<BlockArea>(BlockFieldNameConstants.Link, SystemFieldTypeConstants.Pointer)
+                {
+                    Option = new PointerOption { EntityType = PointerTypeConstants.WebsitesPage },
+                    Editable = true,
                 }
             };
             return fields;
