@@ -52,4 +52,11 @@
             }
         }
     </div>
+    <h3>Popular books by @Model.Title</h3>
+    <ul>
+        @foreach (var book in Model.Books)
+        {
+            <li>@book</li>
+        }
+    </ul>
 </div>

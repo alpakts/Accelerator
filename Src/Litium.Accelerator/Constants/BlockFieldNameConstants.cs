@@ -1,6 +1,6 @@
 ﻿namespace Litium.Accelerator.Constants
 {
-    internal static class BlockFieldNameConstants
+    public static class BlockFieldNameConstants
     {
         // General
         public const string BlockVideo = "BlockVideo";

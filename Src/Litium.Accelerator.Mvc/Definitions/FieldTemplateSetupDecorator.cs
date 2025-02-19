@@ -42,6 +42,7 @@ namespace Litium.Accelerator.Mvc.Definitions
             [(typeof(Blocks.BlockArea), BlockTemplateNameConstants.ProductsAndBanner)] = (typeof(ProductsAndBannerBlockController), nameof(ProductsAndBannerBlockController.InvokeAsync)),
             [(typeof(Blocks.BlockArea), BlockTemplateNameConstants.Slider)] = (typeof(SliderBlockController), nameof(SliderBlockController.Invoke)),
             [(typeof(Blocks.BlockArea), BlockTemplateNameConstants.Video)] = (typeof(VideoBlockController), nameof(VideoBlockController.Invoke)),
+            [(typeof(Blocks.BlockArea), BlockTemplateNameConstants.Author)] = (typeof(AuthorBlockController), nameof(AuthorBlockController.Invoke)),
             [(typeof(Products.ProductArea), ProductTemplateNameConstants.Category)] = (typeof(Controllers.Category.CategoryController), nameof(Controllers.Category.CategoryController.Index)),
             [(typeof(Products.ProductArea), ProductTemplateNameConstants.ProductWithOneVariant)] = (typeof(Controllers.Product.ProductController), nameof(Controllers.Product.ProductController.ProductWithVariants)),
             [(typeof(Products.ProductArea), ProductTemplateNameConstants.ProductWithVariants)] = (typeof(Controllers.Product.ProductController), nameof(Controllers.Product.ProductController.ProductWithVariants)),

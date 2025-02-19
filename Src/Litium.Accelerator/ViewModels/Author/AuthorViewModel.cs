@@ -23,6 +23,7 @@ namespace Litium.Accelerator.ViewModels.Author
         public ImageModel Image { get; set; }
         public IList<LinkModel> Links { get; set; }
         public IList<FileModel> Files { get; set; }
+        public List<string> Books { get; set; }
 
         [UsedImplicitly]
         void IAutoMapperConfiguration.Configure(IMapperConfigurationExpression cfg)

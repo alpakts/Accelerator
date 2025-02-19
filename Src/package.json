@@ -17,5 +17,8 @@
   },
   "resolutions": {
     "@yarnpkg/parsers": "3.0.0-rc.46"
+  },
+  "dependencies": {
+    "litium-extensions": "file:"
   }
 }

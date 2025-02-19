@@ -62,3 +62,4 @@ IISExpress/
 *.pubxml
 *.publishproj
 .*
+.fake

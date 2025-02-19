@@ -8,6 +8,7 @@
         public const string ProductsAndBanner = "ProductsAndBanner";
         public const string Slider = "Slider";
         public const string Video = "Video";
+        public const string Author = "Author";
     }
 }
 ;
